@@ -19,6 +19,7 @@ cur.execute('CREATE UNIQUE INDEX anchor ON searchIndex (name, type, path);')
 docpath = os.path.join(docsetroot,'Contents/Resources/Documents')
 funcpages = []
 
+# index the Class pages
 page = open(os.path.join(docpath,'allclasses-frame.html')).read()
 soup = BeautifulSoup(page)
 
@@ -33,6 +34,7 @@ for tag in soup.find_all('a', {'href':any}):
             print 'name: %s, path: %s' % (name, path)
 
 
+# index the Package pages
 page = open(os.path.join(docpath,'overview-frame.html')).read()
 soup = BeautifulSoup(page)
 
@@ -45,6 +47,7 @@ for tag in soup.find_all('a', {'href':any}):
             cur.execute('INSERT OR IGNORE INTO searchIndex(name, type, path) VALUES (?,?,?)', (name, 'Package', path))
             print 'name: %s, path: %s' % (name, path)
 
+# index all of the methods found on Class pages
 for funcpage in funcpages:
 	pagepath = funcpage.split('/')
 	pagefile = pagepath[len(pagepath)-1]

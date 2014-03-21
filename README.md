@@ -12,6 +12,11 @@ DashDocs generator for ColdBox API documentation
 
 ###To Create a DocSet For a Different Version of ColdBox (ex 3.5.1)
 
+This process has only been tested on OSX 10.9. Pre-requisites:
+
+- Python (should be available on OSX already)
+- [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/) python library (download, then `python setup.py install`)
+
 1. Clone this project
 2. Duplicate one of the existing docset folders, renaming to your version (ColdBox 3.5.1.docset)
 3. Edit ./Coldbox 3.5.1.docset/Contents/Info.plist, change the version in CFBundleName key.
