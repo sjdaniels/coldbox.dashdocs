@@ -1,0 +1,814 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>InterceptorService</title>
+	<meta name="keywords" content="coldbox.system.web.services.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../../highlighter/styles/shCoreDefault.css">
+	<script src="../../../../highlighter/scripts/shCore.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../../../index.html?coldbox/system/web/services/InterceptorService.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system.web.services"><span class="label label-success">coldbox.system.web.services</span></a>
+</div>
+
+<h2>
+
+Class
+InterceptorService</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../../../resources/inherit.gif" alt="extended by "><a href="../../../../coldbox/system/web/services/BaseService.html" title="class in coldbox.system.web.services">coldbox.system.web.services.BaseService</a>
+            <img src="../../../../resources/inherit.gif" alt="extended by ">coldbox.system.web.services.InterceptorService
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				output 
+				: false 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+<div id="class-hint">
+	
+	<p class="lead">The coldbox interceptor service</p>
+</div>
+
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="InterceptorService.html#init()">init</A></strong>(any controller)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Constructor.
+				
+			</td>
+		</tr>
+	</table>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorService.html#appendInterceptionPoints()">appendInterceptionPoints</A></strong>(any customPoints)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Append a list of custom interception points to the CORE interception points and returns itself.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorService.html#configure()">configure</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configure the interceptor service.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorService.html#createInterceptor()">createInterceptor</A></strong>(any interceptorClass, any interceptorName, [any&lt;struct&gt; interceptorProperties='[runtime expression]'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create an interceptor object.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;array&gt;</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorService.html#getInterceptionPoints()">getInterceptionPoints</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the interceptionPoints ENUM of all registered points of execution as an array.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;struct&gt;</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorService.html#getInterceptionStates()">getInterceptionStates</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get all the interception states defined in this service.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorService.html#getInterceptor()">getInterceptor</A></strong>([string interceptorName])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get an interceptor according to its name from a state.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorService.html#getRequestBuffer()">getRequestBuffer</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a coldbox request buffer: coldbox.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorService.html#getStateContainer()">getStateContainer</A></strong>(any state)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a State Container, it will return a blank structure if the state is not found.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorService.html#newPointRecord()">newPointRecord</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a new interception point record.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorService.html#onConfigurationLoad()">onConfigurationLoad</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fires after the main ColdBox application configuration is loaded.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;struct</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorService.html#parseMetadata()">parseMetadata</A></strong>(any metadata, any points)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I get a components valid interception points.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorService.html#processState()">processState</A></strong>(any state, [any interceptData='[runtime expression]'], [boolean async='false'], [boolean asyncAll='false'], [boolean asyncAllJoin='true'], [string asyncPriority='NORMAL'], [numeric asyncJoinTimeout='0'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Announce an interception to the system.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorService.html#registerInterceptionPoint()">registerInterceptionPoint</A></strong>(any interceptorKey, any state, any oInterceptor, [any interceptorMD])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register an Interception point into a new or created interception state.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorService.html#registerInterceptor()">registerInterceptor</A></strong>([any interceptorClass], [any interceptorObject], [any&lt;struct&gt; interceptorProperties='[runtime expression]'], [any customPoints=''], [any interceptorName])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register an interceptor.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorService.html#registerInterceptors()">registerInterceptors</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register all the interceptors according to ColdBox configuration.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorService.html#unregister()">unregister</A></strong>(any interceptorName, [any state=''])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unregister an interceptor from an interception state or all states.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorService.html#wireboxSetup()">wireboxSetup</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Verifies the setup for interceptor classes is online.
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_coldbox.system.web.services.BaseService"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd><a href="../../../../coldbox/system/web/services/BaseService.html" title="class in coldbox.system.web.services">coldbox.system.web.services.BaseService</a></kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="../../../..//coldbox/system/web/services/BaseService.html#convertToColdBox()">convertToColdBox</a>, <a href="../../../..//coldbox/system/web/services/BaseService.html#getColdboxOCM()">getColdboxOCM</a>, <a href="../../../..//coldbox/system/web/services/BaseService.html#getController()">getController</a>, <a href="../../../..//coldbox/system/web/services/BaseService.html#getUtil()">getUtil</a>, <a href="../../../..//coldbox/system/web/services/BaseService.html#isFamilyType()">isFamilyType</a>, <a href="../../../..//coldbox/system/web/services/BaseService.html#onShutdown()">onShutdown</a>, <a href="../../../..//coldbox/system/web/services/BaseService.html#setController()">setController</a> 
+			</td>
+		</tr>
+	</table>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>(any controller)</kbd>
+
+	<br><br>
+
+	
+	<p>Constructor</p>
+	
+	<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+			<dd><code>controller</code></dd>
+		
+	</dl>
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="appendInterceptionPoints()"><!-- --></a>
+	<h3>appendInterceptionPoints</h3>
+	
+	<kbd>public any <strong>appendInterceptionPoints</strong>(any customPoints)</kbd>
+	
+	<br><br>
+
+	
+		<p>Append a list of custom interception points to the CORE interception points and returns itself</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>customPoints</code> - A comma delimmited list or array of custom interception points to append. If they already exists, then they will not be added again.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="configure()"><!-- --></a>
+	<h3>configure</h3>
+	
+	<kbd>public any <strong>configure</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Configure the interceptor service</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="createInterceptor()"><!-- --></a>
+	<h3>createInterceptor</h3>
+	
+	<kbd>private any <strong>createInterceptor</strong>(any interceptorClass, any interceptorName, [any&lt;struct&gt; interceptorProperties='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Create an interceptor object</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>interceptorClass</code> - The class path to instantiate</dd>
+		
+		<dd><code>interceptorName</code> - The unique name of the interceptor</dd>
+		
+		<dd><code>interceptorProperties</code> - The properties</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getInterceptionPoints()"><!-- --></a>
+	<h3>getInterceptionPoints</h3>
+	
+	<kbd>public any&lt;array&gt; <strong>getInterceptionPoints</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the interceptionPoints ENUM of all registered points of execution as an array</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getInterceptionStates()"><!-- --></a>
+	<h3>getInterceptionStates</h3>
+	
+	<kbd>public any&lt;struct&gt; <strong>getInterceptionStates</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get all the interception states defined in this service</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getInterceptor()"><!-- --></a>
+	<h3>getInterceptor</h3>
+	
+	<kbd>public any <strong>getInterceptor</strong>([string interceptorName])</kbd>
+	
+	<br><br>
+
+	
+		<p>Get an interceptor according to its name from a state. If retrieved, it does not mean that the interceptor is registered still. Use the deepSearch argument if you want to check all the interception states for the interceptor.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>interceptorName</code> - The name of the interceptor to search for</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getRequestBuffer()"><!-- --></a>
+	<h3>getRequestBuffer</h3>
+	
+	<kbd>public any <strong>getRequestBuffer</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get a coldbox request buffer: coldbox.system.core.util.RequestBuffer</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getStateContainer()"><!-- --></a>
+	<h3>getStateContainer</h3>
+	
+	<kbd>public any <strong>getStateContainer</strong>(any state)</kbd>
+	
+	<br><br>
+
+	
+		<p>Get a State Container, it will return a blank structure if the state is not found.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>state</code> - The state name to retrieve</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="newPointRecord()"><!-- --></a>
+	<h3>newPointRecord</h3>
+	
+	<kbd>private any <strong>newPointRecord</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Create a new interception point record</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="onConfigurationLoad()"><!-- --></a>
+	<h3>onConfigurationLoad</h3>
+	
+	<kbd>public any <strong>onConfigurationLoad</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Fires after the main ColdBox application configuration is loaded</p>
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/web/services/BaseService.html#onConfigurationLoad()">onConfigurationLoad</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/web/services/BaseService.html" title="class in coldbox.system.web.services">BaseService</a>
+			</code>
+			</dd>
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="parseMetadata()"><!-- --></a>
+	<h3>parseMetadata</h3>
+	
+	<kbd>private struct <strong>parseMetadata</strong>(any metadata, any points)</kbd>
+	
+	<br><br>
+
+	
+		<p>I get a components valid interception points</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>metadata</code> - The recursive metadata</dd>
+		
+		<dd><code>points</code> - The active points structure</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="processState()"><!-- --></a>
+	<h3>processState</h3>
+	
+	<kbd>public any <strong>processState</strong>(any state, [any interceptData='[runtime expression]'], [boolean async='false'], [boolean asyncAll='false'], [boolean asyncAllJoin='true'], [string asyncPriority='NORMAL'], [numeric asyncJoinTimeout='0'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Announce an interception to the system. If you use the asynchronous facilities, you will get a thread structure report as a result.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>state</code> - An interception state to process</dd>
+		
+		<dd><code>interceptData</code> - A data structure used to pass intercepted information.</dd>
+		
+		<dd><code>async</code> - If true, the entire interception chain will be ran in a separate thread.</dd>
+		
+		<dd><code>asyncAll</code> - If true, each interceptor in the interception chain will be ran in a separate thread and then joined together at the end.</dd>
+		
+		<dd><code>asyncAllJoin</code> - If true, each interceptor in the interception chain will be ran in a separate thread and joined together at the end by default.  If you set this flag to false then there will be no joining and waiting for the threads to finalize.</dd>
+		
+		<dd><code>asyncPriority</code> - The thread priority to be used. Either LOW, NORMAL or HIGH. The default value is NORMAL</dd>
+		
+		<dd><code>asyncJoinTimeout</code> - The timeout in milliseconds for the join thread to wait for interceptor threads to finish.  By default there is no timeout.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="registerInterceptionPoint()"><!-- --></a>
+	<h3>registerInterceptionPoint</h3>
+	
+	<kbd>public any <strong>registerInterceptionPoint</strong>(any interceptorKey, any state, any oInterceptor, [any interceptorMD])</kbd>
+	
+	<br><br>
+
+	
+		<p>Register an Interception point into a new or created interception state.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>interceptorKey</code> - The interceptor key to use for lookups in the state.</dd>
+		
+		<dd><code>state</code> - The state to create</dd>
+		
+		<dd><code>oInterceptor</code> - The interceptor to register</dd>
+		
+		<dd><code>interceptorMD</code> - The metadata about the interception point: {async, asyncPriority, eventPattern}</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="registerInterceptor()"><!-- --></a>
+	<h3>registerInterceptor</h3>
+	
+	<kbd>public any <strong>registerInterceptor</strong>([any interceptorClass], [any interceptorObject], [any&lt;struct&gt; interceptorProperties='[runtime expression]'], [any customPoints=''], [any interceptorName])</kbd>
+	
+	<br><br>
+
+	
+		<p>Register an interceptor. This method is here for runtime additions. If the interceptor is already in a state, it will not be added again. You can register an interceptor by class or with an already instantiated and configured object.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>interceptorClass</code> - Mutex with interceptorObject, this is the qualified class of the interceptor to register</dd>
+		
+		<dd><code>interceptorObject</code> - Mutex with interceptor Class, this is used to register an already instantiated object as an interceptor</dd>
+		
+		<dd><code>interceptorProperties</code> - The structure of properties to register this interceptor with.</dd>
+		
+		<dd><code>customPoints</code> - A comma delimmited list or array of custom interception points, if the object or class sent in observes them.</dd>
+		
+		<dd><code>interceptorName</code> - The name to use for the interceptor when stored. If not used, we will use the name found in the object's class</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="registerInterceptors()"><!-- --></a>
+	<h3>registerInterceptors</h3>
+	
+	<kbd>public any <strong>registerInterceptors</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Register all the interceptors according to ColdBox configuration. All interception states are lazy loaded in.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="unregister()"><!-- --></a>
+	<h3>unregister</h3>
+	
+	<kbd>public boolean <strong>unregister</strong>(any interceptorName, [any state=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>Unregister an interceptor from an interception state or all states. If the state does not exists, it returns false</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>interceptorName</code> - The name of the interceptor to search for</dd>
+		
+		<dd><code>state</code> - The named state to unregister this interceptor from. If not passed, then it will be unregistered from all states.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="wireboxSetup()"><!-- --></a>
+	<h3>wireboxSetup</h3>
+	
+	<kbd>private any <strong>wireboxSetup</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Verifies the setup for interceptor classes is online</p>
+	
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>

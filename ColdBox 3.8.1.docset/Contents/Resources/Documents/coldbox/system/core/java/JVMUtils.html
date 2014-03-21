@@ -1,0 +1,520 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>JVMUtils</title>
+	<meta name="keywords" content="coldbox.system.core.java.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../../highlighter/styles/shCoreDefault.css">
+	<script src="../../../../highlighter/scripts/shCore.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../../../index.html?coldbox/system/core/java/JVMUtils.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system.core.java"><span class="label label-success">coldbox.system.core.java</span></a>
+</div>
+
+<h2>
+
+Class
+JVMUtils</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../../../resources/inherit.gif" alt="extended by ">coldbox.system.core.java.JVMUtils
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				output 
+				: false 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Direct Known Subclasses:</strong></div>
+  	<div class="panel-body">
+	
+		<a href="../../../..//coldbox/system/plugins/JVMUtils.html" title="class in coldbox.system.core.java">JVMUtils</a>
+	
+	</div>
+</div>
+
+<div id="class-hint">
+	
+	<p class="lead">This is a JVM Utilities CFC</p>
+</div>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="JVMUtils.html#getIPAddress()">getIPAddress</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the ip address of the executing hostname machine.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="JVMUtils.html#getInetHost()">getInetHost</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the hostname of the executing machine.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="JVMUtils.html#getJVMFreeMemory()">getJVMFreeMemory</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the amount of free memory in the Java Virtual Machine.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="JVMUtils.html#getJVMMaxMemory()">getJVMMaxMemory</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the maximum amount of memory that the Java virtual machine will attempt to use.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="JVMUtils.html#getJVMTotalMemory()">getJVMTotalMemory</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the total amount of memory in the Java virtual machine.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="JVMUtils.html#getJavaRuntime()">getJavaRuntime</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the java runtime version.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="JVMUtils.html#getJavaVersion()">getJavaVersion</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the java version.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="JVMUtils.html#getOSFileSeparator()">getOSFileSeparator</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the operating system's file separator character.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="JVMUtils.html#getOSName()">getOSName</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the operating system's name.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="JVMUtils.html#getOSPathSeparator()">getOSPathSeparator</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the operating system's path separator character.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="JVMUtils.html#getProcessors()">getProcessors</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the number of processors available to the Java virtual machine.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="JVMUtils.html#runGC()">runGC</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Runs the garbage collector.
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="getIPAddress()"><!-- --></a>
+	<h3>getIPAddress</h3>
+	
+	<kbd>public string <strong>getIPAddress</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the ip address of the executing hostname machine.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getInetHost()"><!-- --></a>
+	<h3>getInetHost</h3>
+	
+	<kbd>public string <strong>getInetHost</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the hostname of the executing machine.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getJVMFreeMemory()"><!-- --></a>
+	<h3>getJVMFreeMemory</h3>
+	
+	<kbd>public string <strong>getJVMFreeMemory</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns the amount of free memory in the Java Virtual Machine.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getJVMMaxMemory()"><!-- --></a>
+	<h3>getJVMMaxMemory</h3>
+	
+	<kbd>public string <strong>getJVMMaxMemory</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns the maximum amount of memory that the Java virtual machine will attempt to use..</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getJVMTotalMemory()"><!-- --></a>
+	<h3>getJVMTotalMemory</h3>
+	
+	<kbd>public string <strong>getJVMTotalMemory</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns the total amount of memory in the Java virtual machine.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getJavaRuntime()"><!-- --></a>
+	<h3>getJavaRuntime</h3>
+	
+	<kbd>public string <strong>getJavaRuntime</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the java runtime version</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getJavaVersion()"><!-- --></a>
+	<h3>getJavaVersion</h3>
+	
+	<kbd>public string <strong>getJavaVersion</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the java version.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getOSFileSeparator()"><!-- --></a>
+	<h3>getOSFileSeparator</h3>
+	
+	<kbd>public string <strong>getOSFileSeparator</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the operating system's file separator character</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getOSName()"><!-- --></a>
+	<h3>getOSName</h3>
+	
+	<kbd>public string <strong>getOSName</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the operating system's name</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getOSPathSeparator()"><!-- --></a>
+	<h3>getOSPathSeparator</h3>
+	
+	<kbd>public string <strong>getOSPathSeparator</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the operating system's path separator character.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getProcessors()"><!-- --></a>
+	<h3>getProcessors</h3>
+	
+	<kbd>public numeric <strong>getProcessors</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns the number of processors available to the Java virtual machine</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="runGC()"><!-- --></a>
+	<h3>runGC</h3>
+	
+	<kbd>public void <strong>runGC</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Runs the garbage collector.</p>
+	
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>

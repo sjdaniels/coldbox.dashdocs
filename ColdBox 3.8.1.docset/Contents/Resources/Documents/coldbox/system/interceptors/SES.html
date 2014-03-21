@@ -1,0 +1,1783 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SES</title>
+	<meta name="keywords" content="coldbox.system.interceptors.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../highlighter/styles/shCoreDefault.css">
+	<script src="../../../highlighter/scripts/shCore.js"></script>
+	<script src="../../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../../index.html?coldbox/system/interceptors/SES.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system.interceptors"><span class="label label-success">coldbox.system.interceptors</span></a>
+</div>
+
+<h2>
+
+Class
+SES</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../../resources/inherit.gif" alt="extended by "><a href="../../../coldbox/system/FrameworkSupertype.html" title="class in coldbox.system">coldbox.system.FrameworkSupertype</a>
+            <img src="../../../resources/inherit.gif" alt="extended by "><a href="../../../coldbox/system/Interceptor.html" title="class in coldbox.system">coldbox.system.Interceptor</a>
+                <img src="../../../resources/inherit.gif" alt="extended by ">coldbox.system.interceptors.SES
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				output 
+				: false 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+<div id="class-hint">
+	
+	<p class="lead">This interceptor provides complete SES and URL mappings support to ColdBox Applications</p>
+</div>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#addModuleRoutes()">addModuleRoutes</A></strong>(string pattern, string module, [boolean append='true'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register modules routes in the specified position in the main routing table, and returns itself.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#addNamespace()">addNamespace</A></strong>(string pattern, string namespace, [boolean append='true'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register a namespace in the specified position in the main routing table, and returns itself.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#addRoute()">addRoute</A></strong>(string pattern, [string handler], [any action], [boolean packageResolverExempt='false'], [string matchVariables], [string view], [boolean viewNoLayout='false'], [boolean valuePairTranslation='true'], [any constraints=''], [string module=''], [string moduleRouting=''], [string namespace=''], [string namespaceRouting=''], [boolean ssl='false'], [boolean append='true'], [any response], [numeric statusCode], [string statusText], [any condition])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds a route to dispatch and returns itself.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#checkForInvalidURL()">checkForInvalidURL</A></strong>(any route, any script_name, any event)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check for invalid URL's.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#configure()">configure</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is where the ses plugin configures itself.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#detectExtension()">detectExtension</A></strong>(any requestString, any event)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Detect extensions from the incoming request.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#endWith()">endWith</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End a with closure and returns itself.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#findConventionNameValuePairs()">findConventionNameValuePairs</A></strong>(string requestString, any match, struct params)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Find the convention name value pairs.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#findRoute()">findRoute</A></strong>(any action, any event, [any module=''], [any namespace=''])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figures out which route matches this request and returns a routed structure.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#fixIISURLVars()">fixIISURLVars</A></strong>(any requestString, any rc)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clean up some IIS funkyness.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;boolean&gt;</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#getAutoReload()">getAutoReload</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set to auto reload the rules in each request.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#getBaseURL()">getBaseURL</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get BaseURL.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#getCGIElement()">getCGIElement</A></strong>(any cgielement, any Event)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The cgi element facade method.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#getCleanedPaths()">getCleanedPaths</A></strong>(any rc, any event)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get and Clean the path_info and script names structure.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;boolean&gt;</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#getEnabled()">getEnabled</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get enabled.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;boolean&gt;</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#getExtensionDetection()">getExtensionDetection</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the flag if extension detection is enabled.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;boolean&gt;</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#getLooseMatching()">getLooseMatching</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the current loose matching property.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;array&gt;</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#getModuleRoutes()">getModuleRoutes</A></strong>(any module='')
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a modules routes array.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;struct&gt;</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#getModulesRoutingTable()">getModulesRoutingTable</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the entire modules routing table.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;array&gt;</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#getNamespaceRoutes()">getNamespaceRoutes</A></strong>(any namespace)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a namespace routes array.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;struct&gt;</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#getNamespaceRoutingTable()">getNamespaceRoutingTable</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the entire namespace routing table.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;array&gt;</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#getRoutes()">getRoutes</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the array containing all the routes.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;boolean&gt;</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#getThrowOnInvalidExtension()">getThrowOnInvalidExtension</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get if we are throwing or not on invalid extension detection.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;boolean&gt;</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#getUniqueURLs()">getUniqueURLs</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get uniqueURLs.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any&lt;<a href="../../../coldbox/system/core/util/Util.html" title="class in coldbox.system.core.util">Util</a>&gt;</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#getUtil()">getUtil</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create and return a util object.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#getValidExtensions()">getValidExtensions</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the list of valid extensions this interceptor allows.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#importConfiguration()">importConfiguration</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Import the routing configuration file.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#includeRoutes()">includeRoutes</A></strong>(any location)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Includes a routes configuration file as an added import and returns itself after import.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#onRequestCapture()">onRequestCapture</A></strong>(any event, any interceptData)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is the route dispatch.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#packageResolver()">packageResolver</A></strong>(any routingString, any routeParams, [any module=''])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resolve handler/module packages.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#processRouteOptionals()">processRouteOptionals</A></strong>(struct thisRoute)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process route optionals.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#processWith()">processWith</A></strong>(any args)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process a with closure.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#removeModuleRoutes()">removeModuleRoutes</A></strong>(any module)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove a module's routing table and registration points and return itself.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#removeNamespaceRoutes()">removeNamespaceRoutes</A></strong>(any namespace)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove a namespace's routing table and registration points and return itself.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#renderResponse()">renderResponse</A></strong>(any route, any event)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Render a RESTful response.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#serializeURL()">serializeURL</A></strong>([any formVars=''], any event)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Serialize a URL when invalid.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#setAutoReload()">setAutoReload</A></strong>(any&lt;boolean&gt; autoReload)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the auto reload flag and return itself.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#setBaseURL()">setBaseURL</A></strong>(string baseURL)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the base URL for the application and return itself.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#setEnabled()">setEnabled</A></strong>(any&lt;boolean&gt; enabled)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set whether the interceptor is enabled or not and return itself.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#setExtensionDetection()">setExtensionDetection</A></strong>(any&lt;boolean&gt; extensionDetection)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Call it to activate/deactivate automatic extension detection and return itself.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#setLooseMatching()">setLooseMatching</A></strong>(any&lt;boolean&gt; looseMatching)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the loose matching property of the interceptor and return itself.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#setModuleRoutingTable()">setModuleRoutingTable</A></strong>(any&lt;struct&gt; routes)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the module routing table.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#setRoutes()">setRoutes</A></strong>(any&lt;array&gt; routes)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Internal override of the routes array.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#setThrowOnInvalidExtension()">setThrowOnInvalidExtension</A></strong>(any&lt;boolean&gt; throwOnInvalidExtension)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configure the interceptor to throw an exception or not when invalid extensions are detected and return itself.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#setUniqueURLs()">setUniqueURLs</A></strong>(any&lt;boolean&gt; uniqueURLs)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set the uniqueURLs property and return itself.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#setValidExtensions()">setValidExtensions</A></strong>(any validExtensions)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setup the list of valid extensions to detect automatically for you.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="SES.html#with()">with</A></strong>([string pattern], [string handler], [any action], [boolean packageResolverExempt], [string matchVariables], [string view], [boolean viewNoLayout], [boolean valuePairTranslation], [any constraints], [string module], [string moduleRouting], [string namespace], [string namespaceRouting], [boolean ssl], [boolean append])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Starts a with closure, where all arguments will be prefixed for the next concatenated addRoute() methods until an endWith() is called.
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_coldbox.system.Interceptor"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd><a href="../../../coldbox/system/Interceptor.html" title="class in coldbox.system">coldbox.system.Interceptor</a></kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="../../..//coldbox/system/Interceptor.html#appendToBuffer()">appendToBuffer</a>, <a href="../../..//coldbox/system/Interceptor.html#clearBuffer()">clearBuffer</a>, <a href="../../..//coldbox/system/Interceptor.html#getBufferObject()">getBufferObject</a>, <a href="../../..//coldbox/system/Interceptor.html#getBufferString()">getBufferString</a>, <a href="../../..//coldbox/system/Interceptor.html#getInterceptorService()">getInterceptorService</a>, <a href="../../..//coldbox/system/Interceptor.html#getProperties()">getProperties</a>, <a href="../../..//coldbox/system/Interceptor.html#getProperty()">getProperty</a>, <a href="../../..//coldbox/system/Interceptor.html#init()">init</a>, <a href="../../..//coldbox/system/Interceptor.html#propertyExists()">propertyExists</a>, <a href="../../..//coldbox/system/Interceptor.html#setProperties()">setProperties</a>, <a href="../../..//coldbox/system/Interceptor.html#setProperty()">setProperty</a>, <a href="../../..//coldbox/system/Interceptor.html#unregister()">unregister</a> 
+			</td>
+		</tr>
+	</table>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_coldbox.system.FrameworkSupertype"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd><a href="../../../coldbox/system/FrameworkSupertype.html" title="class in coldbox.system">coldbox.system.FrameworkSupertype</a></kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="../../..//coldbox/system/FrameworkSupertype.html#$abort()">$abort</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#$dump()">$dump</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#$htmlhead()">$htmlhead</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#$include()">$include</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#$rethrow()">$rethrow</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#$throw()">$throw</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#addAsset()">addAsset</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#announceInterception()">announceInterception</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getColdboxOCM()">getColdboxOCM</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getController()">getController</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getDatasource()">getDatasource</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getDebugMode()">getDebugMode</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getInterceptor()">getInterceptor</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getMailService()">getMailService</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getMailSettings()">getMailSettings</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getMemento()">getMemento</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getModel()">getModel</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getModuleSettings()">getModuleSettings</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getMyPlugin()">getMyPlugin</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getNewMail()">getNewMail</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getPlugin()">getPlugin</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getResource()">getResource</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getSetting()">getSetting</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getSettingStructure()">getSettingStructure</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getSettingsBean()">getSettingsBean</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getValidationManager()">getValidationManager</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getfwLocale()">getfwLocale</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#includeUDF()">includeUDF</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#loadGlobalUDFLibraries()">loadGlobalUDFLibraries</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#locateDirectoryPath()">locateDirectoryPath</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#locateFilePath()">locateFilePath</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#persistVariables()">persistVariables</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#populateModel()">populateModel</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#relocate()">relocate</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#renderExternalView()">renderExternalView</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#renderLayout()">renderLayout</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#renderView()">renderView</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#runEvent()">runEvent</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#setDebugMode()">setDebugMode</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#setNextEvent()">setNextEvent</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#setNextRoute()">setNextRoute</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#setSetting()">setSetting</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#setfwLocale()">setfwLocale</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#settingExists()">settingExists</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#validateModel()">validateModel</a> 
+			</td>
+		</tr>
+	</table>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="addModuleRoutes()"><!-- --></a>
+	<h3>addModuleRoutes</h3>
+	
+	<kbd>public any <strong>addModuleRoutes</strong>(string pattern, string module, [boolean append='true'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Register modules routes in the specified position in the main routing table, and returns itself</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>pattern</code> - The pattern to match against the URL.</dd>
+		
+		<dd><code>module</code> - The module to load routes for</dd>
+		
+		<dd><code>append</code> - Whether the module entry point route should be appended or pre-pended to the main routes array. By default we append to the end of the array</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="addNamespace()"><!-- --></a>
+	<h3>addNamespace</h3>
+	
+	<kbd>public any <strong>addNamespace</strong>(string pattern, string namespace, [boolean append='true'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Register a namespace in the specified position in the main routing table, and returns itself</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>pattern</code> - The pattern to match against the URL.</dd>
+		
+		<dd><code>namespace</code> - The name of the namespace to register</dd>
+		
+		<dd><code>append</code> - Whether the route should be appended or pre-pended to the array. By default we append to the end of the array</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="addRoute()"><!-- --></a>
+	<h3>addRoute</h3>
+	
+	<kbd>public any <strong>addRoute</strong>(string pattern, [string handler], [any action], [boolean packageResolverExempt='false'], [string matchVariables], [string view], [boolean viewNoLayout='false'], [boolean valuePairTranslation='true'], [any constraints=''], [string module=''], [string moduleRouting=''], [string namespace=''], [string namespaceRouting=''], [boolean ssl='false'], [boolean append='true'], [any response], [numeric statusCode], [string statusText], [any condition])</kbd>
+	
+	<br><br>
+
+	
+		<p>Adds a route to dispatch and returns itself.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>pattern</code> - The pattern to match against the URL.</dd>
+		
+		<dd><code>handler</code> - The handler to execute if pattern matched.</dd>
+		
+		<dd><code>action</code> - The action in a handler to execute if a pattern is matched.  This can also be a structure based on the HTTP method(GET,POST,PUT,DELETE). ex: {GET:'show', PUT:'update', DELETE:'delete', POST:'save'}</dd>
+		
+		<dd><code>packageResolverExempt</code> - If this is set to true, then the interceptor will not try to do handler package resolving. Else a package will always be resolved. Only works if :handler is in a pattern</dd>
+		
+		<dd><code>matchVariables</code> - A string of name-value pair variables to add to the request collection when this pattern matches. This is a comma delimmitted list. Ex: spaceFound=true,missingAction=onTest</dd>
+		
+		<dd><code>view</code> - The view to dispatch if pattern matches.  No event will be fired, so handler,action will be ignored.</dd>
+		
+		<dd><code>viewNoLayout</code> - If view is choosen, then you can choose to override and not display a layout with the view. Else the view renders in the assigned layout.</dd>
+		
+		<dd><code>valuePairTranslation</code> - Activate convention name value pair translations or not. Turned on by default</dd>
+		
+		<dd><code>constraints</code> - A structure of regex constraint overrides for variable placeholders. The key is the name of the variable, the value is the regex to try to match.</dd>
+		
+		<dd><code>module</code> - The module to add this route to</dd>
+		
+		<dd><code>moduleRouting</code> - Called internally by addModuleRoutes to add a module routing route.</dd>
+		
+		<dd><code>namespace</code> - The namespace to add this route to</dd>
+		
+		<dd><code>namespaceRouting</code> - Called internally by addNamespaceRoutes to add a namespaced routing route.</dd>
+		
+		<dd><code>ssl</code> - Makes the route an SSL only route if true, else it can be anything. If an ssl only route is hit without ssl, the interceptor will redirect to it via ssl</dd>
+		
+		<dd><code>append</code> - Whether the route should be appended or pre-pended to the array. By default we append to the end of the array</dd>
+		
+		<dd><code>response</code> - An HTML response string to send back or a closure to be executed that should return the response. The closure takes in a 'params' struct of all matched params and the string will be parsed with the named value pairs as ${param}</dd>
+		
+		<dd><code>statusCode</code> - The HTTP status code to send to the browser response.</dd>
+		
+		<dd><code>statusText</code> - Explains the HTTP status code sent to the browser response.</dd>
+		
+		<dd><code>condition</code> - A closure or UDF to execute that MUST return true to use route if matched or false and continue.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="checkForInvalidURL()"><!-- --></a>
+	<h3>checkForInvalidURL</h3>
+	
+	<kbd>private void <strong>checkForInvalidURL</strong>(any route, any script_name, any event)</kbd>
+	
+	<br><br>
+
+	
+		<p>Check for invalid URL's</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>route</code></dd>
+		
+		<dd><code>script_name</code></dd>
+		
+		<dd><code>event</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="configure()"><!-- --></a>
+	<h3>configure</h3>
+	
+	<kbd>public void <strong>configure</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>This is where the ses plugin configures itself.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="detectExtension()"><!-- --></a>
+	<h3>detectExtension</h3>
+	
+	<kbd>private any <strong>detectExtension</strong>(any requestString, any event)</kbd>
+	
+	<br><br>
+
+	
+		<p>Detect extensions from the incoming request</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>requestString</code> - The requested URL string</dd>
+		
+		<dd><code>event</code> - The event object.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="endWith()"><!-- --></a>
+	<h3>endWith</h3>
+	
+	<kbd>public any <strong>endWith</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>End a with closure and returns itself</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="findConventionNameValuePairs()"><!-- --></a>
+	<h3>findConventionNameValuePairs</h3>
+	
+	<kbd>private void <strong>findConventionNameValuePairs</strong>(string requestString, any match, struct params)</kbd>
+	
+	<br><br>
+
+	
+		<p>Find the convention name value pairs</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>requestString</code> - The request string</dd>
+		
+		<dd><code>match</code> - The regex matcher</dd>
+		
+		<dd><code>params</code> - The parameter structure</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="findRoute()"><!-- --></a>
+	<h3>findRoute</h3>
+	
+	<kbd>private any <strong>findRoute</strong>(any action, any event, [any module=''], [any namespace=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>Figures out which route matches this request and returns a routed structure</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>action</code> - The action evaluated by the path_info</dd>
+		
+		<dd><code>event</code> - The event object.</dd>
+		
+		<dd><code>module</code> - Find a route on a module</dd>
+		
+		<dd><code>namespace</code> - Find a route on a namespace</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="fixIISURLVars()"><!-- --></a>
+	<h3>fixIISURLVars</h3>
+	
+	<kbd>private any <strong>fixIISURLVars</strong>(any requestString, any rc)</kbd>
+	
+	<br><br>
+
+	
+		<p>Clean up some IIS funkyness</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>requestString</code> - The request string</dd>
+		
+		<dd><code>rc</code> - The request collection</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getAutoReload()"><!-- --></a>
+	<h3>getAutoReload</h3>
+	
+	<kbd>public any&lt;boolean&gt; <strong>getAutoReload</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Set to auto reload the rules in each request</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getBaseURL()"><!-- --></a>
+	<h3>getBaseURL</h3>
+	
+	<kbd>public string <strong>getBaseURL</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get BaseURL</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getCGIElement()"><!-- --></a>
+	<h3>getCGIElement</h3>
+	
+	<kbd>private any <strong>getCGIElement</strong>(any cgielement, any Event)</kbd>
+	
+	<br><br>
+
+	
+		<p>The cgi element facade method</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>cgielement</code> - The cgi element to retrieve</dd>
+		
+		<dd><code>Event</code> - The event object.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getCleanedPaths()"><!-- --></a>
+	<h3>getCleanedPaths</h3>
+	
+	<kbd>private any <strong>getCleanedPaths</strong>(any rc, any event)</kbd>
+	
+	<br><br>
+
+	
+		<p>Get and Clean the path_info and script names structure</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>rc</code> - The request collection to incorporate items into</dd>
+		
+		<dd><code>event</code> - The event object.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getEnabled()"><!-- --></a>
+	<h3>getEnabled</h3>
+	
+	<kbd>public any&lt;boolean&gt; <strong>getEnabled</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get enabled</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getExtensionDetection()"><!-- --></a>
+	<h3>getExtensionDetection</h3>
+	
+	<kbd>public any&lt;boolean&gt; <strong>getExtensionDetection</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the flag if extension detection is enabled</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getLooseMatching()"><!-- --></a>
+	<h3>getLooseMatching</h3>
+	
+	<kbd>public any&lt;boolean&gt; <strong>getLooseMatching</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the current loose matching property</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getModuleRoutes()"><!-- --></a>
+	<h3>getModuleRoutes</h3>
+	
+	<kbd>public any&lt;array&gt; <strong>getModuleRoutes</strong>(any module='')</kbd>
+	
+	<br><br>
+
+	
+		<p>Get a modules routes array</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>module</code> - The name of the module</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getModulesRoutingTable()"><!-- --></a>
+	<h3>getModulesRoutingTable</h3>
+	
+	<kbd>public any&lt;struct&gt; <strong>getModulesRoutingTable</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the entire modules routing table</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getNamespaceRoutes()"><!-- --></a>
+	<h3>getNamespaceRoutes</h3>
+	
+	<kbd>public any&lt;array&gt; <strong>getNamespaceRoutes</strong>(any namespace)</kbd>
+	
+	<br><br>
+
+	
+		<p>Get a namespace routes array</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>namespace</code> - The name of the namespace</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getNamespaceRoutingTable()"><!-- --></a>
+	<h3>getNamespaceRoutingTable</h3>
+	
+	<kbd>public any&lt;struct&gt; <strong>getNamespaceRoutingTable</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the entire namespace routing table</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getRoutes()"><!-- --></a>
+	<h3>getRoutes</h3>
+	
+	<kbd>public any&lt;array&gt; <strong>getRoutes</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the array containing all the routes</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getThrowOnInvalidExtension()"><!-- --></a>
+	<h3>getThrowOnInvalidExtension</h3>
+	
+	<kbd>public any&lt;boolean&gt; <strong>getThrowOnInvalidExtension</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get if we are throwing or not on invalid extension detection</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getUniqueURLs()"><!-- --></a>
+	<h3>getUniqueURLs</h3>
+	
+	<kbd>public any&lt;boolean&gt; <strong>getUniqueURLs</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get uniqueURLs</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getUtil()"><!-- --></a>
+	<h3>getUtil</h3>
+	
+	<kbd>private any&lt;<a href="../../../coldbox/system/core/util/Util.html" title="class in coldbox.system.core.util">Util</a>&gt; <strong>getUtil</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Create and return a util object</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getValidExtensions()"><!-- --></a>
+	<h3>getValidExtensions</h3>
+	
+	<kbd>public any <strong>getValidExtensions</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the list of valid extensions this interceptor allows</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="importConfiguration()"><!-- --></a>
+	<h3>importConfiguration</h3>
+	
+	<kbd>private void <strong>importConfiguration</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Import the routing configuration file</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="includeRoutes()"><!-- --></a>
+	<h3>includeRoutes</h3>
+	
+	<kbd>public any <strong>includeRoutes</strong>(any location)</kbd>
+	
+	<br><br>
+
+	
+		<p>Includes a routes configuration file as an added import and returns itself after import</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>location</code> - The include location of the routes configuration template. Do not add '.cfm'</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="onRequestCapture()"><!-- --></a>
+	<h3>onRequestCapture</h3>
+	
+	<kbd>public void <strong>onRequestCapture</strong>(any event, any interceptData)</kbd>
+	
+	<br><br>
+
+	
+		<p>This is the route dispatch</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>event</code> - The event object.</dd>
+		
+		<dd><code>interceptData</code> - interceptData of intercepted info.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="packageResolver()"><!-- --></a>
+	<h3>packageResolver</h3>
+	
+	<kbd>private any <strong>packageResolver</strong>(any routingString, any routeParams, [any module=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>Resolve handler/module packages</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>routingString</code> - The routing string</dd>
+		
+		<dd><code>routeParams</code> - The routed params array</dd>
+		
+		<dd><code>module</code> - Tells package resolver this is an explicit module package resolving call</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="processRouteOptionals()"><!-- --></a>
+	<h3>processRouteOptionals</h3>
+	
+	<kbd>private void <strong>processRouteOptionals</strong>(struct thisRoute)</kbd>
+	
+	<br><br>
+
+	
+		<p>Process route optionals</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>thisRoute</code> - The route struct</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="processWith()"><!-- --></a>
+	<h3>processWith</h3>
+	
+	<kbd>private any <strong>processWith</strong>(any args)</kbd>
+	
+	<br><br>
+
+	
+		<p>Process a with closure</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>args</code> - The arguments to process</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="removeModuleRoutes()"><!-- --></a>
+	<h3>removeModuleRoutes</h3>
+	
+	<kbd>public any <strong>removeModuleRoutes</strong>(any module)</kbd>
+	
+	<br><br>
+
+	
+		<p>Remove a module's routing table and registration points and return itself</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>module</code> - The name of the module to remove</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="removeNamespaceRoutes()"><!-- --></a>
+	<h3>removeNamespaceRoutes</h3>
+	
+	<kbd>public any <strong>removeNamespaceRoutes</strong>(any namespace)</kbd>
+	
+	<br><br>
+
+	
+		<p>Remove a namespace's routing table and registration points and return itself</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>namespace</code> - The name of the namespace to remove</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="renderResponse()"><!-- --></a>
+	<h3>renderResponse</h3>
+	
+	<kbd>private any <strong>renderResponse</strong>(any route, any event)</kbd>
+	
+	<br><br>
+
+	
+		<p>Render a RESTful response</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>route</code> - The route response</dd>
+		
+		<dd><code>event</code> - The event object.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="serializeURL()"><!-- --></a>
+	<h3>serializeURL</h3>
+	
+	<kbd>private any <strong>serializeURL</strong>([any formVars=''], any event)</kbd>
+	
+	<br><br>
+
+	
+		<p>Serialize a URL when invalid</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>formVars</code></dd>
+		
+		<dd><code>event</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setAutoReload()"><!-- --></a>
+	<h3>setAutoReload</h3>
+	
+	<kbd>public any <strong>setAutoReload</strong>(any&lt;boolean&gt; autoReload)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set the auto reload flag and return itself</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>autoReload</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setBaseURL()"><!-- --></a>
+	<h3>setBaseURL</h3>
+	
+	<kbd>public any <strong>setBaseURL</strong>(string baseURL)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set the base URL for the application and return itself</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>baseURL</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setEnabled()"><!-- --></a>
+	<h3>setEnabled</h3>
+	
+	<kbd>public any <strong>setEnabled</strong>(any&lt;boolean&gt; enabled)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set whether the interceptor is enabled or not and return itself</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>enabled</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setExtensionDetection()"><!-- --></a>
+	<h3>setExtensionDetection</h3>
+	
+	<kbd>public any <strong>setExtensionDetection</strong>(any&lt;boolean&gt; extensionDetection)</kbd>
+	
+	<br><br>
+
+	
+		<p>Call it to activate/deactivate automatic extension detection and return itself</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>extensionDetection</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setLooseMatching()"><!-- --></a>
+	<h3>setLooseMatching</h3>
+	
+	<kbd>public any <strong>setLooseMatching</strong>(any&lt;boolean&gt; looseMatching)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set the loose matching property of the interceptor and return itself</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>looseMatching</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setModuleRoutingTable()"><!-- --></a>
+	<h3>setModuleRoutingTable</h3>
+	
+	<kbd>public void <strong>setModuleRoutingTable</strong>(any&lt;struct&gt; routes)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set the module routing table</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>routes</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setRoutes()"><!-- --></a>
+	<h3>setRoutes</h3>
+	
+	<kbd>public void <strong>setRoutes</strong>(any&lt;array&gt; routes)</kbd>
+	
+	<br><br>
+
+	
+		<p>Internal override of the routes array</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>routes</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setThrowOnInvalidExtension()"><!-- --></a>
+	<h3>setThrowOnInvalidExtension</h3>
+	
+	<kbd>public any <strong>setThrowOnInvalidExtension</strong>(any&lt;boolean&gt; throwOnInvalidExtension)</kbd>
+	
+	<br><br>
+
+	
+		<p>Configure the interceptor to throw an exception or not when invalid extensions are detected and return itself</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>throwOnInvalidExtension</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setUniqueURLs()"><!-- --></a>
+	<h3>setUniqueURLs</h3>
+	
+	<kbd>public any <strong>setUniqueURLs</strong>(any&lt;boolean&gt; uniqueURLs)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set the uniqueURLs property and return itself</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>uniqueURLs</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setValidExtensions()"><!-- --></a>
+	<h3>setValidExtensions</h3>
+	
+	<kbd>public any <strong>setValidExtensions</strong>(any validExtensions)</kbd>
+	
+	<br><br>
+
+	
+		<p>Setup the list of valid extensions to detect automatically for you.: e.g.: json,xml,rss. Return itself</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>validExtensions</code> - A list of valid extensions to allow in a request</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="with()"><!-- --></a>
+	<h3>with</h3>
+	
+	<kbd>public any <strong>with</strong>([string pattern], [string handler], [any action], [boolean packageResolverExempt], [string matchVariables], [string view], [boolean viewNoLayout], [boolean valuePairTranslation], [any constraints], [string module], [string moduleRouting], [string namespace], [string namespaceRouting], [boolean ssl], [boolean append])</kbd>
+	
+	<br><br>
+
+	
+		<p>Starts a with closure, where all arguments will be prefixed for the next concatenated addRoute() methods until an endWith() is called</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>pattern</code> - The pattern to match against the URL.</dd>
+		
+		<dd><code>handler</code> - The handler to execute if pattern matched.</dd>
+		
+		<dd><code>action</code> - The action in a handler to execute if a pattern is matched.  This can also be a structure based on the HTTP method(GET,POST,PUT,DELETE). ex: {GET:'show', PUT:'update', DELETE:'delete', POST:'save'}</dd>
+		
+		<dd><code>packageResolverExempt</code> - If this is set to true, then the interceptor will not try to do handler package resolving. Else a package will always be resolved. Only works if :handler is in a pattern</dd>
+		
+		<dd><code>matchVariables</code> - A string of name-value pair variables to add to the request collection when this pattern matches. This is a comma delimmitted list. Ex: spaceFound=true,missingAction=onTest</dd>
+		
+		<dd><code>view</code> - The view to dispatch if pattern matches.  No event will be fired, so handler,action will be ignored.</dd>
+		
+		<dd><code>viewNoLayout</code> - If view is choosen, then you can choose to override and not display a layout with the view. Else the view renders in the assigned layout.</dd>
+		
+		<dd><code>valuePairTranslation</code> - Activate convention name value pair translations or not. Turned on by default</dd>
+		
+		<dd><code>constraints</code> - A structure of regex constraint overrides for variable placeholders. The key is the name of the variable, the value is the regex to try to match.</dd>
+		
+		<dd><code>module</code> - The module to add this route to</dd>
+		
+		<dd><code>moduleRouting</code> - Called internally by addModuleRoutes to add a module routing route.</dd>
+		
+		<dd><code>namespace</code> - The namespace to add this route to</dd>
+		
+		<dd><code>namespaceRouting</code> - Called internally by addNamespaceRoutes to add a namespaced routing route.</dd>
+		
+		<dd><code>ssl</code> - Makes the route an SSL only route if true, else it can be anything. If an ssl only route is hit without ssl, the interceptor will redirect to it via ssl</dd>
+		
+		<dd><code>append</code> - Whether the route should be appended or pre-pended to the array. By default we append to the end of the array</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>

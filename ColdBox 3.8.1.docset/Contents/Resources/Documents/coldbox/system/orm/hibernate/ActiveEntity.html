@@ -1,0 +1,1072 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ActiveEntity</title>
+	<meta name="keywords" content="coldbox.system.orm.hibernate.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../../highlighter/styles/shCoreDefault.css">
+	<script src="../../../../highlighter/scripts/shCore.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../../../index.html?coldbox/system/orm/hibernate/ActiveEntity.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system.orm.hibernate"><span class="label label-success">coldbox.system.orm.hibernate</span></a>
+</div>
+
+<h2>
+
+Class
+ActiveEntity</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../../../resources/inherit.gif" alt="extended by "><a href="../../../../coldbox/system/orm/hibernate/BaseORMService.html" title="class in coldbox.system.orm.hibernate">coldbox.system.orm.hibernate.BaseORMService</a>
+            <img src="../../../../resources/inherit.gif" alt="extended by "><a href="../../../../coldbox/system/orm/hibernate/VirtualEntityService.html" title="class in coldbox.system.orm.hibernate">coldbox.system.orm.hibernate.VirtualEntityService</a>
+                <img src="../../../../resources/inherit.gif" alt="extended by ">coldbox.system.orm.hibernate.ActiveEntity
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				accessors 
+				: true 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+<div id="class-hint">
+	
+	<p class="lead">******************************************************************************* Copyright Since 2005 ColdBox Framework by Luis Majano and Ortus Solutions, Corp www.coldbox.org | www.luismajano.com | www.ortussolutions.com ******************************************************************************* Description : This Active Entity object allows you to enhance your ORM entities with virtual service methods and make it follow more of an Active Record pattern, but not really :) It just allows you to operate on entity and related entity objects much much more easily. If you have enabled WireBox entity injection, then you will get an added validation features: boolean function isValid(fields="*",constraints="",locale=""){} coldbox.system.validation.result.IValidationResult function getValidationResults(){} These methods are only active if WireBox entity injection is available.</p>
+</div>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="property_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="5">
+			<strong>Property Summary</strong>
+		</th>
+	</tr>
+	<tr class="info">
+		<th align="left">
+			<strong>type</strong>
+		</th>
+		<th align="left">
+			<strong>property</strong>
+		</th>
+		<th align="left">
+			<strong>default</strong>
+		</th>
+		<th align="left">
+			<strong>serializable</strong>
+		</th>
+		<th align="left">
+			<strong>required</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ActiveEntity.html#wirebox()">wirebox</A></strong> 
+			<br>
+			
+			<!-- only grab the first sentence of the hint -->
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WireBox entity injector, only injected if ORM entity injection is available.
+			
+			<br><br>
+			<ul>
+			
+				<li class="label label-default label-annotations">inject = wirebox</li>
+				
+				<li class="label label-default label-annotations">persistent = false</li>
+				
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	</tr>
+</table>
+
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="ActiveEntity.html#init()">init</A></strong>([string queryCacheRegion], [boolean useQueryCaching], [boolean eventHandling], [boolean useTransactions], [boolean defaultAsQuery])
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Active Entity Constructor, if you override it, make sure you call super.
+				
+			</td>
+		</tr>
+	</table>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ActiveEntity.html#GETWIREBOX()">GETWIREBOX</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get: WireBox entity injector, only injected if ORM entity injection is available.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../../coldbox/system/orm/hibernate/ActiveEntity.html" title="class in coldbox.system.orm.hibernate">ActiveEntity</a></code>
+		</td>
+		<td>
+			<strong><a href="ActiveEntity.html#SETWIREBOX()">SETWIREBOX</A></strong>(any wirebox)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set: WireBox entity injector, only injected if ORM entity injection is available.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ActiveEntity.html#delete()">delete</A></strong>([any entity], [boolean flush='false'], [boolean transactional='[runtime expression]'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Delete an entity.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ActiveEntity.html#evict()">evict</A></strong>([any entity])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Evict entity objects from session, if no arguments, then the entity evicts itself.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../../coldbox/system/validation/result/IValidationResult.html" title="interface in coldbox.system.validation.result">IValidationResult</a></code>
+		</td>
+		<td>
+			<strong><a href="ActiveEntity.html#getValidationResults()">getValidationResults</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the validation results object.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="ActiveEntity.html#isValid()">isValid</A></strong>([string fields='*'], [any constraints=''], [string locale=''], [string excludeFields=''])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Validate the ActiveEntity with the coded constraints -> this.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ActiveEntity.html#merge()">merge</A></strong>([any entity])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Merge an entity or array of entities back into the session.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ActiveEntity.html#populate()">populate</A></strong>([any target='[runtime expression]'], struct memento, [string scope=''], [boolean trustedSetter='false'], [string include=''], [string exclude=''], [boolean ignoreEmpty='false'], [string nullEmptyInclude=''], [string nullEmptyExclude=''], [boolean composeRelationships='true'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Simple map to property population for entities.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ActiveEntity.html#populateFromJSON()">populateFromJSON</A></strong>([any target='[runtime expression]'], string JSONString, [string scope=''], [boolean trustedSetter='false'], [string include=''], [string exclude=''], [boolean ignoreEmpty='false'], [string nullEmptyInclude=''], [string nullEmptyExclude=''], [boolean composeRelationships='true'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Populate from JSON, for argument definitions look at the populate method.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ActiveEntity.html#populateFromQuery()">populateFromQuery</A></strong>([any target='[runtime expression]'], any qry, [numeric rowNumber='1'], [string scope=''], [boolean trustedSetter='false'], [string include=''], [string exclude=''], [boolean ignoreEmpty='false'], [string nullEmptyInclude=''], [string nullEmptyExclude=''], [boolean composeRelationships='true'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Populate from Query, for argument definitions look at the populate method.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ActiveEntity.html#populateFromXML()">populateFromXML</A></strong>([any target='[runtime expression]'], string xml, [string root=''], [string scope=''], [boolean trustedSetter='false'], [string include=''], [string exclude=''], [boolean ignoreEmpty='false'], [string nullEmptyInclude=''], [string nullEmptyExclude=''], [boolean composeRelationships='true'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Populate from XML, for argument definitions look at the populate method.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ActiveEntity.html#populateWithPrefix()">populateWithPrefix</A></strong>([any target='[runtime expression]'], struct memento, [string scope=''], [boolean trustedSetter='false'], [string include=''], [string exclude=''], [boolean ignoreEmpty='false'], [string nullEmptyInclude=''], [string nullEmptyExclude=''], [boolean composeRelationships='true'], string prefix)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Simple map to property population for entities with structure key prefixes.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ActiveEntity.html#refresh()">refresh</A></strong>([any entity])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Refresh the state of the entity.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ActiveEntity.html#save()">save</A></strong>([any entity], [boolean forceInsert='false'], [boolean flush='false'], [boolean transactional='[runtime expression]'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save an entity using hibernate transactions or not.
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_coldbox.system.orm.hibernate.VirtualEntityService"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd><a href="../../../../coldbox/system/orm/hibernate/VirtualEntityService.html" title="class in coldbox.system.orm.hibernate">coldbox.system.orm.hibernate.VirtualEntityService</a></kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#GETDATASOURCE()">GETDATASOURCE</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#GETENTITYNAME()">GETENTITYNAME</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#SETDATASOURCE()">SETDATASOURCE</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#SETENTITYNAME()">SETENTITYNAME</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#clear()">clear</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#convertIDValueToJavaType()">convertIDValueToJavaType</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#convertValueToJavaType()">convertValueToJavaType</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#count()">count</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#countWhere()">countWhere</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#criteriaCount()">criteriaCount</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#criteriaQuery()">criteriaQuery</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#deleteAll()">deleteAll</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#deleteByID()">deleteByID</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#deleteByQuery()">deleteByQuery</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#deleteWhere()">deleteWhere</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#executeQuery()">executeQuery</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#exists()">exists</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#findAllWhere()">findAllWhere</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#findWhere()">findWhere</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#get()">get</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#getAll()">getAll</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#getKey()">getKey</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#getPropertyNames()">getPropertyNames</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#getSessionStatistics()">getSessionStatistics</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#getTableName()">getTableName</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#isSessionDirty()">isSessionDirty</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#list()">list</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#new()">new</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#newCriteria()">newCriteria</a>, <a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#onMissingMethod()">onMissingMethod</a> 
+			</td>
+		</tr>
+	</table>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_coldbox.system.orm.hibernate.BaseORMService"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd><a href="../../../../coldbox/system/orm/hibernate/BaseORMService.html" title="class in coldbox.system.orm.hibernate">coldbox.system.orm.hibernate.BaseORMService</a></kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#$delete()">$delete</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#$deleteAll()">$deleteAll</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#$deleteByID()">$deleteByID</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#$deleteByQuery()">$deleteByQuery</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#$deleteWhere()">$deleteWhere</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#$save()">$save</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#$saveAll()">$saveAll</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#$transactioned()">$transactioned</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#GETDEFAULTASQUERY()">GETDEFAULTASQUERY</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#GETEVENTHANDLING()">GETEVENTHANDLING</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#GETHQLDYNAMICCACHE()">GETHQLDYNAMICCACHE</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#GETORM()">GETORM</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#GETORMEVENTHANDLER()">GETORMEVENTHANDLER</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#GETQUERYCACHEREGION()">GETQUERYCACHEREGION</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#GETUSEQUERYCACHING()">GETUSEQUERYCACHING</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#GETUSETRANSACTIONS()">GETUSETRANSACTIONS</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#SETDEFAULTASQUERY()">SETDEFAULTASQUERY</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#SETEVENTHANDLING()">SETEVENTHANDLING</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#SETHQLDYNAMICCACHE()">SETHQLDYNAMICCACHE</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#SETORM()">SETORM</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#SETORMEVENTHANDLER()">SETORMEVENTHANDLER</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#SETQUERYCACHEREGION()">SETQUERYCACHEREGION</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#SETUSEQUERYCACHING()">SETUSEQUERYCACHING</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#SETUSETRANSACTIONS()">SETUSETRANSACTIONS</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#compileHQLFromDynamicMethod()">compileHQLFromDynamicMethod</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#createCriteriaQuery()">createCriteriaQuery</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#createService()">createService</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#evictEntity()">evictEntity</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#evictQueries()">evictQueries</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#findAll()">findAll</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#findByExample()">findByExample</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#findDynamically()">findDynamically</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#findIt()">findIt</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#getEntityGivenName()">getEntityGivenName</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#getRestrictions()">getRestrictions</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#saveAll()">saveAll</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#sessionContains()">sessionContains</a> 
+			</td>
+		</tr>
+	</table>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>([string queryCacheRegion], [boolean useQueryCaching], [boolean eventHandling], [boolean useTransactions], [boolean defaultAsQuery])</kbd>
+
+	<br><br>
+
+	
+	<p>Active Entity Constructor, if you override it, make sure you call super.init()</p>
+	
+	<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+			<dd><code>queryCacheRegion</code> - The query cache region to use if not we will use one for you</dd>
+		
+			<dd><code>useQueryCaching</code> - Enable query caching for this entity or not, defaults to false</dd>
+		
+			<dd><code>eventHandling</code> - Enable event handling for new() and save() operations, defaults to true</dd>
+		
+			<dd><code>useTransactions</code> - Enable transactions for all major operations, defaults to true</dd>
+		
+			<dd><code>defaultAsQuery</code> - What should be the default return type query or arrays for list opertions, defaults to true</dd>
+		
+	</dl>
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+	<a name="property_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Property Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	
+		<a name="wirebox()"><!-- --></a>
+		<h3>wirebox</h3>
+
+		<kbd>
+			property any <strong>wirebox</strong> 
+		</kbd>
+
+		<br><br>
+		
+			<p>WireBox entity injector, only injected if ORM entity injection is available.</p>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			<dd><code>inject</code> - wirebox</dd>
+			
+			<dd><code>serializable</code> - true</dd>
+			
+			<dd><code>required</code> - false</dd>
+			
+			<dd><code>persistent</code> - false</dd>
+			
+		</dl>
+
+		<hr>
+	
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="GETWIREBOX()"><!-- --></a>
+	<h3>GETWIREBOX</h3>
+	
+	<kbd>public any <strong>GETWIREBOX</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>get: WireBox entity injector, only injected if ORM entity injection is available.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="SETWIREBOX()"><!-- --></a>
+	<h3>SETWIREBOX</h3>
+	
+	<kbd>public <a href="../../../../coldbox/system/orm/hibernate/ActiveEntity.html" title="class in coldbox.system.orm.hibernate">ActiveEntity</a> <strong>SETWIREBOX</strong>(any wirebox)</kbd>
+	
+	<br><br>
+
+	
+		<p>set: WireBox entity injector, only injected if ORM entity injection is available.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>wirebox</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="delete()"><!-- --></a>
+	<h3>delete</h3>
+	
+	<kbd>public any <strong>delete</strong>([any entity], [boolean flush='false'], [boolean transactional='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Delete an entity. The entity argument can be a single entity or an array of entities. You can optionally flush the session also after committing Transactions are used if useTransactions bit is set or the transactional argument is passed</p>
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#delete()">delete</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/orm/hibernate/BaseORMService.html" title="class in coldbox.system.orm.hibernate">BaseORMService</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>entity</code> - You can optionally pass in an entity, else this active entity is saved</dd>
+		
+		<dd><code>flush</code> - Flush the session or not, default is false</dd>
+		
+		<dd><code>transactional</code> - Use transactions or not, it defaults to true</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="evict()"><!-- --></a>
+	<h3>evict</h3>
+	
+	<kbd>public any <strong>evict</strong>([any entity])</kbd>
+	
+	<br><br>
+
+	
+		<p>Evict entity objects from session, if no arguments, then the entity evicts itself</p>
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/orm/hibernate/VirtualEntityService.html#evict()">evict</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/orm/hibernate/VirtualEntityService.html" title="class in coldbox.system.orm.hibernate">VirtualEntityService</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>entity</code> - The argument can be one persistence entity or an array of entities</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getValidationResults()"><!-- --></a>
+	<h3>getValidationResults</h3>
+	
+	<kbd>public <a href="../../../../coldbox/system/validation/result/IValidationResult.html" title="interface in coldbox.system.validation.result">IValidationResult</a> <strong>getValidationResults</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the validation results object.  This will be an empty validation object if isValid() has not being called yet.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="isValid()"><!-- --></a>
+	<h3>isValid</h3>
+	
+	<kbd>public boolean <strong>isValid</strong>([string fields='*'], [any constraints=''], [string locale=''], [string excludeFields=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>Validate the ActiveEntity with the coded constraints -> this.constraints, or passed in shared or implicit constraints The entity must have been populated with data before the validation</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>fields</code> - One or more fields to validate on, by default it validates all fields in the constraints. This can be a simple list or an array.</dd>
+		
+		<dd><code>constraints</code> - An optional shared constraints name or an actual structure of constraints to validate on.</dd>
+		
+		<dd><code>locale</code> - An optional locale to use for i18n messages</dd>
+		
+		<dd><code>excludeFields</code> - An optional list of fields to exclude from the validation.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="merge()"><!-- --></a>
+	<h3>merge</h3>
+	
+	<kbd>public any <strong>merge</strong>([any entity])</kbd>
+	
+	<br><br>
+
+	
+		<p>Merge an entity or array of entities back into the session</p>
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#merge()">merge</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/orm/hibernate/BaseORMService.html" title="class in coldbox.system.orm.hibernate">BaseORMService</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>entity</code> - The argument can be one persistence entity or an array of entities</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="populate()"><!-- --></a>
+	<h3>populate</h3>
+	
+	<kbd>public any <strong>populate</strong>([any target='[runtime expression]'], struct memento, [string scope=''], [boolean trustedSetter='false'], [string include=''], [string exclude=''], [boolean ignoreEmpty='false'], [string nullEmptyInclude=''], [string nullEmptyExclude=''], [boolean composeRelationships='true'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Simple map to property population for entities</p>
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#populate()">populate</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/orm/hibernate/BaseORMService.html" title="class in coldbox.system.orm.hibernate">BaseORMService</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>target</code></dd>
+		
+		<dd><code>memento</code></dd>
+		
+		<dd><code>scope</code> - Use scope injection instead of setter injection, no need of setters, just tell us what scope to inject to</dd>
+		
+		<dd><code>trustedSetter</code> - Do not check if the setter exists, just call it, great for usage with onMissingMethod() and virtual properties</dd>
+		
+		<dd><code>include</code> - A list of keys to include in the population ONLY</dd>
+		
+		<dd><code>exclude</code> - A list of keys to exclude from the population</dd>
+		
+		<dd><code>ignoreEmpty</code></dd>
+		
+		<dd><code>nullEmptyInclude</code></dd>
+		
+		<dd><code>nullEmptyExclude</code></dd>
+		
+		<dd><code>composeRelationships</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="populateFromJSON()"><!-- --></a>
+	<h3>populateFromJSON</h3>
+	
+	<kbd>public any <strong>populateFromJSON</strong>([any target='[runtime expression]'], string JSONString, [string scope=''], [boolean trustedSetter='false'], [string include=''], [string exclude=''], [boolean ignoreEmpty='false'], [string nullEmptyInclude=''], [string nullEmptyExclude=''], [boolean composeRelationships='true'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Populate from JSON, for argument definitions look at the populate method</p>
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#populateFromJSON()">populateFromJSON</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/orm/hibernate/BaseORMService.html" title="class in coldbox.system.orm.hibernate">BaseORMService</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>target</code></dd>
+		
+		<dd><code>JSONString</code></dd>
+		
+		<dd><code>scope</code> - Use scope injection instead of setter injection, no need of setters, just tell us what scope to inject to</dd>
+		
+		<dd><code>trustedSetter</code> - Do not check if the setter exists, just call it, great for usage with onMissingMethod() and virtual properties</dd>
+		
+		<dd><code>include</code> - A list of keys to include in the population ONLY</dd>
+		
+		<dd><code>exclude</code> - A list of keys to exclude from the population</dd>
+		
+		<dd><code>ignoreEmpty</code></dd>
+		
+		<dd><code>nullEmptyInclude</code></dd>
+		
+		<dd><code>nullEmptyExclude</code></dd>
+		
+		<dd><code>composeRelationships</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="populateFromQuery()"><!-- --></a>
+	<h3>populateFromQuery</h3>
+	
+	<kbd>public any <strong>populateFromQuery</strong>([any target='[runtime expression]'], any qry, [numeric rowNumber='1'], [string scope=''], [boolean trustedSetter='false'], [string include=''], [string exclude=''], [boolean ignoreEmpty='false'], [string nullEmptyInclude=''], [string nullEmptyExclude=''], [boolean composeRelationships='true'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Populate from Query, for argument definitions look at the populate method. <br/></p>
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#populateFromQuery()">populateFromQuery</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/orm/hibernate/BaseORMService.html" title="class in coldbox.system.orm.hibernate">BaseORMService</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>target</code></dd>
+		
+		<dd><code>qry</code> - The query to use for population</dd>
+		
+		<dd><code>rowNumber</code></dd>
+		
+		<dd><code>scope</code> - Use scope injection instead of setter injection, no need of setters, just tell us what scope to inject to</dd>
+		
+		<dd><code>trustedSetter</code> - Do not check if the setter exists, just call it, great for usage with onMissingMethod() and virtual properties</dd>
+		
+		<dd><code>include</code> - A list of keys to include in the population ONLY</dd>
+		
+		<dd><code>exclude</code> - A list of keys to exclude from the population</dd>
+		
+		<dd><code>ignoreEmpty</code></dd>
+		
+		<dd><code>nullEmptyInclude</code></dd>
+		
+		<dd><code>nullEmptyExclude</code></dd>
+		
+		<dd><code>composeRelationships</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="populateFromXML()"><!-- --></a>
+	<h3>populateFromXML</h3>
+	
+	<kbd>public any <strong>populateFromXML</strong>([any target='[runtime expression]'], string xml, [string root=''], [string scope=''], [boolean trustedSetter='false'], [string include=''], [string exclude=''], [boolean ignoreEmpty='false'], [string nullEmptyInclude=''], [string nullEmptyExclude=''], [boolean composeRelationships='true'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Populate from XML, for argument definitions look at the populate method. <br/></p>
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#populateFromXML()">populateFromXML</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/orm/hibernate/BaseORMService.html" title="class in coldbox.system.orm.hibernate">BaseORMService</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>target</code></dd>
+		
+		<dd><code>xml</code></dd>
+		
+		<dd><code>root</code> - The XML root element to start from</dd>
+		
+		<dd><code>scope</code> - Use scope injection instead of setter injection, no need of setters, just tell us what scope to inject to</dd>
+		
+		<dd><code>trustedSetter</code> - Do not check if the setter exists, just call it, great for usage with onMissingMethod() and virtual properties</dd>
+		
+		<dd><code>include</code> - A list of keys to include in the population ONLY</dd>
+		
+		<dd><code>exclude</code> - A list of keys to exclude from the population</dd>
+		
+		<dd><code>ignoreEmpty</code></dd>
+		
+		<dd><code>nullEmptyInclude</code></dd>
+		
+		<dd><code>nullEmptyExclude</code></dd>
+		
+		<dd><code>composeRelationships</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="populateWithPrefix()"><!-- --></a>
+	<h3>populateWithPrefix</h3>
+	
+	<kbd>public any <strong>populateWithPrefix</strong>([any target='[runtime expression]'], struct memento, [string scope=''], [boolean trustedSetter='false'], [string include=''], [string exclude=''], [boolean ignoreEmpty='false'], [string nullEmptyInclude=''], [string nullEmptyExclude=''], [boolean composeRelationships='true'], string prefix)</kbd>
+	
+	<br><br>
+
+	
+		<p>Simple map to property population for entities with structure key prefixes</p>
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#populateWithPrefix()">populateWithPrefix</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/orm/hibernate/BaseORMService.html" title="class in coldbox.system.orm.hibernate">BaseORMService</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>target</code></dd>
+		
+		<dd><code>memento</code></dd>
+		
+		<dd><code>scope</code> - Use scope injection instead of setter injection, no need of setters, just tell us what scope to inject to</dd>
+		
+		<dd><code>trustedSetter</code> - Do not check if the setter exists, just call it, great for usage with onMissingMethod() and virtual properties</dd>
+		
+		<dd><code>include</code> - A list of keys to include in the population ONLY</dd>
+		
+		<dd><code>exclude</code> - A list of keys to exclude from the population</dd>
+		
+		<dd><code>ignoreEmpty</code></dd>
+		
+		<dd><code>nullEmptyInclude</code></dd>
+		
+		<dd><code>nullEmptyExclude</code></dd>
+		
+		<dd><code>composeRelationships</code></dd>
+		
+		<dd><code>prefix</code> - The prefix used to filter, Example: 'user' would apply to the following formfield: 'user_id' and 'user_name' but not 'address_id</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="refresh()"><!-- --></a>
+	<h3>refresh</h3>
+	
+	<kbd>public any <strong>refresh</strong>([any entity])</kbd>
+	
+	<br><br>
+
+	
+		<p>Refresh the state of the entity</p>
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#refresh()">refresh</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/orm/hibernate/BaseORMService.html" title="class in coldbox.system.orm.hibernate">BaseORMService</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>entity</code> - The argument can be one persistence entity or an array of entities</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="save()"><!-- --></a>
+	<h3>save</h3>
+	
+	<kbd>public any <strong>save</strong>([any entity], [boolean forceInsert='false'], [boolean flush='false'], [boolean transactional='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Save an entity using hibernate transactions or not. You can optionally flush the session also</p>
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/orm/hibernate/BaseORMService.html#save()">save</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/orm/hibernate/BaseORMService.html" title="class in coldbox.system.orm.hibernate">BaseORMService</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>entity</code> - You can optionally pass in an entity, else this active entity is saved</dd>
+		
+		<dd><code>forceInsert</code> - Force insert on the save</dd>
+		
+		<dd><code>flush</code> - Flush the session or not, default is false</dd>
+		
+		<dd><code>transactional</code> - Use transactions or not, it defaults to true</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>

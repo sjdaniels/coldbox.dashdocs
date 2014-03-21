@@ -1,0 +1,1704 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CacheBoxProvider</title>
+	<meta name="keywords" content="coldbox.system.cache.providers.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../../highlighter/styles/shCoreDefault.css">
+	<script src="../../../../highlighter/scripts/shCore.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../../../index.html?coldbox/system/cache/providers/CacheBoxProvider.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system.cache.providers"><span class="label label-success">coldbox.system.cache.providers</span></a>
+</div>
+
+<h2>
+
+Class
+CacheBoxProvider</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../../../resources/inherit.gif" alt="extended by "><a href="../../../../coldbox/system/cache/AbstractCacheBoxProvider.html" title="class in coldbox.system.cache">coldbox.system.cache.AbstractCacheBoxProvider</a>
+            <img src="../../../../resources/inherit.gif" alt="extended by ">coldbox.system.cache.providers.CacheBoxProvider
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				serializable 
+				: false 
+			</li>
+			&nbsp;
+			
+			<li class="label label-danger label-annotations">
+				output 
+				: false 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><strong>All Implemented Interfaces:</strong></div>
+  			<div class="panel-body">
+			<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a> 
+			</div>
+		</div>
+	
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Direct Known Subclasses:</strong></div>
+  	<div class="panel-body">
+	
+		<a href="../../../..//coldbox/system/cache/providers/CacheBoxColdBoxProvider.html" title="class in coldbox.system.cache.providers">CacheBoxColdBoxProvider</a>
+	
+	</div>
+</div>
+
+<div id="class-hint">
+	
+	<p class="lead">The coolest standalone CacheBox Provider ever built</p>
+</div>
+
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="CacheBoxProvider.html#init()">init</A></strong>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Constructor.
+				
+			</td>
+		</tr>
+	</table>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#_reap()">_reap</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reap the cache, clear out everything that is dead.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#announceExpiration()">announceExpiration</A></strong>(any objectKey)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Announce an Expiration.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;boolean&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#clear()">clear</A></strong>(any objectKey)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clears an object from the cache by using its cache key.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#clearAll()">clearAll</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clear all the cache elements from the cache.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#clearByKeySnippet()">clearByKeySnippet</A></strong>(any keySnippet, [any&lt;boolean&gt; regex='false'], [any&lt;boolean&gt; async='false'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clears keys using the passed in object key snippet.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;boolean&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#clearKey()">clearKey</A></strong>(any objectKey)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deprecated, please use clear().
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;struct&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#clearMulti()">clearMulti</A></strong>(any keys, [any prefix=''])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clears objects from the cache by using its cache key.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;boolean&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#clearQuiet()">clearQuiet</A></strong>(any objectKey)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clears an object from the cache by using its cache key.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#configure()">configure</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configures the cache for operation, sets the configuration object, sets and creates the eviction policy and clears the stats.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#expireAll()">expireAll</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expire All Objects.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#expireByKeySnippet()">expireByKeySnippet</A></strong>(any keySnippet, [any&lt;boolean&gt; regex='false'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Same as expireKey but can touch multiple objects depending on the keysnippet that is sent in.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#expireObject()">expireObject</A></strong>(any objectKey)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expire an Object.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#get()">get</A></strong>(any objectKey)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get an object from cache.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;struct&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#getCachedObjectMetadata()">getCachedObjectMetadata</A></strong>(any objectKey)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the cached object's metadata structure.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;struct&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#getCachedObjectMetadataMulti()">getCachedObjectMetadataMulti</A></strong>(any keys, [any prefix=''])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the cached object's metadata structure.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#getJavaRuntime()">getJavaRuntime</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the java runtime object for reporting purposes.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;array&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#getKeys()">getKeys</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a listing of all the keys of the objects in the cache.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;struct&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#getMulti()">getMulti</A></strong>(any keys, [any prefix=''])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The returned value is a structure of name-value pairs of all the keys that where found.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;<a href="../../../../coldbox/system/cache/store/IObjectStore.html" title="interface in coldbox.system.cache.store">IObjectStore</a>&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#getObjectStore()">getObjectStore</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If the cache provider implements it, this returns the cache's object store as type: coldbox.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#getOrSet()">getOrSet</A></strong>(any objectKey, any produce, [any timeout=''], [any lastAccessTimeout=''], [any&lt;struct&gt; extra='[runtime expression]'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tries to get an object from the cache, if not found, it calls the 'produce' closure to produce the data and cache it.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#getQuiet()">getQuiet</A></strong>(any objectKey)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get an object from cache.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;numeric&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#getSize()">getSize</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the cache's size in items.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;struct&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#getStoreMetadataKeyMap()">getStoreMetadataKeyMap</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a key lookup structure where cachebox can build the report on.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;struct&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#getStoreMetadataReport()">getStoreMetadataReport</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a structure of all the keys in the cache with their appropriate metadata structures.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;boolean&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#isExpired()">isExpired</A></strong>(any objectKey)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Has the object key expired in the cache.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#locateEvictionPolicy()">locateEvictionPolicy</A></strong>([string policy])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Locate the eviction policy.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#locateObjectStore()">locateObjectStore</A></strong>([string store])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Locate the object store.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;boolean&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#lookup()">lookup</A></strong>(any objectKey)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check if an object is in cache, if not found it records a miss.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;struct&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#lookupMulti()">lookupMulti</A></strong>(any keys, [any prefix=''])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The returned value is a structure of name-value pairs of all the keys that where found or not.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;boolean&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#lookupQuiet()">lookupQuiet</A></strong>(any objectKey)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check if an object is in cache quietly, advising nobody!.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#reap()">reap</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reap the cache, clear out everything that is dead.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;boolean&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#set()">set</A></strong>(any objectKey, any object, [any timeout=''], [any lastAccessTimeout=''], [any&lt;struct&gt; extra])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets an object in cache.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#setMulti()">setMulti</A></strong>(any&lt;struct&gt; mapping, [any timeout=''], [any lastAccessTimeout=''], [any prefix=''])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets Multiple Ojects in the cache.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;boolean&gt;</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#setQuiet()">setQuiet</A></strong>(any objectKey, any object, [any timeout=''], [any lastAccessTimeout=''], [any&lt;struct&gt; extra])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sets an object in cache.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#shutdown()">shutdown</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shutdown command issued when CacheBox is going through shutdown phase.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;boolean</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#thresholdChecks()">thresholdChecks</A></strong>(any threshold='')
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JVM Threshold checks.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="CacheBoxProvider.html#validateConfiguration()">validateConfiguration</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Validate incoming set configuration data.
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_coldbox.system.cache.AbstractCacheBoxProvider"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd><a href="../../../../coldbox/system/cache/AbstractCacheBoxProvider.html" title="class in coldbox.system.cache">coldbox.system.cache.AbstractCacheBoxProvider</a></kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="../../../..//coldbox/system/cache/AbstractCacheBoxProvider.html#clearStatistics()">clearStatistics</a>, <a href="../../../..//coldbox/system/cache/AbstractCacheBoxProvider.html#getCacheFactory()">getCacheFactory</a>, <a href="../../../..//coldbox/system/cache/AbstractCacheBoxProvider.html#getCacheID()">getCacheID</a>, <a href="../../../..//coldbox/system/cache/AbstractCacheBoxProvider.html#getConfiguration()">getConfiguration</a>, <a href="../../../..//coldbox/system/cache/AbstractCacheBoxProvider.html#getEventManager()">getEventManager</a>, <a href="../../../..//coldbox/system/cache/AbstractCacheBoxProvider.html#getMemento()">getMemento</a>, <a href="../../../..//coldbox/system/cache/AbstractCacheBoxProvider.html#getName()">getName</a>, <a href="../../../..//coldbox/system/cache/AbstractCacheBoxProvider.html#getStats()">getStats</a>, <a href="../../../..//coldbox/system/cache/AbstractCacheBoxProvider.html#getUtil()">getUtil</a>, <a href="../../../..//coldbox/system/cache/AbstractCacheBoxProvider.html#isEnabled()">isEnabled</a>, <a href="../../../..//coldbox/system/cache/AbstractCacheBoxProvider.html#isReportingEnabled()">isReportingEnabled</a>, <a href="../../../..//coldbox/system/cache/AbstractCacheBoxProvider.html#setCacheFactory()">setCacheFactory</a>, <a href="../../../..//coldbox/system/cache/AbstractCacheBoxProvider.html#setConfiguration()">setConfiguration</a>, <a href="../../../..//coldbox/system/cache/AbstractCacheBoxProvider.html#setEventManager()">setEventManager</a>, <a href="../../../..//coldbox/system/cache/AbstractCacheBoxProvider.html#setName()">setName</a>, <a href="../../../..//coldbox/system/cache/AbstractCacheBoxProvider.html#statusCheck()">statusCheck</a> 
+			</td>
+		</tr>
+	</table>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>()</kbd>
+
+	<br><br>
+
+	
+	<p>Constructor</p>
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="_reap()"><!-- --></a>
+	<h3>_reap</h3>
+	
+	<kbd>public void <strong>_reap</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Reap the cache, clear out everything that is dead.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="announceExpiration()"><!-- --></a>
+	<h3>announceExpiration</h3>
+	
+	<kbd>private void <strong>announceExpiration</strong>(any objectKey)</kbd>
+	
+	<br><br>
+
+	
+		<p>Announce an Expiration</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>objectKey</code> - The object cache key</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="clear()"><!-- --></a>
+	<h3>clear</h3>
+	
+	<kbd>public any&lt;boolean&gt; <strong>clear</strong>(any objectKey)</kbd>
+	
+	<br><br>
+
+	
+		<p>Clears an object from the cache by using its cache key. Returns false if object was not removed or did not exist anymore</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#clear()">clear</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>objectKey</code> - The object cache key</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="clearAll()"><!-- --></a>
+	<h3>clearAll</h3>
+	
+	<kbd>public void <strong>clearAll</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Clear all the cache elements from the cache</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#clearAll()">clearAll</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+
+	</dl>
+	<hr>
+
+	<a name="clearByKeySnippet()"><!-- --></a>
+	<h3>clearByKeySnippet</h3>
+	
+	<kbd>public void <strong>clearByKeySnippet</strong>(any keySnippet, [any&lt;boolean&gt; regex='false'], [any&lt;boolean&gt; async='false'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Clears keys using the passed in object key snippet</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>keySnippet</code> - the cache key snippet to use</dd>
+		
+		<dd><code>regex</code> - Use regex or not</dd>
+		
+		<dd><code>async</code> - Run command asynchronously or not</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="clearKey()"><!-- --></a>
+	<h3>clearKey</h3>
+	
+	<kbd>public any&lt;boolean&gt; <strong>clearKey</strong>(any objectKey)</kbd>
+	
+	<br><br>
+
+	
+		<p>Deprecated, please use clear()</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>objectKey</code> - The object cache key</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="clearMulti()"><!-- --></a>
+	<h3>clearMulti</h3>
+	
+	<kbd>public any&lt;struct&gt; <strong>clearMulti</strong>(any keys, [any prefix=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>Clears objects from the cache by using its cache key. The returned value is a structure of name-value pairs of all the keys that where removed from the operation.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>keys</code> - The comma-delimmitted list or array of keys to remove.</dd>
+		
+		<dd><code>prefix</code> - A prefix to prepend to the keys</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="clearQuiet()"><!-- --></a>
+	<h3>clearQuiet</h3>
+	
+	<kbd>public any&lt;boolean&gt; <strong>clearQuiet</strong>(any objectKey)</kbd>
+	
+	<br><br>
+
+	
+		<p>Clears an object from the cache by using its cache key. Returns false if object was not removed or did not exist anymore</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#clearQuiet()">clearQuiet</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>objectKey</code> - The object cache key</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="configure()"><!-- --></a>
+	<h3>configure</h3>
+	
+	<kbd>public void <strong>configure</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Configures the cache for operation, sets the configuration object, sets and creates the eviction policy and clears the stats. If this method is not called, the cache is useless.</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#configure()">configure</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+
+	</dl>
+	<hr>
+
+	<a name="expireAll()"><!-- --></a>
+	<h3>expireAll</h3>
+	
+	<kbd>public void <strong>expireAll</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Expire All Objects. Use this instead of clear() from within handlers or any cached object, this sets the metadata for the objects to expire in the next request. Note that this is not an inmmediate expiration. Clear should only be used from outside a cached object</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#expireAll()">expireAll</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+
+	</dl>
+	<hr>
+
+	<a name="expireByKeySnippet()"><!-- --></a>
+	<h3>expireByKeySnippet</h3>
+	
+	<kbd>public void <strong>expireByKeySnippet</strong>(any keySnippet, [any&lt;boolean&gt; regex='false'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Same as expireKey but can touch multiple objects depending on the keysnippet that is sent in.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>keySnippet</code> - The key snippet to use</dd>
+		
+		<dd><code>regex</code> - Use regex or not</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="expireObject()"><!-- --></a>
+	<h3>expireObject</h3>
+	
+	<kbd>public void <strong>expireObject</strong>(any objectKey)</kbd>
+	
+	<br><br>
+
+	
+		<p>Expire an Object. Use this instead of clearKey() from within handlers or any cached object, this sets the metadata for the objects to expire in the next request. Note that this is not an inmmediate expiration. Clear should only be used from outside a cached object</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#expireObject()">expireObject</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>objectKey</code> - The object cache key</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="get()"><!-- --></a>
+	<h3>get</h3>
+	
+	<kbd>public any <strong>get</strong>(any objectKey)</kbd>
+	
+	<br><br>
+
+	
+		<p>Get an object from cache. If object does not exist it returns null</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#get()">get</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>objectKey</code> - The key of the object to lookup.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getCachedObjectMetadata()"><!-- --></a>
+	<h3>getCachedObjectMetadata</h3>
+	
+	<kbd>public any&lt;struct&gt; <strong>getCachedObjectMetadata</strong>(any objectKey)</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the cached object's metadata structure. If the object does not exist, it returns an empty structure.</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#getCachedObjectMetadata()">getCachedObjectMetadata</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>objectKey</code> - The key of the object to lookup its metadata</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getCachedObjectMetadataMulti()"><!-- --></a>
+	<h3>getCachedObjectMetadataMulti</h3>
+	
+	<kbd>public any&lt;struct&gt; <strong>getCachedObjectMetadataMulti</strong>(any keys, [any prefix=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the cached object's metadata structure. If the object does not exist, it returns an empty structure.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>keys</code> - The comma delimited list or array of keys to retrieve from the cache.</dd>
+		
+		<dd><code>prefix</code> - A prefix to prepend to the keys</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getJavaRuntime()"><!-- --></a>
+	<h3>getJavaRuntime</h3>
+	
+	<kbd>public any <strong>getJavaRuntime</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the java runtime object for reporting purposes.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getKeys()"><!-- --></a>
+	<h3>getKeys</h3>
+	
+	<kbd>public any&lt;array&gt; <strong>getKeys</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get a listing of all the keys of the objects in the cache</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#getKeys()">getKeys</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+
+	</dl>
+	<hr>
+
+	<a name="getMulti()"><!-- --></a>
+	<h3>getMulti</h3>
+	
+	<kbd>public any&lt;struct&gt; <strong>getMulti</strong>(any keys, [any prefix=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>The returned value is a structure of name-value pairs of all the keys that where found. Not found values will not be returned</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>keys</code> - The comma delimited list or array of keys to retrieve from the cache.</dd>
+		
+		<dd><code>prefix</code> - A prefix to prepend to the keys</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getObjectStore()"><!-- --></a>
+	<h3>getObjectStore</h3>
+	
+	<kbd>public any&lt;<a href="../../../../coldbox/system/cache/store/IObjectStore.html" title="interface in coldbox.system.cache.store">IObjectStore</a>&gt; <strong>getObjectStore</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>If the cache provider implements it, this returns the cache's object store as type: coldbox.system.cache.store.IObjectStore</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#getObjectStore()">getObjectStore</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+
+	</dl>
+	<hr>
+
+	<a name="getOrSet()"><!-- --></a>
+	<h3>getOrSet</h3>
+	
+	<kbd>public any <strong>getOrSet</strong>(any objectKey, any produce, [any timeout=''], [any lastAccessTimeout=''], [any&lt;struct&gt; extra='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Tries to get an object from the cache, if not found, it calls the 'produce' closure to produce the data and cache it.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>objectKey</code> - The object cache key</dd>
+		
+		<dd><code>produce</code> - The closure/udf to produce the data if not found</dd>
+		
+		<dd><code>timeout</code> - The timeout to use on the object (if any, provider specific)</dd>
+		
+		<dd><code>lastAccessTimeout</code> - The idle timeout to use on the object (if any, provider specific)</dd>
+		
+		<dd><code>extra</code> - A map of name-value pairs to use as extra arguments to pass to a providers set operation</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getQuiet()"><!-- --></a>
+	<h3>getQuiet</h3>
+	
+	<kbd>public any <strong>getQuiet</strong>(any objectKey)</kbd>
+	
+	<br><br>
+
+	
+		<p>Get an object from cache. If object does not exist it returns null</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#getQuiet()">getQuiet</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>objectKey</code> - The key of the object to lookup.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getSize()"><!-- --></a>
+	<h3>getSize</h3>
+	
+	<kbd>public any&lt;numeric&gt; <strong>getSize</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the cache's size in items</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#getSize()">getSize</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+
+	</dl>
+	<hr>
+
+	<a name="getStoreMetadataKeyMap()"><!-- --></a>
+	<h3>getStoreMetadataKeyMap</h3>
+	
+	<kbd>public any&lt;struct&gt; <strong>getStoreMetadataKeyMap</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get a key lookup structure where cachebox can build the report on. Ex: [timeout=timeout,lastAccessTimeout=idleTimeout].  It is a way for the visualizer to construct the columns correctly on the reports</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#getStoreMetadataKeyMap()">getStoreMetadataKeyMap</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+
+	</dl>
+	<hr>
+
+	<a name="getStoreMetadataReport()"><!-- --></a>
+	<h3>getStoreMetadataReport</h3>
+	
+	<kbd>public any&lt;struct&gt; <strong>getStoreMetadataReport</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get a structure of all the keys in the cache with their appropriate metadata structures. This is used to build the reporting.[keyX->[metadataStructure]]</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#getStoreMetadataReport()">getStoreMetadataReport</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+
+	</dl>
+	<hr>
+
+	<a name="isExpired()"><!-- --></a>
+	<h3>isExpired</h3>
+	
+	<kbd>public any&lt;boolean&gt; <strong>isExpired</strong>(any objectKey)</kbd>
+	
+	<br><br>
+
+	
+		<p>Has the object key expired in the cache</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#isExpired()">isExpired</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>objectKey</code> - The object key</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="locateEvictionPolicy()"><!-- --></a>
+	<h3>locateEvictionPolicy</h3>
+	
+	<kbd>private any <strong>locateEvictionPolicy</strong>([string policy])</kbd>
+	
+	<br><br>
+
+	
+		<p>Locate the eviction policy</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>policy</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="locateObjectStore()"><!-- --></a>
+	<h3>locateObjectStore</h3>
+	
+	<kbd>private any <strong>locateObjectStore</strong>([string store])</kbd>
+	
+	<br><br>
+
+	
+		<p>Locate the object store</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>store</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="lookup()"><!-- --></a>
+	<h3>lookup</h3>
+	
+	<kbd>public any&lt;boolean&gt; <strong>lookup</strong>(any objectKey)</kbd>
+	
+	<br><br>
+
+	
+		<p>Check if an object is in cache, if not found it records a miss.</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#lookup()">lookup</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>objectKey</code> - The key of the object to lookup.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="lookupMulti()"><!-- --></a>
+	<h3>lookupMulti</h3>
+	
+	<kbd>public any&lt;struct&gt; <strong>lookupMulti</strong>(any keys, [any prefix=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>The returned value is a structure of name-value pairs of all the keys that where found or not.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>keys</code> - The comma delimited list or an array of keys to lookup in the cache.</dd>
+		
+		<dd><code>prefix</code> - A prefix to prepend to the keys</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="lookupQuiet()"><!-- --></a>
+	<h3>lookupQuiet</h3>
+	
+	<kbd>public any&lt;boolean&gt; <strong>lookupQuiet</strong>(any objectKey)</kbd>
+	
+	<br><br>
+
+	
+		<p>Check if an object is in cache quietly, advising nobody!</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#lookupQuiet()">lookupQuiet</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>objectKey</code> - The key of the object to lookup.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="reap()"><!-- --></a>
+	<h3>reap</h3>
+	
+	<kbd>public void <strong>reap</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Reap the cache, clear out everything that is dead.</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#reap()">reap</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+
+	</dl>
+	<hr>
+
+	<a name="set()"><!-- --></a>
+	<h3>set</h3>
+	
+	<kbd>public any&lt;boolean&gt; <strong>set</strong>(any objectKey, any object, [any timeout=''], [any lastAccessTimeout=''], [any&lt;struct&gt; extra])</kbd>
+	
+	<br><br>
+
+	
+		<p>sets an object in cache. Sets might be expensive. If the JVM threshold is used and it has been reached, the object won't be cached. If the pool is at maximum it will expire using its eviction policy and still cache the object. Cleanup will be done later.</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#set()">set</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>objectKey</code> - The object cache key</dd>
+		
+		<dd><code>object</code> - The object to cache</dd>
+		
+		<dd><code>timeout</code> - The timeout to use on the object (if any, provider specific)</dd>
+		
+		<dd><code>lastAccessTimeout</code> - The idle timeout to use on the object (if any, provider specific)</dd>
+		
+		<dd><code>extra</code> - A map of name-value pairs to use as extra arguments to pass to a providers set operation</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setMulti()"><!-- --></a>
+	<h3>setMulti</h3>
+	
+	<kbd>public void <strong>setMulti</strong>(any&lt;struct&gt; mapping, [any timeout=''], [any lastAccessTimeout=''], [any prefix=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>Sets Multiple Ojects in the cache. Sets might be expensive. If the JVM threshold is used and it has been reached, the object won't be cached. If the pool is at maximum it will expire using its eviction policy and still cache the object. Cleanup will be done later.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>mapping</code> - The structure of name value pairs to cache</dd>
+		
+		<dd><code>timeout</code> - The timeout to use on the object (if any, provider specific)</dd>
+		
+		<dd><code>lastAccessTimeout</code> - The idle timeout to use on the object (if any, provider specific)</dd>
+		
+		<dd><code>prefix</code> - A prefix to prepend to the keys</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setQuiet()"><!-- --></a>
+	<h3>setQuiet</h3>
+	
+	<kbd>public any&lt;boolean&gt; <strong>setQuiet</strong>(any objectKey, any object, [any timeout=''], [any lastAccessTimeout=''], [any&lt;struct&gt; extra])</kbd>
+	
+	<br><br>
+
+	
+		<p>sets an object in cache. Sets might be expensive. If the JVM threshold is used and it has been reached, the object won't be cached. If the pool is at maximum it will expire using its eviction policy and still cache the object. Cleanup will be done later.</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#setQuiet()">setQuiet</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>objectKey</code> - The object cache key</dd>
+		
+		<dd><code>object</code> - The object to cache</dd>
+		
+		<dd><code>timeout</code> - The timeout to use on the object (if any, provider specific)</dd>
+		
+		<dd><code>lastAccessTimeout</code> - The idle timeout to use on the object (if any, provider specific)</dd>
+		
+		<dd><code>extra</code> - A map of name-value pairs to use as extra arguments to pass to a providers set operation</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="shutdown()"><!-- --></a>
+	<h3>shutdown</h3>
+	
+	<kbd>public void <strong>shutdown</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Shutdown command issued when CacheBox is going through shutdown phase</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/ICacheProvider.html#shutdown()">shutdown</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a>
+				</code>
+				</dd>
+			</dl>
+		
+
+	</dl>
+	<hr>
+
+	<a name="thresholdChecks()"><!-- --></a>
+	<h3>thresholdChecks</h3>
+	
+	<kbd>private boolean <strong>thresholdChecks</strong>(any threshold='')</kbd>
+	
+	<br><br>
+
+	
+		<p>JVM Threshold checks</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>threshold</code> - The threshold to check</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="validateConfiguration()"><!-- --></a>
+	<h3>validateConfiguration</h3>
+	
+	<kbd>private void <strong>validateConfiguration</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Validate incoming set configuration data</p>
+	
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>

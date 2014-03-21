@@ -1,0 +1,1198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DebuggerConfig</title>
+	<meta name="keywords" content="coldbox.system.web.config.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../../highlighter/styles/shCoreDefault.css">
+	<script src="../../../../highlighter/scripts/shCore.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../../../index.html?coldbox/system/web/config/DebuggerConfig.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system.web.config"><span class="label label-success">coldbox.system.web.config</span></a>
+</div>
+
+<h2>
+
+Class
+DebuggerConfig</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../../../resources/inherit.gif" alt="extended by ">coldbox.system.web.config.DebuggerConfig
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				output 
+				: false 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+<div id="class-hint">
+	
+	<p class="lead">I hold the ColdBox debugger configuration data.</p>
+</div>
+
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="DebuggerConfig.html#init()">init</A></strong>()
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; constructor.
+				
+			</td>
+		</tr>
+	</table>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#getEnableDumpVar()">getEnableDumpVar</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get enableDumpVar.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#getExpandedCachePanel()">getExpandedCachePanel</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get expandedCachePanel.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#getExpandedInfoPanel()">getExpandedInfoPanel</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get expandedInfoPanel.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#getExpandedModulesPanel()">getExpandedModulesPanel</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#getExpandedRCPanel()">getExpandedRCPanel</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get expandedRCPanel.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#getExpandedTracerPanel()">getExpandedTracerPanel</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get expandedTracerPanel.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#getMaxPersistentRequestProfilers()">getMaxPersistentRequestProfilers</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get maxPersistentRequestProfilers.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#getMaxRCPanelQueryRows()">getMaxRCPanelQueryRows</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get maxRCPanelQueryRows.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>struct</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#getMemento()">getMemento</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get memento.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#getPersistentRequestProfiler()">getPersistentRequestProfiler</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get PersistentRequestProfiler.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#getShowCachePanel()">getShowCachePanel</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get showCachePanel.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#getShowInfoPanel()">getShowInfoPanel</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get showInfoPanel.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#getShowRCPanel()">getShowRCPanel</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get showRCPanel.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#getShowRCSnapshots()">getShowRCSnapshots</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#getShowTracerPanel()">getShowTracerPanel</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get showTracerPanel.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#getshowModulesPanel()">getshowModulesPanel</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#populate()">populate</A></strong>(struct memento)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Populate with a memento.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#setEnableDumpVar()">setEnableDumpVar</A></strong>(boolean enableDumpVar)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set enableDumpVar.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#setExpandedCachePanel()">setExpandedCachePanel</A></strong>(boolean expandedCachePanel)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set expandedCachePanel.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#setExpandedInfoPanel()">setExpandedInfoPanel</A></strong>(boolean expandedInfoPanel)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set expandedInfoPanel.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#setExpandedModulesPanel()">setExpandedModulesPanel</A></strong>(boolean expandedModulesPanel)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#setExpandedRCPanel()">setExpandedRCPanel</A></strong>(boolean expandedRCPanel)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set expandedRCPanel.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#setExpandedTracerPanel()">setExpandedTracerPanel</A></strong>(boolean expandedTracerPanel)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set expandedTracerPanel.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#setMaxPersistentRequestProfilers()">setMaxPersistentRequestProfilers</A></strong>(numeric maxPersistentRequestProfilers)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set maxPersistentRequestProfilers.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#setMaxRCPanelQueryRows()">setMaxRCPanelQueryRows</A></strong>(numeric maxRCPanelQueryRows)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set maxRCPanelQueryRows.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#setMemento()">setMemento</A></strong>(struct memento)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set memento.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#setPersistentRequestProfiler()">setPersistentRequestProfiler</A></strong>(boolean PersistentRequestProfiler)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set PersistentRequestProfiler.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#setShowCachePanel()">setShowCachePanel</A></strong>(boolean showCachePanel)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set showCachePanel.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#setShowInfoPanel()">setShowInfoPanel</A></strong>(boolean showInfoPanel)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set showInfoPanel.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#setShowRCPanel()">setShowRCPanel</A></strong>(boolean showRCPanel)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set showRCPanel.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#setShowRCSnapshots()">setShowRCSnapshots</A></strong>(boolean showRCSnapshots)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#setShowTracerPanel()">setShowTracerPanel</A></strong>(boolean showTracerPanel)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set showTracerPanel.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="DebuggerConfig.html#setshowModulesPanel()">setshowModulesPanel</A></strong>(boolean showModulesPanel)
+			<br>
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>()</kbd>
+
+	<br><br>
+
+	
+	<p>constructor</p>
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="getEnableDumpVar()"><!-- --></a>
+	<h3>getEnableDumpVar</h3>
+	
+	<kbd>public boolean <strong>getEnableDumpVar</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get enableDumpVar</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getExpandedCachePanel()"><!-- --></a>
+	<h3>getExpandedCachePanel</h3>
+	
+	<kbd>public boolean <strong>getExpandedCachePanel</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get expandedCachePanel</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getExpandedInfoPanel()"><!-- --></a>
+	<h3>getExpandedInfoPanel</h3>
+	
+	<kbd>public boolean <strong>getExpandedInfoPanel</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get expandedInfoPanel</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getExpandedModulesPanel()"><!-- --></a>
+	<h3>getExpandedModulesPanel</h3>
+	
+	<kbd>public boolean <strong>getExpandedModulesPanel</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="getExpandedRCPanel()"><!-- --></a>
+	<h3>getExpandedRCPanel</h3>
+	
+	<kbd>public boolean <strong>getExpandedRCPanel</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get expandedRCPanel</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getExpandedTracerPanel()"><!-- --></a>
+	<h3>getExpandedTracerPanel</h3>
+	
+	<kbd>public boolean <strong>getExpandedTracerPanel</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get expandedTracerPanel</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getMaxPersistentRequestProfilers()"><!-- --></a>
+	<h3>getMaxPersistentRequestProfilers</h3>
+	
+	<kbd>public numeric <strong>getMaxPersistentRequestProfilers</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get maxPersistentRequestProfilers</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getMaxRCPanelQueryRows()"><!-- --></a>
+	<h3>getMaxRCPanelQueryRows</h3>
+	
+	<kbd>public numeric <strong>getMaxRCPanelQueryRows</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get maxRCPanelQueryRows</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getMemento()"><!-- --></a>
+	<h3>getMemento</h3>
+	
+	<kbd>public struct <strong>getMemento</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get memento</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getPersistentRequestProfiler()"><!-- --></a>
+	<h3>getPersistentRequestProfiler</h3>
+	
+	<kbd>public boolean <strong>getPersistentRequestProfiler</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get PersistentRequestProfiler</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getShowCachePanel()"><!-- --></a>
+	<h3>getShowCachePanel</h3>
+	
+	<kbd>public boolean <strong>getShowCachePanel</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get showCachePanel</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getShowInfoPanel()"><!-- --></a>
+	<h3>getShowInfoPanel</h3>
+	
+	<kbd>public boolean <strong>getShowInfoPanel</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get showInfoPanel</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getShowRCPanel()"><!-- --></a>
+	<h3>getShowRCPanel</h3>
+	
+	<kbd>public boolean <strong>getShowRCPanel</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get showRCPanel</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getShowRCSnapshots()"><!-- --></a>
+	<h3>getShowRCSnapshots</h3>
+	
+	<kbd>public boolean <strong>getShowRCSnapshots</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="getShowTracerPanel()"><!-- --></a>
+	<h3>getShowTracerPanel</h3>
+	
+	<kbd>public boolean <strong>getShowTracerPanel</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get showTracerPanel</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getshowModulesPanel()"><!-- --></a>
+	<h3>getshowModulesPanel</h3>
+	
+	<kbd>public boolean <strong>getshowModulesPanel</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="populate()"><!-- --></a>
+	<h3>populate</h3>
+	
+	<kbd>public any <strong>populate</strong>(struct memento)</kbd>
+	
+	<br><br>
+
+	
+		<p>Populate with a memento</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>memento</code> - The structure to populate the object with.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setEnableDumpVar()"><!-- --></a>
+	<h3>setEnableDumpVar</h3>
+	
+	<kbd>public any <strong>setEnableDumpVar</strong>(boolean enableDumpVar)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set enableDumpVar</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>enableDumpVar</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setExpandedCachePanel()"><!-- --></a>
+	<h3>setExpandedCachePanel</h3>
+	
+	<kbd>public any <strong>setExpandedCachePanel</strong>(boolean expandedCachePanel)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set expandedCachePanel</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>expandedCachePanel</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setExpandedInfoPanel()"><!-- --></a>
+	<h3>setExpandedInfoPanel</h3>
+	
+	<kbd>public any <strong>setExpandedInfoPanel</strong>(boolean expandedInfoPanel)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set expandedInfoPanel</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>expandedInfoPanel</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setExpandedModulesPanel()"><!-- --></a>
+	<h3>setExpandedModulesPanel</h3>
+	
+	<kbd>public any <strong>setExpandedModulesPanel</strong>(boolean expandedModulesPanel)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>expandedModulesPanel</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setExpandedRCPanel()"><!-- --></a>
+	<h3>setExpandedRCPanel</h3>
+	
+	<kbd>public any <strong>setExpandedRCPanel</strong>(boolean expandedRCPanel)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set expandedRCPanel</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>expandedRCPanel</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setExpandedTracerPanel()"><!-- --></a>
+	<h3>setExpandedTracerPanel</h3>
+	
+	<kbd>public any <strong>setExpandedTracerPanel</strong>(boolean expandedTracerPanel)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set expandedTracerPanel</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>expandedTracerPanel</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setMaxPersistentRequestProfilers()"><!-- --></a>
+	<h3>setMaxPersistentRequestProfilers</h3>
+	
+	<kbd>public any <strong>setMaxPersistentRequestProfilers</strong>(numeric maxPersistentRequestProfilers)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set maxPersistentRequestProfilers</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>maxPersistentRequestProfilers</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setMaxRCPanelQueryRows()"><!-- --></a>
+	<h3>setMaxRCPanelQueryRows</h3>
+	
+	<kbd>public any <strong>setMaxRCPanelQueryRows</strong>(numeric maxRCPanelQueryRows)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set maxRCPanelQueryRows</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>maxRCPanelQueryRows</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setMemento()"><!-- --></a>
+	<h3>setMemento</h3>
+	
+	<kbd>public void <strong>setMemento</strong>(struct memento)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set memento</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>memento</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setPersistentRequestProfiler()"><!-- --></a>
+	<h3>setPersistentRequestProfiler</h3>
+	
+	<kbd>public any <strong>setPersistentRequestProfiler</strong>(boolean PersistentRequestProfiler)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set PersistentRequestProfiler</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>PersistentRequestProfiler</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setShowCachePanel()"><!-- --></a>
+	<h3>setShowCachePanel</h3>
+	
+	<kbd>public any <strong>setShowCachePanel</strong>(boolean showCachePanel)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set showCachePanel</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>showCachePanel</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setShowInfoPanel()"><!-- --></a>
+	<h3>setShowInfoPanel</h3>
+	
+	<kbd>public any <strong>setShowInfoPanel</strong>(boolean showInfoPanel)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set showInfoPanel</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>showInfoPanel</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setShowRCPanel()"><!-- --></a>
+	<h3>setShowRCPanel</h3>
+	
+	<kbd>public any <strong>setShowRCPanel</strong>(boolean showRCPanel)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set showRCPanel</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>showRCPanel</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setShowRCSnapshots()"><!-- --></a>
+	<h3>setShowRCSnapshots</h3>
+	
+	<kbd>public void <strong>setShowRCSnapshots</strong>(boolean showRCSnapshots)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>showRCSnapshots</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setShowTracerPanel()"><!-- --></a>
+	<h3>setShowTracerPanel</h3>
+	
+	<kbd>public any <strong>setShowTracerPanel</strong>(boolean showTracerPanel)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set showTracerPanel</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>showTracerPanel</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setshowModulesPanel()"><!-- --></a>
+	<h3>setshowModulesPanel</h3>
+	
+	<kbd>public any <strong>setshowModulesPanel</strong>(boolean showModulesPanel)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>showModulesPanel</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>

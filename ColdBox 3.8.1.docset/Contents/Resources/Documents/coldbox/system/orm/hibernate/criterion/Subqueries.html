@@ -1,0 +1,1360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Subqueries</title>
+	<meta name="keywords" content="coldbox.system.orm.hibernate.criterion.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../../../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../../../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../../../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../../../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../../../highlighter/styles/shCoreDefault.css">
+	<script src="../../../../../highlighter/scripts/shCore.js"></script>
+	<script src="../../../../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../../../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../../../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../../../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../../../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../../../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../../../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../../../../index.html?coldbox/system/orm/hibernate/criterion/Subqueries.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system.orm.hibernate.criterion"><span class="label label-success">coldbox.system.orm.hibernate.criterion</span></a>
+</div>
+
+<h2>
+
+Class
+Subqueries</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../../../../resources/inherit.gif" alt="extended by "><a href="../../../../../coldbox/system/orm/hibernate/criterion/Restrictions.html" title="class in coldbox.system.orm.hibernate.criterion">coldbox.system.orm.hibernate.criterion.Restrictions</a>
+            <img src="../../../../../resources/inherit.gif" alt="extended by ">coldbox.system.orm.hibernate.criterion.Subqueries
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				singleton 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+<div id="class-hint">
+	
+	<p class="lead">******************************************************************************* Copyright Since 2005 ColdBox Framework by Luis Majano and Ortus Solutions, Corp www.coldbox.org | www.luismajano.com | www.ortussolutions.com ******************************************************************************* Description : A proxy to hibernate org.hibernate.criterion.Subqueries object to allow for criteria based subquerying</p>
+</div>
+
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="Subqueries.html#init()">init</A></strong>(any criteria)
+				<br>
+				
+			</td>
+		</tr>
+	</table>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#exists()">exists</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#getNativeClass()">getNativeClass</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#notExists()">notExists</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#propertyEq()">propertyEq</A></strong>(string property)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#propertyEqAll()">propertyEqAll</A></strong>(string property)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#propertyGe()">propertyGe</A></strong>(string property)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#propertyGeAll()">propertyGeAll</A></strong>(string property)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#propertyGeSome()">propertyGeSome</A></strong>(string property)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#propertyGt()">propertyGt</A></strong>(string property)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#propertyGtAll()">propertyGtAll</A></strong>(string property)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#propertyGtSome()">propertyGtSome</A></strong>(string property)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#propertyIn()">propertyIn</A></strong>(string property)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#propertyLe()">propertyLe</A></strong>(string property)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#propertyLeAll()">propertyLeAll</A></strong>(string property)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#propertyLeSome()">propertyLeSome</A></strong>(string property)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#propertyLt()">propertyLt</A></strong>(string property)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#propertyLtAll()">propertyLtAll</A></strong>(string property)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#propertyLtSome()">propertyLtSome</A></strong>(string property)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#propertyNe()">propertyNe</A></strong>(string property)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#propertyNotIn()">propertyNotIn</A></strong>(string property)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#subEq()">subEq</A></strong>(any value)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#subEqAll()">subEqAll</A></strong>(any value)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#subGe()">subGe</A></strong>(any value)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#subGeAll()">subGeAll</A></strong>(any value)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#subGeSome()">subGeSome</A></strong>(any value)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#subGt()">subGt</A></strong>(any value)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#subGtAll()">subGtAll</A></strong>(any value)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#subGtSome()">subGtSome</A></strong>(any value)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#subIn()">subIn</A></strong>(any value)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#subLe()">subLe</A></strong>(any value)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#subLeAll()">subLeAll</A></strong>(any value)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#subLeSome()">subLeSome</A></strong>(any value)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#subLt()">subLt</A></strong>(any value)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#subLtAll()">subLtAll</A></strong>(any value)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#subLtSome()">subLtSome</A></strong>(any value)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#subNe()">subNe</A></strong>(any value)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Subqueries.html#subNotIn()">subNotIn</A></strong>(any value)
+			<br>
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_coldbox.system.orm.hibernate.criterion.Restrictions"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd><a href="../../../../../coldbox/system/orm/hibernate/criterion/Restrictions.html" title="class in coldbox.system.orm.hibernate.criterion">coldbox.system.orm.hibernate.criterion.Restrictions</a></kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#$and()">$and</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#$or()">$or</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#between()">between</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#conjunction()">conjunction</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#disjunction()">disjunction</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#eqProperty()">eqProperty</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#geProperty()">geProperty</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#gtProperty()">gtProperty</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#idEQ()">idEQ</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#ilike()">ilike</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#isEmpty()">isEmpty</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#isEq()">isEq</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#isFalse()">isFalse</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#isGe()">isGe</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#isGt()">isGt</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#isIn()">isIn</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#isNot()">isNot</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#isNotEmpty()">isNotEmpty</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#isNotNull()">isNotNull</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#isNull()">isNull</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#isTrue()">isTrue</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#isle()">isle</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#islt()">islt</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#leProperty()">leProperty</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#like()">like</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#ltProperty()">ltProperty</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#ne()">ne</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#neProperty()">neProperty</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#onMissingMethod()">onMissingMethod</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#sizeEq()">sizeEq</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#sizeGE()">sizeGE</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#sizeGT()">sizeGT</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#sizeLE()">sizeLE</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#sizeLT()">sizeLT</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#sizeNE()">sizeNE</a>, <a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#sqlRestriction()">sqlRestriction</a> 
+			</td>
+		</tr>
+	</table>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>(any criteria)</kbd>
+
+	<br><br>
+
+	
+	<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+			<dd><code>criteria</code></dd>
+		
+	</dl>
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="exists()"><!-- --></a>
+	<h3>exists</h3>
+	
+	<kbd>public any <strong>exists</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="getNativeClass()"><!-- --></a>
+	<h3>getNativeClass</h3>
+	
+	<kbd>public any <strong>getNativeClass</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../../..//coldbox/system/orm/hibernate/criterion/Restrictions.html#getNativeClass()">getNativeClass</a></code>
+			in class
+			<code>
+				<a href="../../../../../coldbox/system/orm/hibernate/criterion/Restrictions.html" title="class in coldbox.system.orm.hibernate.criterion">Restrictions</a>
+			</code>
+			</dd>
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="notExists()"><!-- --></a>
+	<h3>notExists</h3>
+	
+	<kbd>public any <strong>notExists</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="propertyEq()"><!-- --></a>
+	<h3>propertyEq</h3>
+	
+	<kbd>public any <strong>propertyEq</strong>(string property)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>property</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="propertyEqAll()"><!-- --></a>
+	<h3>propertyEqAll</h3>
+	
+	<kbd>public any <strong>propertyEqAll</strong>(string property)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>property</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="propertyGe()"><!-- --></a>
+	<h3>propertyGe</h3>
+	
+	<kbd>public any <strong>propertyGe</strong>(string property)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>property</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="propertyGeAll()"><!-- --></a>
+	<h3>propertyGeAll</h3>
+	
+	<kbd>public any <strong>propertyGeAll</strong>(string property)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>property</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="propertyGeSome()"><!-- --></a>
+	<h3>propertyGeSome</h3>
+	
+	<kbd>public any <strong>propertyGeSome</strong>(string property)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>property</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="propertyGt()"><!-- --></a>
+	<h3>propertyGt</h3>
+	
+	<kbd>public any <strong>propertyGt</strong>(string property)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>property</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="propertyGtAll()"><!-- --></a>
+	<h3>propertyGtAll</h3>
+	
+	<kbd>public any <strong>propertyGtAll</strong>(string property)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>property</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="propertyGtSome()"><!-- --></a>
+	<h3>propertyGtSome</h3>
+	
+	<kbd>public any <strong>propertyGtSome</strong>(string property)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>property</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="propertyIn()"><!-- --></a>
+	<h3>propertyIn</h3>
+	
+	<kbd>public any <strong>propertyIn</strong>(string property)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>property</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="propertyLe()"><!-- --></a>
+	<h3>propertyLe</h3>
+	
+	<kbd>public any <strong>propertyLe</strong>(string property)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>property</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="propertyLeAll()"><!-- --></a>
+	<h3>propertyLeAll</h3>
+	
+	<kbd>public any <strong>propertyLeAll</strong>(string property)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>property</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="propertyLeSome()"><!-- --></a>
+	<h3>propertyLeSome</h3>
+	
+	<kbd>public any <strong>propertyLeSome</strong>(string property)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>property</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="propertyLt()"><!-- --></a>
+	<h3>propertyLt</h3>
+	
+	<kbd>public any <strong>propertyLt</strong>(string property)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>property</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="propertyLtAll()"><!-- --></a>
+	<h3>propertyLtAll</h3>
+	
+	<kbd>public any <strong>propertyLtAll</strong>(string property)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>property</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="propertyLtSome()"><!-- --></a>
+	<h3>propertyLtSome</h3>
+	
+	<kbd>public any <strong>propertyLtSome</strong>(string property)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>property</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="propertyNe()"><!-- --></a>
+	<h3>propertyNe</h3>
+	
+	<kbd>public any <strong>propertyNe</strong>(string property)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>property</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="propertyNotIn()"><!-- --></a>
+	<h3>propertyNotIn</h3>
+	
+	<kbd>public any <strong>propertyNotIn</strong>(string property)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>property</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="subEq()"><!-- --></a>
+	<h3>subEq</h3>
+	
+	<kbd>public any <strong>subEq</strong>(any value)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>value</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="subEqAll()"><!-- --></a>
+	<h3>subEqAll</h3>
+	
+	<kbd>public any <strong>subEqAll</strong>(any value)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>value</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="subGe()"><!-- --></a>
+	<h3>subGe</h3>
+	
+	<kbd>public any <strong>subGe</strong>(any value)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>value</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="subGeAll()"><!-- --></a>
+	<h3>subGeAll</h3>
+	
+	<kbd>public any <strong>subGeAll</strong>(any value)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>value</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="subGeSome()"><!-- --></a>
+	<h3>subGeSome</h3>
+	
+	<kbd>public any <strong>subGeSome</strong>(any value)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>value</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="subGt()"><!-- --></a>
+	<h3>subGt</h3>
+	
+	<kbd>public any <strong>subGt</strong>(any value)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>value</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="subGtAll()"><!-- --></a>
+	<h3>subGtAll</h3>
+	
+	<kbd>public any <strong>subGtAll</strong>(any value)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>value</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="subGtSome()"><!-- --></a>
+	<h3>subGtSome</h3>
+	
+	<kbd>public any <strong>subGtSome</strong>(any value)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>value</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="subIn()"><!-- --></a>
+	<h3>subIn</h3>
+	
+	<kbd>public any <strong>subIn</strong>(any value)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>value</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="subLe()"><!-- --></a>
+	<h3>subLe</h3>
+	
+	<kbd>public any <strong>subLe</strong>(any value)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>value</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="subLeAll()"><!-- --></a>
+	<h3>subLeAll</h3>
+	
+	<kbd>public any <strong>subLeAll</strong>(any value)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>value</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="subLeSome()"><!-- --></a>
+	<h3>subLeSome</h3>
+	
+	<kbd>public any <strong>subLeSome</strong>(any value)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>value</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="subLt()"><!-- --></a>
+	<h3>subLt</h3>
+	
+	<kbd>public any <strong>subLt</strong>(any value)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>value</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="subLtAll()"><!-- --></a>
+	<h3>subLtAll</h3>
+	
+	<kbd>public any <strong>subLtAll</strong>(any value)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>value</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="subLtSome()"><!-- --></a>
+	<h3>subLtSome</h3>
+	
+	<kbd>public any <strong>subLtSome</strong>(any value)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>value</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="subNe()"><!-- --></a>
+	<h3>subNe</h3>
+	
+	<kbd>public any <strong>subNe</strong>(any value)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>value</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="subNotIn()"><!-- --></a>
+	<h3>subNotIn</h3>
+	
+	<kbd>public any <strong>subNotIn</strong>(any value)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>value</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>

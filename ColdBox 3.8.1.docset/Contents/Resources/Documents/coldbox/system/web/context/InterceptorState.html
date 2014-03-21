@@ -1,0 +1,803 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>InterceptorState</title>
+	<meta name="keywords" content="coldbox.system.web.context.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../../highlighter/styles/shCoreDefault.css">
+	<script src="../../../../highlighter/scripts/shCore.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../../../index.html?coldbox/system/web/context/InterceptorState.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system.web.context"><span class="label label-success">coldbox.system.web.context</span></a>
+</div>
+
+<h2>
+
+Class
+InterceptorState</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../../../resources/inherit.gif" alt="extended by "><a href="../../../../coldbox/system/core/events/EventPool.html" title="class in coldbox.system.core.events">coldbox.system.core.events.EventPool</a>
+            <img src="../../../../resources/inherit.gif" alt="extended by ">coldbox.system.web.context.InterceptorState
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				output 
+				: false 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+<div id="class-hint">
+	
+	<p class="lead">I am a pool of interceptors that can execute on a state or interception value.</p>
+</div>
+
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="InterceptorState.html#init()">init</A></strong>(any state, any logbox)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; constructor.
+				
+			</td>
+		</tr>
+	</table>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorState.html#exists()">exists</A></strong>(any interceptorKey)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Checks if the passed interceptor key already exists.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorState.html#getInterceptor()">getInterceptor</A></strong>(any interceptorKey)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get an interceptor from this state.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorState.html#getInterceptors()">getInterceptors</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the interceptors linked hash map.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorState.html#getMetadataMap()">getMetadataMap</A></strong>([any interceptorKey])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the state's metadata map for it's registered interecptors.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorState.html#invoker()">invoker</A></strong>(any interceptor, any event, any interceptData, any interceptorKey, any buffer)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Execute an interceptor execution point.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorState.html#invokerAsync()">invokerAsync</A></strong>(any event, any interceptData, any interceptorKey, [any asyncPriority='normal'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Execute an interceptor execution point asynchronously.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorState.html#isExecutable()">isExecutable</A></strong>(any target, any event, any targetKey)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Checks if an interceptor is executable or not.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorState.html#process()">process</A></strong>(any event, any interceptData, [boolean async='false'], [boolean asyncAll='false'], [boolean asyncAllJoin='true'], [string asyncPriority='NORMAL'], [numeric asyncJoinTimeout='0'], any buffer)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process this state's interceptors.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorState.html#processAsync()">processAsync</A></strong>([any event], [any interceptData], [any asyncPriority='NORMAL'], [any buffer])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process an execution asynchronously.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorState.html#processAsyncAll()">processAsyncAll</A></strong>([any event], [any interceptData], [any asyncAllJoin='true'], [any asyncPriority='NORMAL'], [any asyncJoinTimeout='0'], [any buffer])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process an execution asynchronously for each interceptor state.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorState.html#processSync()">processSync</A></strong>([any event], [any interceptData], [any buffer])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process an execution synchronously.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorState.html#register()">register</A></strong>(any interceptorKey, any interceptor, any interceptorMD)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register an interceptor class with this state.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="InterceptorState.html#unregister()">unregister</A></strong>(any interceptorKey)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Unregister an interceptor class from this state.
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_coldbox.system.core.events.EventPool"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd><a href="../../../../coldbox/system/core/events/EventPool.html" title="class in coldbox.system.core.events">coldbox.system.core.events.EventPool</a></kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="../../../..//coldbox/system/core/events/EventPool.html#getObject()">getObject</a>, <a href="../../../..//coldbox/system/core/events/EventPool.html#getPool()">getPool</a>, <a href="../../../..//coldbox/system/core/events/EventPool.html#getState()">getState</a>, <a href="../../../..//coldbox/system/core/events/EventPool.html#setState()">setState</a> 
+			</td>
+		</tr>
+	</table>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>(any state, any logbox)</kbd>
+
+	<br><br>
+
+	
+	<p>constructor</p>
+	
+	<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+			<dd><code>state</code> - The interception state I model</dd>
+		
+			<dd><code>logbox</code> - An instance of logbox</dd>
+		
+	</dl>
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="exists()"><!-- --></a>
+	<h3>exists</h3>
+	
+	<kbd>public boolean <strong>exists</strong>(any interceptorKey)</kbd>
+	
+	<br><br>
+
+	
+		<p>Checks if the passed interceptor key already exists</p>
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/core/events/EventPool.html#exists()">exists</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/core/events/EventPool.html" title="class in coldbox.system.core.events">EventPool</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>interceptorKey</code> - The interceptor key class to verify it exists</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getInterceptor()"><!-- --></a>
+	<h3>getInterceptor</h3>
+	
+	<kbd>public any <strong>getInterceptor</strong>(any interceptorKey)</kbd>
+	
+	<br><br>
+
+	
+		<p>Get an interceptor from this state. Else return a blank structure if not found</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>interceptorKey</code> - The interceptor key class to retrieve</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getInterceptors()"><!-- --></a>
+	<h3>getInterceptors</h3>
+	
+	<kbd>public any <strong>getInterceptors</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the interceptors linked hash map</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getMetadataMap()"><!-- --></a>
+	<h3>getMetadataMap</h3>
+	
+	<kbd>public any <strong>getMetadataMap</strong>([any interceptorKey])</kbd>
+	
+	<br><br>
+
+	
+		<p>Return the state's metadata map for it's registered interecptors</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>interceptorKey</code> - Pass a key and retrieve that interceptor's metadata map only</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="invoker()"><!-- --></a>
+	<h3>invoker</h3>
+	
+	<kbd>private any <strong>invoker</strong>(any interceptor, any event, any interceptData, any interceptorKey, any buffer)</kbd>
+	
+	<br><br>
+
+	
+		<p>Execute an interceptor execution point</p>
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/core/events/EventPool.html#invoker()">invoker</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/core/events/EventPool.html" title="class in coldbox.system.core.events">EventPool</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>interceptor</code> - The interceptor reference from cache</dd>
+		
+		<dd><code>event</code> - The event context</dd>
+		
+		<dd><code>interceptData</code> - A metadata structure used to pass intercepted information.</dd>
+		
+		<dd><code>interceptorKey</code> - The interceptor key to invoke</dd>
+		
+		<dd><code>buffer</code> - The request buffer object that can be used to produce output from interceptor chains</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="invokerAsync()"><!-- --></a>
+	<h3>invokerAsync</h3>
+	
+	<kbd>private any <strong>invokerAsync</strong>(any event, any interceptData, any interceptorKey, [any asyncPriority='normal'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Execute an interceptor execution point asynchronously</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>event</code> - The event context</dd>
+		
+		<dd><code>interceptData</code> - A metadata structure used to pass intercepted information.</dd>
+		
+		<dd><code>interceptorKey</code> - The interceptor key to invoke</dd>
+		
+		<dd><code>asyncPriority</code> - The thread priority for the execution</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="isExecutable()"><!-- --></a>
+	<h3>isExecutable</h3>
+	
+	<kbd>public any <strong>isExecutable</strong>(any target, any event, any targetKey)</kbd>
+	
+	<br><br>
+
+	
+		<p>Checks if an interceptor is executable or not. Boolean</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>target</code> - The target interceptor to check</dd>
+		
+		<dd><code>event</code> - The event context object.</dd>
+		
+		<dd><code>targetKey</code> - The target interceptor key to check.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="process()"><!-- --></a>
+	<h3>process</h3>
+	
+	<kbd>public any <strong>process</strong>(any event, any interceptData, [boolean async='false'], [boolean asyncAll='false'], [boolean asyncAllJoin='true'], [string asyncPriority='NORMAL'], [numeric asyncJoinTimeout='0'], any buffer)</kbd>
+	
+	<br><br>
+
+	
+		<p>Process this state's interceptors. If you use the asynchronous facilities, you will get a thread structure report as a result.</p>
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/core/events/EventPool.html#process()">process</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/core/events/EventPool.html" title="class in coldbox.system.core.events">EventPool</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>event</code> - The event context object.</dd>
+		
+		<dd><code>interceptData</code> - A data structure used to pass intercepted information.</dd>
+		
+		<dd><code>async</code> - If true, the entire interception chain will be ran in a separate thread.</dd>
+		
+		<dd><code>asyncAll</code> - If true, each interceptor in the interception chain will be ran in a separate thread and then joined together at the end.</dd>
+		
+		<dd><code>asyncAllJoin</code> - If true, each interceptor in the interception chain will be ran in a separate thread and joined together at the end by default.  If you set this flag to false then there will be no joining and waiting for the threads to finalize.</dd>
+		
+		<dd><code>asyncPriority</code> - The thread priority to be used. Either LOW, NORMAL or HIGH. The default value is NORMAL</dd>
+		
+		<dd><code>asyncJoinTimeout</code> - The timeout in milliseconds for the join thread to wait for interceptor threads to finish.  By default there is no timeout.</dd>
+		
+		<dd><code>buffer</code> - The request buffer object that can be used to produce output from interceptor chains</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="processAsync()"><!-- --></a>
+	<h3>processAsync</h3>
+	
+	<kbd>private any <strong>processAsync</strong>([any event], [any interceptData], [any asyncPriority='NORMAL'], [any buffer])</kbd>
+	
+	<br><br>
+
+	
+		<p>Process an execution asynchronously</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>event</code> - The event context object.</dd>
+		
+		<dd><code>interceptData</code> - A data structure used to pass intercepted information.</dd>
+		
+		<dd><code>asyncPriority</code> - The thread priority to be used. Either LOW, NORMAL or HIGH. The default value is NORMAL</dd>
+		
+		<dd><code>buffer</code> - The request buffer object that can be used to produce output from interceptor chains</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="processAsyncAll()"><!-- --></a>
+	<h3>processAsyncAll</h3>
+	
+	<kbd>private any <strong>processAsyncAll</strong>([any event], [any interceptData], [any asyncAllJoin='true'], [any asyncPriority='NORMAL'], [any asyncJoinTimeout='0'], [any buffer])</kbd>
+	
+	<br><br>
+
+	
+		<p>Process an execution asynchronously for each interceptor state</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>event</code> - The event context object.</dd>
+		
+		<dd><code>interceptData</code> - A data structure used to pass intercepted information.</dd>
+		
+		<dd><code>asyncAllJoin</code> - If true, each interceptor in the interception chain will be ran in a separate thread and joined together at the end by default.  If you set this flag to false then there will be no joining and waiting for the threads to finalize.</dd>
+		
+		<dd><code>asyncPriority</code> - The thread priority to be used. Either LOW, NORMAL or HIGH. The default value is NORMAL</dd>
+		
+		<dd><code>asyncJoinTimeout</code> - The timeout in milliseconds for the join thread to wait for interceptor threads to finish.  By default there is no timeout.</dd>
+		
+		<dd><code>buffer</code> - The request buffer object that can be used to produce output from interceptor chains</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="processSync()"><!-- --></a>
+	<h3>processSync</h3>
+	
+	<kbd>private any <strong>processSync</strong>([any event], [any interceptData], [any buffer])</kbd>
+	
+	<br><br>
+
+	
+		<p>Process an execution synchronously</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>event</code> - The event context object.</dd>
+		
+		<dd><code>interceptData</code> - A data structure used to pass intercepted information.</dd>
+		
+		<dd><code>buffer</code> - The request buffer object that can be used to produce output from interceptor chains</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="register()"><!-- --></a>
+	<h3>register</h3>
+	
+	<kbd>public any <strong>register</strong>(any interceptorKey, any interceptor, any interceptorMD)</kbd>
+	
+	<br><br>
+
+	
+		<p>Register an interceptor class with this state</p>
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/core/events/EventPool.html#register()">register</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/core/events/EventPool.html" title="class in coldbox.system.core.events">EventPool</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>interceptorKey</code> - The interceptor key class to register</dd>
+		
+		<dd><code>interceptor</code> - The interceptor reference from the cache.</dd>
+		
+		<dd><code>interceptorMD</code> - The interceptor state metadata.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="unregister()"><!-- --></a>
+	<h3>unregister</h3>
+	
+	<kbd>public any <strong>unregister</strong>(any interceptorKey)</kbd>
+	
+	<br><br>
+
+	
+		<p>Unregister an interceptor class from this state</p>
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/core/events/EventPool.html#unregister()">unregister</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/core/events/EventPool.html" title="class in coldbox.system.core.events">EventPool</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>interceptorKey</code> - The interceptor key class to Unregister</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>

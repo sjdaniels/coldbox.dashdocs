@@ -1,0 +1,513 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>LoaderService</title>
+	<meta name="keywords" content="coldbox.system.web.services.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../../highlighter/styles/shCoreDefault.css">
+	<script src="../../../../highlighter/scripts/shCore.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../../../index.html?coldbox/system/web/services/LoaderService.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system.web.services"><span class="label label-success">coldbox.system.web.services</span></a>
+</div>
+
+<h2>
+
+Class
+LoaderService</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../../../resources/inherit.gif" alt="extended by "><a href="../../../../coldbox/system/web/services/BaseService.html" title="class in coldbox.system.web.services">coldbox.system.web.services.BaseService</a>
+            <img src="../../../../resources/inherit.gif" alt="extended by ">coldbox.system.web.services.LoaderService
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				output 
+				: false 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+<div id="class-hint">
+	
+	<p class="lead">The application and framework loader service</p>
+</div>
+
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="LoaderService.html#init()">init</A></strong>(any controller)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Constructor.
+				
+			</td>
+		</tr>
+	</table>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any&lt;coldbox.system.web.loader.AbstractApplicationLoader&gt;</code>
+		</td>
+		<td>
+			<strong><a href="LoaderService.html#createAppLoader()">createAppLoader</A></strong>([any overrideConfigFile=''])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Setups the variable for ColdBox loading.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="LoaderService.html#createCacheBox()">createCacheBox</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create the application's CacheBox instance.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="LoaderService.html#createControllerDecorator()">createControllerDecorator</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create Controller Decorator.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../../coldbox/system/logging/LogBox.html" title="class in coldbox.system.logging">LogBox</a></code>
+		</td>
+		<td>
+			<strong><a href="LoaderService.html#createDefaultLogBox()">createDefaultLogBox</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a running LogBox instance configured using ColdBox's default config.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="LoaderService.html#createWireBox()">createWireBox</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create WireBox DI Framework with config settings.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>coldbox.system.web.loader.AbstractApplicationLoader</code>
+		</td>
+		<td>
+			<strong><a href="LoaderService.html#getAppLoader()">getAppLoader</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the application configuration loader used.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="LoaderService.html#loadApplication()">loadApplication</A></strong>([any overrideConfigFile=''], [any overrideAppMapping=''])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I load a coldbox application for operation.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="LoaderService.html#processShutdown()">processShutdown</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process the shutdown of the application.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="LoaderService.html#registerAspects()">registerAspects</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I Register the current Application's Aspects.
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_coldbox.system.web.services.BaseService"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd><a href="../../../../coldbox/system/web/services/BaseService.html" title="class in coldbox.system.web.services">coldbox.system.web.services.BaseService</a></kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="../../../..//coldbox/system/web/services/BaseService.html#convertToColdBox()">convertToColdBox</a>, <a href="../../../..//coldbox/system/web/services/BaseService.html#getColdboxOCM()">getColdboxOCM</a>, <a href="../../../..//coldbox/system/web/services/BaseService.html#getController()">getController</a>, <a href="../../../..//coldbox/system/web/services/BaseService.html#getUtil()">getUtil</a>, <a href="../../../..//coldbox/system/web/services/BaseService.html#isFamilyType()">isFamilyType</a>, <a href="../../../..//coldbox/system/web/services/BaseService.html#onConfigurationLoad()">onConfigurationLoad</a>, <a href="../../../..//coldbox/system/web/services/BaseService.html#onShutdown()">onShutdown</a>, <a href="../../../..//coldbox/system/web/services/BaseService.html#setController()">setController</a> 
+			</td>
+		</tr>
+	</table>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>(any controller)</kbd>
+
+	<br><br>
+
+	
+	<p>Constructor</p>
+	
+	<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+			<dd><code>controller</code></dd>
+		
+	</dl>
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="createAppLoader()"><!-- --></a>
+	<h3>createAppLoader</h3>
+	
+	<kbd>private any&lt;coldbox.system.web.loader.AbstractApplicationLoader&gt; <strong>createAppLoader</strong>([any overrideConfigFile=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>Setups the variable for ColdBox loading</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>overrideConfigFile</code> - Only used for unit testing or reparsing of a specific coldbox config file.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="createCacheBox()"><!-- --></a>
+	<h3>createCacheBox</h3>
+	
+	<kbd>public void <strong>createCacheBox</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Create the application's CacheBox instance</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="createControllerDecorator()"><!-- --></a>
+	<h3>createControllerDecorator</h3>
+	
+	<kbd>public void <strong>createControllerDecorator</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Create Controller Decorator</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="createDefaultLogBox()"><!-- --></a>
+	<h3>createDefaultLogBox</h3>
+	
+	<kbd>public <a href="../../../../coldbox/system/logging/LogBox.html" title="class in coldbox.system.logging">LogBox</a> <strong>createDefaultLogBox</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Create a running LogBox instance configured using ColdBox's default config</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="createWireBox()"><!-- --></a>
+	<h3>createWireBox</h3>
+	
+	<kbd>public void <strong>createWireBox</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Create WireBox DI Framework with config settings.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getAppLoader()"><!-- --></a>
+	<h3>getAppLoader</h3>
+	
+	<kbd>public coldbox.system.web.loader.AbstractApplicationLoader <strong>getAppLoader</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the application configuration loader used</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="loadApplication()"><!-- --></a>
+	<h3>loadApplication</h3>
+	
+	<kbd>Public void <strong>loadApplication</strong>([any overrideConfigFile=''], [any overrideAppMapping=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>I load a coldbox application for operation.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>overrideConfigFile</code> - The configuration file to load the application with</dd>
+		
+		<dd><code>overrideAppMapping</code> - The direct location of the application in the web server.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="processShutdown()"><!-- --></a>
+	<h3>processShutdown</h3>
+	
+	<kbd>public void <strong>processShutdown</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Process the shutdown of the application</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="registerAspects()"><!-- --></a>
+	<h3>registerAspects</h3>
+	
+	<kbd>public void <strong>registerAspects</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>I Register the current Application's Aspects</p>
+	
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>

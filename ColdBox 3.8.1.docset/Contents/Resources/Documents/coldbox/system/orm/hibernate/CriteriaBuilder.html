@@ -1,0 +1,1020 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CriteriaBuilder</title>
+	<meta name="keywords" content="coldbox.system.orm.hibernate.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../../highlighter/styles/shCoreDefault.css">
+	<script src="../../../../highlighter/scripts/shCore.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../../../index.html?coldbox/system/orm/hibernate/CriteriaBuilder.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system.orm.hibernate"><span class="label label-success">coldbox.system.orm.hibernate</span></a>
+</div>
+
+<h2>
+
+Class
+CriteriaBuilder</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../../../resources/inherit.gif" alt="extended by "><a href="../../../../coldbox/system/orm/hibernate/BaseBuilder.html" title="class in coldbox.system.orm.hibernate">coldbox.system.orm.hibernate.BaseBuilder</a>
+            <img src="../../../../resources/inherit.gif" alt="extended by ">coldbox.system.orm.hibernate.CriteriaBuilder
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				accessors 
+				: true 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="property_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="5">
+			<strong>Property Summary</strong>
+		</th>
+	</tr>
+	<tr class="info">
+		<th align="left">
+			<strong>type</strong>
+		</th>
+		<th align="left">
+			<strong>property</strong>
+		</th>
+		<th align="left">
+			<strong>default</strong>
+		</th>
+		<th align="left">
+			<strong>serializable</strong>
+		</th>
+		<th align="left">
+			<strong>required</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>array</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#criterias()">criterias</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#queryCacheRegion()">queryCacheRegion</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+				<code>criterias.{entityName}</code>
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#useQueryCaching()">useQueryCaching</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+				<code>false</code>
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	</tr>
+</table>
+
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="CriteriaBuilder.html#init()">init</A></strong>(string entityName, [boolean useQueryCaching='false'], [string queryCacheRegion=''], any ORMService)
+				<br>
+				
+			</td>
+		</tr>
+	</table>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>array</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#GETCRITERIAS()">GETCRITERIAS</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#GETQUERYCACHEREGION()">GETQUERYCACHEREGION</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#GETUSEQUERYCACHING()">GETUSEQUERYCACHING</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../../coldbox/system/orm/hibernate/CriteriaBuilder.html" title="class in coldbox.system.orm.hibernate">CriteriaBuilder</a></code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#SETCRITERIAS()">SETCRITERIAS</A></strong>(array criterias)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../../coldbox/system/orm/hibernate/CriteriaBuilder.html" title="class in coldbox.system.orm.hibernate">CriteriaBuilder</a></code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#SETQUERYCACHEREGION()">SETQUERYCACHEREGION</A></strong>(string queryCacheRegion)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../../coldbox/system/orm/hibernate/CriteriaBuilder.html" title="class in coldbox.system.orm.hibernate">CriteriaBuilder</a></code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#SETUSEQUERYCACHING()">SETUSEQUERYCACHING</A></strong>(boolean useQueryCaching)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#cache()">cache</A></strong>(boolean cache='true', [string cacheRegion])
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#cacheRegion()">cacheRegion</A></strong>(string cacheRegion)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#count()">count</A></strong>([any propertyName=''])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the record count using hibernate projections for the given criterias.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#createSubcriteria()">createSubcriteria</A></strong>(string entityName, [string alias=''])
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#fetchSize()">fetchSize</A></strong>(numeric fetchSize)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#firstResult()">firstResult</A></strong>(numeric firstResult)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#get()">get</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#getORMUtil()">getORMUtil</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get ORM Util.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#list()">list</A></strong>([numeric offset='0'], [numeric max='0'], [numeric timeout='0'], [string sortOrder=''], [boolean ignoreCase='false'], [boolean asQuery='false'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Execute the criteria queries you have defined and return the results, you can pass optional parameters or define them via our methods.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#maxResults()">maxResults</A></strong>(numeric maxResults)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#onMissingMethod()">onMissingMethod</A></strong>(string missingMethodName, struct missingMethodArguments)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#readOnly()">readOnly</A></strong>([boolean readOnly='true'])
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CriteriaBuilder.html#timeout()">timeout</A></strong>(numeric timeout)
+			<br>
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_coldbox.system.orm.hibernate.BaseBuilder"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd><a href="../../../../coldbox/system/orm/hibernate/BaseBuilder.html" title="class in coldbox.system.orm.hibernate">coldbox.system.orm.hibernate.BaseBuilder</a></kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#GETENTITYNAME()">GETENTITYNAME</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#GETEVENTMANAGER()">GETEVENTMANAGER</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#GETNATIVECRITERIA()">GETNATIVECRITERIA</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#GETSQLLOGGERACTIVE()">GETSQLLOGGERACTIVE</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#SETEVENTMANAGER()">SETEVENTMANAGER</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#SETSQLLOGGERACTIVE()">SETSQLLOGGERACTIVE</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#add()">add</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#addProjection()">addProjection</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#canLogSql()">canLogSql</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#convertIDValueToJavaType()">convertIDValueToJavaType</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#convertValueToJavaType()">convertValueToJavaType</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#createAlias()">createAlias</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#createCriteria()">createCriteria</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#createRestriction()">createRestriction</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#getPositionalSQLParameterTypes()">getPositionalSQLParameterTypes</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#getPositionalSQLParameterValues()">getPositionalSQLParameterValues</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#getPositionalSQLParameters()">getPositionalSQLParameters</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#getSQL()">getSQL</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#getSQLLog()">getSQLLog</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#hasProjection()">hasProjection</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#logSQL()">logSQL</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#normalizeOrder()">normalizeOrder</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#order()">order</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#prepareSQLProjection()">prepareSQLProjection</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#resultTransformer()">resultTransformer</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#setEntityName()">setEntityName</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#setNativeCriteria()">setNativeCriteria</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#setProjection()">setProjection</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#startSqlLog()">startSqlLog</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#stopSqlLog()">stopSqlLog</a>, <a href="../../../..//coldbox/system/orm/hibernate/BaseBuilder.html#withProjections()">withProjections</a> 
+			</td>
+		</tr>
+	</table>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>(string entityName, [boolean useQueryCaching='false'], [string queryCacheRegion=''], any ORMService)</kbd>
+
+	<br><br>
+
+	
+	<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+			<dd><code>entityName</code></dd>
+		
+			<dd><code>useQueryCaching</code></dd>
+		
+			<dd><code>queryCacheRegion</code></dd>
+		
+			<dd><code>ORMService</code></dd>
+		
+	</dl>
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+	<a name="property_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Property Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	
+		<a name="criterias()"><!-- --></a>
+		<h3>criterias</h3>
+
+		<kbd>
+			property array <strong>criterias</strong> 
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			<dd><code>serializable</code> - true</dd>
+			
+			<dd><code>required</code> - false</dd>
+			
+		</dl>
+
+		<hr>
+	
+		<a name="queryCacheRegion()"><!-- --></a>
+		<h3>queryCacheRegion</h3>
+
+		<kbd>
+			property string <strong>queryCacheRegion</strong> 
+			= [criterias.{entityName}]
+			
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			<dd><code>serializable</code> - true</dd>
+			
+			<dd><code>required</code> - false</dd>
+			
+		</dl>
+
+		<hr>
+	
+		<a name="useQueryCaching()"><!-- --></a>
+		<h3>useQueryCaching</h3>
+
+		<kbd>
+			property boolean <strong>useQueryCaching</strong> 
+			= [false]
+			
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			<dd><code>serializable</code> - true</dd>
+			
+			<dd><code>required</code> - false</dd>
+			
+		</dl>
+
+		<hr>
+	
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="GETCRITERIAS()"><!-- --></a>
+	<h3>GETCRITERIAS</h3>
+	
+	<kbd>public array <strong>GETCRITERIAS</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="GETQUERYCACHEREGION()"><!-- --></a>
+	<h3>GETQUERYCACHEREGION</h3>
+	
+	<kbd>public string <strong>GETQUERYCACHEREGION</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="GETUSEQUERYCACHING()"><!-- --></a>
+	<h3>GETUSEQUERYCACHING</h3>
+	
+	<kbd>public boolean <strong>GETUSEQUERYCACHING</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="SETCRITERIAS()"><!-- --></a>
+	<h3>SETCRITERIAS</h3>
+	
+	<kbd>public <a href="../../../../coldbox/system/orm/hibernate/CriteriaBuilder.html" title="class in coldbox.system.orm.hibernate">CriteriaBuilder</a> <strong>SETCRITERIAS</strong>(array criterias)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>criterias</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="SETQUERYCACHEREGION()"><!-- --></a>
+	<h3>SETQUERYCACHEREGION</h3>
+	
+	<kbd>public <a href="../../../../coldbox/system/orm/hibernate/CriteriaBuilder.html" title="class in coldbox.system.orm.hibernate">CriteriaBuilder</a> <strong>SETQUERYCACHEREGION</strong>(string queryCacheRegion)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>queryCacheRegion</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="SETUSEQUERYCACHING()"><!-- --></a>
+	<h3>SETUSEQUERYCACHING</h3>
+	
+	<kbd>public <a href="../../../../coldbox/system/orm/hibernate/CriteriaBuilder.html" title="class in coldbox.system.orm.hibernate">CriteriaBuilder</a> <strong>SETUSEQUERYCACHING</strong>(boolean useQueryCaching)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>useQueryCaching</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="cache()"><!-- --></a>
+	<h3>cache</h3>
+	
+	<kbd>public any <strong>cache</strong>(boolean cache='true', [string cacheRegion])</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>cache</code></dd>
+		
+		<dd><code>cacheRegion</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="cacheRegion()"><!-- --></a>
+	<h3>cacheRegion</h3>
+	
+	<kbd>public any <strong>cacheRegion</strong>(string cacheRegion)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>cacheRegion</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="count()"><!-- --></a>
+	<h3>count</h3>
+	
+	<kbd>public numeric <strong>count</strong>([any propertyName=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the record count using hibernate projections for the given criterias</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>propertyName</code> - The name of the property to do the count on or do it for all row results instead</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="createSubcriteria()"><!-- --></a>
+	<h3>createSubcriteria</h3>
+	
+	<kbd>public any <strong>createSubcriteria</strong>(string entityName, [string alias=''])</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>entityName</code></dd>
+		
+		<dd><code>alias</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="fetchSize()"><!-- --></a>
+	<h3>fetchSize</h3>
+	
+	<kbd>public any <strong>fetchSize</strong>(numeric fetchSize)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>fetchSize</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="firstResult()"><!-- --></a>
+	<h3>firstResult</h3>
+	
+	<kbd>public any <strong>firstResult</strong>(numeric firstResult)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>firstResult</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="get()"><!-- --></a>
+	<h3>get</h3>
+	
+	<kbd>public any <strong>get</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="getORMUtil()"><!-- --></a>
+	<h3>getORMUtil</h3>
+	
+	<kbd>private any <strong>getORMUtil</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get ORM Util</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="list()"><!-- --></a>
+	<h3>list</h3>
+	
+	<kbd>public any <strong>list</strong>([numeric offset='0'], [numeric max='0'], [numeric timeout='0'], [string sortOrder=''], [boolean ignoreCase='false'], [boolean asQuery='false'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Execute the criteria queries you have defined and return the results, you can pass optional parameters or define them via our methods</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>offset</code></dd>
+		
+		<dd><code>max</code></dd>
+		
+		<dd><code>timeout</code></dd>
+		
+		<dd><code>sortOrder</code></dd>
+		
+		<dd><code>ignoreCase</code></dd>
+		
+		<dd><code>asQuery</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="maxResults()"><!-- --></a>
+	<h3>maxResults</h3>
+	
+	<kbd>public any <strong>maxResults</strong>(numeric maxResults)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>maxResults</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="onMissingMethod()"><!-- --></a>
+	<h3>onMissingMethod</h3>
+	
+	<kbd>public any <strong>onMissingMethod</strong>(string missingMethodName, struct missingMethodArguments)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>missingMethodName</code></dd>
+		
+		<dd><code>missingMethodArguments</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="readOnly()"><!-- --></a>
+	<h3>readOnly</h3>
+	
+	<kbd>public any <strong>readOnly</strong>([boolean readOnly='true'])</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>readOnly</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="timeout()"><!-- --></a>
+	<h3>timeout</h3>
+	
+	<kbd>public any <strong>timeout</strong>(numeric timeout)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>timeout</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>

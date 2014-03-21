@@ -1,0 +1,716 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CFColdBoxProvider</title>
+	<meta name="keywords" content="coldbox.system.cache.providers.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../../highlighter/styles/shCoreDefault.css">
+	<script src="../../../../highlighter/scripts/shCore.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../../../index.html?coldbox/system/cache/providers/CFColdBoxProvider.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system.cache.providers"><span class="label label-success">coldbox.system.cache.providers</span></a>
+</div>
+
+<h2>
+
+Class
+CFColdBoxProvider</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../../../resources/inherit.gif" alt="extended by "><a href="../../../../coldbox/system/cache/providers/CFProvider.html" title="class in coldbox.system.cache.providers">coldbox.system.cache.providers.CFProvider</a>
+            <img src="../../../../resources/inherit.gif" alt="extended by ">coldbox.system.cache.providers.CFColdBoxProvider
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				serializable 
+				: false 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><strong>All Implemented Interfaces:</strong></div>
+  			<div class="panel-body">
+			<a href="../../../../coldbox/system/cache/ICacheProvider.html" title="interface in coldbox.system.cache">ICacheProvider</a> , <a href="../../../../coldbox/system/cache/IColdboxApplicationCache.html" title="interface in coldbox.system.cache">IColdboxApplicationCache</a> 
+			</div>
+		</div>
+	
+<div id="class-hint">
+	
+	<p class="lead">******************************************************************************* Copyright Since 2005 ColdBox Framework by Luis Majano and Ortus Solutions, Corp www.coldbox.org | www.luismajano.com | www.ortussolutions.com ******************************************************************************* Author: Luis Majano Description:  This CacheBox provider communicates with the built in caches in the Adobe ColdFusion Engine for ColdBox applications.</p>
+</div>
+
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="CFColdBoxProvider.html#init()">init</A></strong>()
+				<br>
+				
+			</td>
+		</tr>
+	</table>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="CFColdBoxProvider.html#clearAllEvents()">clearAllEvents</A></strong>([any async='false'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clear all events.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="CFColdBoxProvider.html#clearAllViews()">clearAllViews</A></strong>([any async='false'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clear all views.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="CFColdBoxProvider.html#clearEvent()">clearEvent</A></strong>(any eventsnippet, [any queryString=''])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clear event.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="CFColdBoxProvider.html#clearEventMulti()">clearEventMulti</A></strong>(any eventsnippets, [any queryString=''])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clear multiple events.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="CFColdBoxProvider.html#clearView()">clearView</A></strong>(any viewSnippet)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clear view.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="CFColdBoxProvider.html#clearViewMulti()">clearViewMulti</A></strong>(any viewsnippets)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clear multiple view.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CFColdBoxProvider.html#getColdbox()">getColdbox</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CFColdBoxProvider.html#getEventCacheKeyPrefix()">getEventCacheKeyPrefix</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CFColdBoxProvider.html#getEventURLFacade()">getEventURLFacade</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="CFColdBoxProvider.html#getViewCacheKeyPrefix()">getViewCacheKeyPrefix</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="CFColdBoxProvider.html#setColdbox()">setColdbox</A></strong>(any coldbox)
+			<br>
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_coldbox.system.cache.providers.CFProvider"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd><a href="../../../../coldbox/system/cache/providers/CFProvider.html" title="class in coldbox.system.cache.providers">coldbox.system.cache.providers.CFProvider</a></kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="../../../..//coldbox/system/cache/providers/CFProvider.html#clear()">clear</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#clearAll()">clearAll</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#clearByKeySnippet()">clearByKeySnippet</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#clearQuiet()">clearQuiet</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#clearStatistics()">clearStatistics</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#configure()">configure</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#expireAll()">expireAll</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#expireObject()">expireObject</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#get()">get</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#getCacheFactory()">getCacheFactory</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#getCachedObjectMetadata()">getCachedObjectMetadata</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#getConfiguration()">getConfiguration</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#getEventManager()">getEventManager</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#getKeys()">getKeys</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#getName()">getName</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#getObjectStore()">getObjectStore</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#getOrSet()">getOrSet</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#getQuiet()">getQuiet</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#getSize()">getSize</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#getStats()">getStats</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#getStoreMetadataKeyMap()">getStoreMetadataKeyMap</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#getStoreMetadataReport()">getStoreMetadataReport</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#isClusterCoherent()">isClusterCoherent</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#isEnabled()">isEnabled</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#isExpired()">isExpired</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#isNodeCoherent()">isNodeCoherent</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#isReportingEnabled()">isReportingEnabled</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#isTerracotaClustered()">isTerracotaClustered</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#lookup()">lookup</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#lookupQuiet()">lookupQuiet</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#reap()">reap</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#set()">set</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#setCacheFactory()">setCacheFactory</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#setConfiguration()">setConfiguration</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#setEventManager()">setEventManager</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#setName()">setName</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#setQuiet()">setQuiet</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#shutdown()">shutdown</a>, <a href="../../../..//coldbox/system/cache/providers/CFProvider.html#validateConfiguration()">validateConfiguration</a> 
+			</td>
+		</tr>
+	</table>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>()</kbd>
+
+	<br><br>
+
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="clearAllEvents()"><!-- --></a>
+	<h3>clearAllEvents</h3>
+	
+	<kbd>public void <strong>clearAllEvents</strong>([any async='false'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Clear all events</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/IColdboxApplicationCache.html#clearAllEvents()">clearAllEvents</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/IColdboxApplicationCache.html" title="interface in coldbox.system.cache">IColdboxApplicationCache</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>async</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="clearAllViews()"><!-- --></a>
+	<h3>clearAllViews</h3>
+	
+	<kbd>public void <strong>clearAllViews</strong>([any async='false'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Clear all views</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/IColdboxApplicationCache.html#clearAllViews()">clearAllViews</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/IColdboxApplicationCache.html" title="interface in coldbox.system.cache">IColdboxApplicationCache</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>async</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="clearEvent()"><!-- --></a>
+	<h3>clearEvent</h3>
+	
+	<kbd>public void <strong>clearEvent</strong>(any eventsnippet, [any queryString=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>Clear event</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/IColdboxApplicationCache.html#clearEvent()">clearEvent</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/IColdboxApplicationCache.html" title="interface in coldbox.system.cache">IColdboxApplicationCache</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>eventsnippet</code></dd>
+		
+		<dd><code>queryString</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="clearEventMulti()"><!-- --></a>
+	<h3>clearEventMulti</h3>
+	
+	<kbd>public void <strong>clearEventMulti</strong>(any eventsnippets, [any queryString=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>Clear multiple events</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/IColdboxApplicationCache.html#clearEventMulti()">clearEventMulti</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/IColdboxApplicationCache.html" title="interface in coldbox.system.cache">IColdboxApplicationCache</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>eventsnippets</code></dd>
+		
+		<dd><code>queryString</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="clearView()"><!-- --></a>
+	<h3>clearView</h3>
+	
+	<kbd>public void <strong>clearView</strong>(any viewSnippet)</kbd>
+	
+	<br><br>
+
+	
+		<p>Clear view</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/IColdboxApplicationCache.html#clearView()">clearView</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/IColdboxApplicationCache.html" title="interface in coldbox.system.cache">IColdboxApplicationCache</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>viewSnippet</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="clearViewMulti()"><!-- --></a>
+	<h3>clearViewMulti</h3>
+	
+	<kbd>public void <strong>clearViewMulti</strong>(any viewsnippets)</kbd>
+	
+	<br><br>
+
+	
+		<p>Clear multiple view</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/IColdboxApplicationCache.html#clearViewMulti()">clearViewMulti</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/IColdboxApplicationCache.html" title="interface in coldbox.system.cache">IColdboxApplicationCache</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>viewsnippets</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getColdbox()"><!-- --></a>
+	<h3>getColdbox</h3>
+	
+	<kbd>public any <strong>getColdbox</strong>()</kbd>
+	
+	<br><br>
+
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/IColdboxApplicationCache.html#getColdbox()">getColdbox</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/IColdboxApplicationCache.html" title="interface in coldbox.system.cache">IColdboxApplicationCache</a>
+				</code>
+				</dd>
+			</dl>
+		
+
+	</dl>
+	<hr>
+
+	<a name="getEventCacheKeyPrefix()"><!-- --></a>
+	<h3>getEventCacheKeyPrefix</h3>
+	
+	<kbd>public any <strong>getEventCacheKeyPrefix</strong>()</kbd>
+	
+	<br><br>
+
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/IColdboxApplicationCache.html#getEventCacheKeyPrefix()">getEventCacheKeyPrefix</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/IColdboxApplicationCache.html" title="interface in coldbox.system.cache">IColdboxApplicationCache</a>
+				</code>
+				</dd>
+			</dl>
+		
+
+	</dl>
+	<hr>
+
+	<a name="getEventURLFacade()"><!-- --></a>
+	<h3>getEventURLFacade</h3>
+	
+	<kbd>public any <strong>getEventURLFacade</strong>()</kbd>
+	
+	<br><br>
+
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/IColdboxApplicationCache.html#getEventURLFacade()">getEventURLFacade</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/IColdboxApplicationCache.html" title="interface in coldbox.system.cache">IColdboxApplicationCache</a>
+				</code>
+				</dd>
+			</dl>
+		
+
+	</dl>
+	<hr>
+
+	<a name="getViewCacheKeyPrefix()"><!-- --></a>
+	<h3>getViewCacheKeyPrefix</h3>
+	
+	<kbd>public any <strong>getViewCacheKeyPrefix</strong>()</kbd>
+	
+	<br><br>
+
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/IColdboxApplicationCache.html#getViewCacheKeyPrefix()">getViewCacheKeyPrefix</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/IColdboxApplicationCache.html" title="interface in coldbox.system.cache">IColdboxApplicationCache</a>
+				</code>
+				</dd>
+			</dl>
+		
+
+	</dl>
+	<hr>
+
+	<a name="setColdbox()"><!-- --></a>
+	<h3>setColdbox</h3>
+	
+	<kbd>public void <strong>setColdbox</strong>(any coldbox)</kbd>
+	
+	<br><br>
+
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../../..//coldbox/system/cache/IColdboxApplicationCache.html#setColdbox()">setColdbox</a></code>
+				in interface
+				<code>
+					<a href="../../../../coldbox/system/cache/IColdboxApplicationCache.html" title="interface in coldbox.system.cache">IColdboxApplicationCache</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>coldbox</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>

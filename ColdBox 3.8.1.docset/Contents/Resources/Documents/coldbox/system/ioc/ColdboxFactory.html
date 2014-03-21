@@ -1,0 +1,722 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ColdboxFactory</title>
+	<meta name="keywords" content="coldbox.system.ioc.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../highlighter/styles/shCoreDefault.css">
+	<script src="../../../highlighter/scripts/shCore.js"></script>
+	<script src="../../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../../index.html?coldbox/system/ioc/ColdboxFactory.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system.ioc"><span class="label label-success">coldbox.system.ioc</span></a>
+</div>
+
+<h2>
+
+Class
+ColdboxFactory</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../../resources/inherit.gif" alt="extended by ">coldbox.system.ioc.ColdboxFactory
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				output 
+				: false 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+<div id="class-hint">
+	
+	<p class="lead">Create Config Beans, Controller, Cache Manager and Plugins of the current running application</p>
+</div>
+
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="ColdboxFactory.html#init()">init</A></strong>([string COLDBOX_APP_KEY])
+				<br>
+				
+			</td>
+		</tr>
+	</table>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;<a href="../../../coldbox/system/cache/CacheFactory.html" title="class in coldbox.system.cache">CacheFactory</a>&gt;</code>
+		</td>
+		<td>
+			<strong><a href="ColdboxFactory.html#getCacheBox()">getCacheBox</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the CacheBox reference.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../coldbox/system/web/Controller.html" title="class in coldbox.system.web">Controller</a></code>
+		</td>
+		<td>
+			<strong><a href="ColdboxFactory.html#getColdbox()">getColdbox</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the coldbox controller reference: coldbox.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;<a href="../../../coldbox/system/cache/IColdboxApplicationCache.html" title="interface in coldbox.system.cache">IColdboxApplicationCache</a>&gt;</code>
+		</td>
+		<td>
+			<strong><a href="ColdboxFactory.html#getColdboxOCM()">getColdboxOCM</A></strong>([string cacheName='default'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get ColdboxOCM: coldbox.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../coldbox/system/core/collections/ConfigBean.html" title="class in coldbox.system.core.collections">ConfigBean</a></code>
+		</td>
+		<td>
+			<strong><a href="ColdboxFactory.html#getConfigBean()">getConfigBean</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an application's config bean: coldbox.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../coldbox/system/core/db/DatasourceBean.html" title="class in coldbox.system.core.db">DatasourceBean</a></code>
+		</td>
+		<td>
+			<strong><a href="ColdboxFactory.html#getDatasource()">getDatasource</A></strong>([string alias])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I will return to you a datasourceBean according to the alias of the datasource you wish to get from the configstruct: coldbox.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ColdboxFactory.html#getInstance()">getInstance</A></strong>(any name, [any dsl], [any&lt;struct&gt; initArguments])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Locates, Creates, Injects and Configures an object model instance.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ColdboxFactory.html#getInterceptor()">getInterceptor</A></strong>([string interceptorName], [boolean deepSearch='false'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get an interceptor.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../coldbox/system/logging/LogBox.html" title="class in coldbox.system.logging">LogBox</a></code>
+		</td>
+		<td>
+			<strong><a href="ColdboxFactory.html#getLogBox()">getLogBox</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the LogBox reference.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../coldbox/system/logging/Logger.html" title="class in coldbox.system.logging">Logger</a></code>
+		</td>
+		<td>
+			<strong><a href="ColdboxFactory.html#getLogger()">getLogger</A></strong>(any category)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a named logger reference.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../coldbox/system/core/mail/MailSettingsBean.html" title="class in coldbox.system.core.mail">MailSettingsBean</a></code>
+		</td>
+		<td>
+			<strong><a href="ColdboxFactory.html#getMailSettings()">getMailSettings</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I will return to you a mailsettingsBean modeled after your mail settings in your config file.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="ColdboxFactory.html#getPlugin()">getPlugin</A></strong>([any plugin], [boolean customPlugin='false'], [boolean newInstance='false'], [any module=''], [boolean init='true'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plugin factory, returns a new or cached instance of a plugin.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>struct</code>
+		</td>
+		<td>
+			<strong><a href="ColdboxFactory.html#getRequestCollection()">getRequestCollection</A></strong>([boolean private='false'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tries to retrieve the request collection.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../coldbox/system/web/context/RequestContext.html" title="class in coldbox.system.web.context">RequestContext</a></code>
+		</td>
+		<td>
+			<strong><a href="ColdboxFactory.html#getRequestContext()">getRequestContext</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tries to retrieve the request context object.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../coldbox/system/logging/Logger.html" title="class in coldbox.system.logging">Logger</a></code>
+		</td>
+		<td>
+			<strong><a href="ColdboxFactory.html#getRootLogger()">getRootLogger</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the root logger reference.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;<a href="../../../coldbox/system/core/util/Util.html" title="class in coldbox.system.core.util">Util</a></code>
+		</td>
+		<td>
+			<strong><a href="ColdboxFactory.html#getUtil()">getUtil</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create and return a util object.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../coldbox/system/ioc/Injector.html" title="class in coldbox.system.ioc">Injector</a></code>
+		</td>
+		<td>
+			<strong><a href="ColdboxFactory.html#getWireBox()">getWireBox</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the WireBox Injector reference.
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>([string COLDBOX_APP_KEY])</kbd>
+
+	<br><br>
+
+	
+	<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+			<dd><code>COLDBOX_APP_KEY</code> - The application key to use</dd>
+		
+	</dl>
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="getCacheBox()"><!-- --></a>
+	<h3>getCacheBox</h3>
+	
+	<kbd>public any&lt;<a href="../../../coldbox/system/cache/CacheFactory.html" title="class in coldbox.system.cache">CacheFactory</a>&gt; <strong>getCacheBox</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the CacheBox reference.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getColdbox()"><!-- --></a>
+	<h3>getColdbox</h3>
+	
+	<kbd>public <a href="../../../coldbox/system/web/Controller.html" title="class in coldbox.system.web">Controller</a> <strong>getColdbox</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the coldbox controller reference: coldbox.system.web.Controller</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getColdboxOCM()"><!-- --></a>
+	<h3>getColdboxOCM</h3>
+	
+	<kbd>public any&lt;<a href="../../../coldbox/system/cache/IColdboxApplicationCache.html" title="interface in coldbox.system.cache">IColdboxApplicationCache</a>&gt; <strong>getColdboxOCM</strong>([string cacheName='default'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Get ColdboxOCM: coldbox.system.cache.CacheManager or new CacheBox providers as coldbox.system.cache.IColdboxApplicationCache</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>cacheName</code> - The cache name to retrieve</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getConfigBean()"><!-- --></a>
+	<h3>getConfigBean</h3>
+	
+	<kbd>public <a href="../../../coldbox/system/core/collections/ConfigBean.html" title="class in coldbox.system.core.collections">ConfigBean</a> <strong>getConfigBean</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns an application's config bean: coldbox.system.core.collections.ConfigBean</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getDatasource()"><!-- --></a>
+	<h3>getDatasource</h3>
+	
+	<kbd>public <a href="../../../coldbox/system/core/db/DatasourceBean.html" title="class in coldbox.system.core.db">DatasourceBean</a> <strong>getDatasource</strong>([string alias])</kbd>
+	
+	<br><br>
+
+	
+		<p>I will return to you a datasourceBean according to the alias of the datasource you wish to get from the configstruct: coldbox.system.core.db.DatasourceBean</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>alias</code> - The alias of the datasource to get from the configstruct (alias property in the config file)</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getInstance()"><!-- --></a>
+	<h3>getInstance</h3>
+	
+	<kbd>public any <strong>getInstance</strong>(any name, [any dsl], [any&lt;struct&gt; initArguments])</kbd>
+	
+	<br><br>
+
+	
+		<p>Locates, Creates, Injects and Configures an object model instance</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>name</code> - The mapping name or CFC instance path to try to build up</dd>
+		
+		<dd><code>dsl</code> - The dsl string to use to retrieve the instance model object, mutually exclusive with 'name'</dd>
+		
+		<dd><code>initArguments</code> - The constructor structure of arguments to passthrough when initializing the instance</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getInterceptor()"><!-- --></a>
+	<h3>getInterceptor</h3>
+	
+	<kbd>public any <strong>getInterceptor</strong>([string interceptorName], [boolean deepSearch='false'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Get an interceptor</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>interceptorName</code> - The name of the interceptor to search for</dd>
+		
+		<dd><code>deepSearch</code> - By default we search the cache for the interceptor reference. If true, we search all the registered interceptor states for a match.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getLogBox()"><!-- --></a>
+	<h3>getLogBox</h3>
+	
+	<kbd>public <a href="../../../coldbox/system/logging/LogBox.html" title="class in coldbox.system.logging">LogBox</a> <strong>getLogBox</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the LogBox reference.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getLogger()"><!-- --></a>
+	<h3>getLogger</h3>
+	
+	<kbd>public <a href="../../../coldbox/system/logging/Logger.html" title="class in coldbox.system.logging">Logger</a> <strong>getLogger</strong>(any category)</kbd>
+	
+	<br><br>
+
+	
+		<p>Get a named logger reference.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>category</code> - The category name to use in this logger or pass in the target object will log from and we will inspect the object and use its metadata name.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getMailSettings()"><!-- --></a>
+	<h3>getMailSettings</h3>
+	
+	<kbd>public <a href="../../../coldbox/system/core/mail/MailSettingsBean.html" title="class in coldbox.system.core.mail">MailSettingsBean</a> <strong>getMailSettings</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>I will return to you a mailsettingsBean modeled after your mail settings in your config file.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getPlugin()"><!-- --></a>
+	<h3>getPlugin</h3>
+	
+	<kbd>Public any <strong>getPlugin</strong>([any plugin], [boolean customPlugin='false'], [boolean newInstance='false'], [any module=''], [boolean init='true'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Plugin factory, returns a new or cached instance of a plugin.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>plugin</code> - The Plugin object's name to instantiate</dd>
+		
+		<dd><code>customPlugin</code> - Used internally to create custom plugins.</dd>
+		
+		<dd><code>newInstance</code> - If true, it will create and return a new plugin. No caching or persistance.</dd>
+		
+		<dd><code>module</code> - The module to retrieve the plugin from</dd>
+		
+		<dd><code>init</code> - Auto init() the plugin upon construction</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getRequestCollection()"><!-- --></a>
+	<h3>getRequestCollection</h3>
+	
+	<kbd>public struct <strong>getRequestCollection</strong>([boolean private='false'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Tries to retrieve the request collection</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>private</code> - Get the request collection or private request collection</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getRequestContext()"><!-- --></a>
+	<h3>getRequestContext</h3>
+	
+	<kbd>public <a href="../../../coldbox/system/web/context/RequestContext.html" title="class in coldbox.system.web.context">RequestContext</a> <strong>getRequestContext</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Tries to retrieve the request context object</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getRootLogger()"><!-- --></a>
+	<h3>getRootLogger</h3>
+	
+	<kbd>public <a href="../../../coldbox/system/logging/Logger.html" title="class in coldbox.system.logging">Logger</a> <strong>getRootLogger</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the root logger reference.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getUtil()"><!-- --></a>
+	<h3>getUtil</h3>
+	
+	<kbd>private <a href="../../../coldbox/system/core/util/Util.html" title="class in coldbox.system.core.util">Util</a> <strong>getUtil</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Create and return a util object</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getWireBox()"><!-- --></a>
+	<h3>getWireBox</h3>
+	
+	<kbd>public <a href="../../../coldbox/system/ioc/Injector.html" title="class in coldbox.system.ioc">Injector</a> <strong>getWireBox</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the WireBox Injector reference.</p>
+	
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>

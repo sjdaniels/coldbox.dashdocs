@@ -1,0 +1,978 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>QueryHelper</title>
+	<meta name="keywords" content="coldbox.system.plugins.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../highlighter/styles/shCoreDefault.css">
+	<script src="../../../highlighter/scripts/shCore.js"></script>
+	<script src="../../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../../index.html?coldbox/system/plugins/QueryHelper.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system.plugins"><span class="label label-success">coldbox.system.plugins</span></a>
+</div>
+
+<h2>
+
+Class
+QueryHelper</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../../resources/inherit.gif" alt="extended by "><a href="../../../coldbox/system/FrameworkSupertype.html" title="class in coldbox.system">coldbox.system.FrameworkSupertype</a>
+            <img src="../../../resources/inherit.gif" alt="extended by "><a href="../../../coldbox/system/Plugin.html" title="class in coldbox.system">coldbox.system.Plugin</a>
+                <img src="../../../resources/inherit.gif" alt="extended by ">coldbox.system.plugins.QueryHelper
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				cache 
+				: true 
+			</li>
+			&nbsp;
+			
+			<li class="label label-danger label-annotations">
+				output 
+				: false 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+<div id="class-hint">
+	
+	<p class="lead">A query helper plugin.</p>
+</div>
+
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="QueryHelper.html#init()">init</A></strong>(any controller)
+				<br>
+				
+			</td>
+		</tr>
+	</table>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#arrayOfStructuresToQuery()">arrayOfStructuresToQuery</A></strong>(array theArray)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Converts an array of structures to a CF Query Object.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>query</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#doInnerJoin()">doInnerJoin</A></strong>(query qryLeft, query qryRight, string LeftJoinColumn, string RightJoinColumn, [string OrderByElement=''], [boolean CaseSensitive='false'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return inner-joined Query.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>query</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#doLeftOuterJoin()">doLeftOuterJoin</A></strong>(query qryLeft, query qryRight, string LeftJoinColumn, string RightJoinColumn, [string OrderByElement=''], [boolean CaseSensitive='false'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return left outer-joined Query.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>query</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#doQueryAppend()">doQueryAppend</A></strong>(query qryFrom, query qryTo)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Append Query1 into Query2.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>query</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#filterNull()">filterNull</A></strong>(query qry, string field, [string null='NULL'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filters a query by NULL.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>query</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#filterQuery()">filterQuery</A></strong>(query qry, string field, string value, [string cfsqltype='cf_sql_varchar'], [boolean list='false'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filters a query by the given value.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#getCSV()">getCSV</A></strong>(query qry, [string delimiter=','])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;returns query in delimited text file format.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#getColumnArray()">getColumnArray</A></strong>(query qry, string ColumnName)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an array of the values.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#getCountDistinct()">getCountDistinct</A></strong>(query qry, string ColumnName)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns total/count disninct values.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>numeric</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#getRowNumber()">getRowNumber</A></strong>(query qry, string ColumnValue, string ColumnName)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the row number of the first match.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;string</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#getUnMatchedElements()">getUnMatchedElements</A></strong>(string FirstList, string secondList)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns element which are only present in second-list.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#getUniqueElements()">getUniqueElements</A></strong>(string FirstList, string secondList)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns unique elements from two list.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;query</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#qrySetCell()">qrySetCell</A></strong>(query qryFrom, query qryTo, array ArrayCols, numeric FromRowNumber, numeric ToRowNumber)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert value into query.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>query</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#querySim()">querySim</A></strong>(string queryData)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First line are the query columns separated by commas.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>array</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#queryToArrayOfStructures()">queryToArrayOfStructures</A></strong>(query theQuery)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Converts a query to an array of structures.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>Query</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#rotateQuery()">rotateQuery</A></strong>(query originalQuery)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rotates query swapping rows for cols and cols for rows, first col becomes new col names.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>string</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#slugifyCol()">slugifyCol</A></strong>(string str, [numeric maxLength='0'], [string allow=''])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create a query column name safe slug from a string.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>query</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#sortQuery()">sortQuery</A></strong>(query qry, string sortBy, [string sortOrder='ASC'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sorts a query by the given field.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>query</code>
+		</td>
+		<td>
+			<strong><a href="QueryHelper.html#sortQueryNoCase()">sortQueryNoCase</A></strong>(query qry, string sortBy, [string sortOrder='ASC'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sorts a query by the given field non-case.
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_coldbox.system.Plugin"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd><a href="../../../coldbox/system/Plugin.html" title="class in coldbox.system">coldbox.system.Plugin</a></kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="../../..//coldbox/system/Plugin.html#getPluginDescription()">getPluginDescription</a>, <a href="../../..//coldbox/system/Plugin.html#getPluginName()">getPluginName</a>, <a href="../../..//coldbox/system/Plugin.html#getPluginVersion()">getPluginVersion</a>, <a href="../../..//coldbox/system/Plugin.html#getRequestCollection()">getRequestCollection</a>, <a href="../../..//coldbox/system/Plugin.html#getRequestContext()">getRequestContext</a>, <a href="../../..//coldbox/system/Plugin.html#getpluginAuthor()">getpluginAuthor</a>, <a href="../../..//coldbox/system/Plugin.html#getpluginAuthorURL()">getpluginAuthorURL</a>, <a href="../../..//coldbox/system/Plugin.html#getpluginPath()">getpluginPath</a>, <a href="../../..//coldbox/system/Plugin.html#setPluginDescription()">setPluginDescription</a>, <a href="../../..//coldbox/system/Plugin.html#setPluginName()">setPluginName</a>, <a href="../../..//coldbox/system/Plugin.html#setPluginVersion()">setPluginVersion</a>, <a href="../../..//coldbox/system/Plugin.html#setpluginAuthor()">setpluginAuthor</a>, <a href="../../..//coldbox/system/Plugin.html#setpluginAuthorURL()">setpluginAuthorURL</a> 
+			</td>
+		</tr>
+	</table>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_coldbox.system.FrameworkSupertype"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd><a href="../../../coldbox/system/FrameworkSupertype.html" title="class in coldbox.system">coldbox.system.FrameworkSupertype</a></kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="../../..//coldbox/system/FrameworkSupertype.html#$abort()">$abort</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#$dump()">$dump</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#$htmlhead()">$htmlhead</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#$include()">$include</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#$rethrow()">$rethrow</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#$throw()">$throw</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#addAsset()">addAsset</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#announceInterception()">announceInterception</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getColdboxOCM()">getColdboxOCM</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getController()">getController</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getDatasource()">getDatasource</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getDebugMode()">getDebugMode</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getInterceptor()">getInterceptor</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getMailService()">getMailService</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getMailSettings()">getMailSettings</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getMemento()">getMemento</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getModel()">getModel</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getModuleSettings()">getModuleSettings</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getMyPlugin()">getMyPlugin</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getNewMail()">getNewMail</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getPlugin()">getPlugin</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getResource()">getResource</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getSetting()">getSetting</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getSettingStructure()">getSettingStructure</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getSettingsBean()">getSettingsBean</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getValidationManager()">getValidationManager</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#getfwLocale()">getfwLocale</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#includeUDF()">includeUDF</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#loadGlobalUDFLibraries()">loadGlobalUDFLibraries</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#locateDirectoryPath()">locateDirectoryPath</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#locateFilePath()">locateFilePath</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#persistVariables()">persistVariables</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#populateModel()">populateModel</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#relocate()">relocate</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#renderExternalView()">renderExternalView</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#renderLayout()">renderLayout</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#renderView()">renderView</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#runEvent()">runEvent</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#setDebugMode()">setDebugMode</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#setNextEvent()">setNextEvent</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#setNextRoute()">setNextRoute</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#setSetting()">setSetting</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#setfwLocale()">setfwLocale</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#settingExists()">settingExists</a>, <a href="../../..//coldbox/system/FrameworkSupertype.html#validateModel()">validateModel</a> 
+			</td>
+		</tr>
+	</table>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>(any controller)</kbd>
+
+	<br><br>
+
+	
+	<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+			<dd><code>controller</code></dd>
+		
+	</dl>
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="arrayOfStructuresToQuery()"><!-- --></a>
+	<h3>arrayOfStructuresToQuery</h3>
+	
+	<kbd>public any <strong>arrayOfStructuresToQuery</strong>(array theArray)</kbd>
+	
+	<br><br>
+
+	
+		<p>Converts an array of structures to a CF Query Object.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>theArray</code> - The array of structures to convert to a query</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="doInnerJoin()"><!-- --></a>
+	<h3>doInnerJoin</h3>
+	
+	<kbd>public query <strong>doInnerJoin</strong>(query qryLeft, query qryRight, string LeftJoinColumn, string RightJoinColumn, [string OrderByElement=''], [boolean CaseSensitive='false'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Return inner-joined Query</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>qryLeft</code></dd>
+		
+		<dd><code>qryRight</code></dd>
+		
+		<dd><code>LeftJoinColumn</code> - the column name, not the value of column</dd>
+		
+		<dd><code>RightJoinColumn</code> - the column name, not the value of column</dd>
+		
+		<dd><code>OrderByElement</code></dd>
+		
+		<dd><code>CaseSensitive</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="doLeftOuterJoin()"><!-- --></a>
+	<h3>doLeftOuterJoin</h3>
+	
+	<kbd>public query <strong>doLeftOuterJoin</strong>(query qryLeft, query qryRight, string LeftJoinColumn, string RightJoinColumn, [string OrderByElement=''], [boolean CaseSensitive='false'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Return left outer-joined Query</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>qryLeft</code></dd>
+		
+		<dd><code>qryRight</code></dd>
+		
+		<dd><code>LeftJoinColumn</code> - the column name, not the value of column</dd>
+		
+		<dd><code>RightJoinColumn</code> - the column name, not the value of column</dd>
+		
+		<dd><code>OrderByElement</code></dd>
+		
+		<dd><code>CaseSensitive</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="doQueryAppend()"><!-- --></a>
+	<h3>doQueryAppend</h3>
+	
+	<kbd>public query <strong>doQueryAppend</strong>(query qryFrom, query qryTo)</kbd>
+	
+	<br><br>
+
+	
+		<p>Append Query1 into Query2</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>qryFrom</code> - Append Query1 into Query2</dd>
+		
+		<dd><code>qryTo</code> - Query2 will have all record from Query1</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="filterNull()"><!-- --></a>
+	<h3>filterNull</h3>
+	
+	<kbd>public query <strong>filterNull</strong>(query qry, string field, [string null='NULL'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Filters a query by NULL</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>qry</code> - Query to filter</dd>
+		
+		<dd><code>field</code> - Field to filter on</dd>
+		
+		<dd><code>null</code> - NULL by default, also accepts NOT NULL</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="filterQuery()"><!-- --></a>
+	<h3>filterQuery</h3>
+	
+	<kbd>public query <strong>filterQuery</strong>(query qry, string field, string value, [string cfsqltype='cf_sql_varchar'], [boolean list='false'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Filters a query by the given value</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>qry</code> - Query to filter</dd>
+		
+		<dd><code>field</code> - Field to filter on</dd>
+		
+		<dd><code>value</code> - Value to filter on</dd>
+		
+		<dd><code>cfsqltype</code> - The cf sql type of the value.</dd>
+		
+		<dd><code>list</code> - Whether to do a where IN list.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getCSV()"><!-- --></a>
+	<h3>getCSV</h3>
+	
+	<kbd>public string <strong>getCSV</strong>(query qry, [string delimiter=','])</kbd>
+	
+	<br><br>
+
+	
+		<p>returns query in delimited text file format</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>qry</code> - query to return as a delimited text file</dd>
+		
+		<dd><code>delimiter</code> - delimiter</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getColumnArray()"><!-- --></a>
+	<h3>getColumnArray</h3>
+	
+	<kbd>public any <strong>getColumnArray</strong>(query qry, string ColumnName)</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns an array of the values</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>qry</code> - cf query</dd>
+		
+		<dd><code>ColumnName</code> - column name</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getCountDistinct()"><!-- --></a>
+	<h3>getCountDistinct</h3>
+	
+	<kbd>public numeric <strong>getCountDistinct</strong>(query qry, string ColumnName)</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns total/count disninct values</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>qry</code> - cf query</dd>
+		
+		<dd><code>ColumnName</code> - column/s name</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getRowNumber()"><!-- --></a>
+	<h3>getRowNumber</h3>
+	
+	<kbd>public numeric <strong>getRowNumber</strong>(query qry, string ColumnValue, string ColumnName)</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns the row number of the first match</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>qry</code> - cf query</dd>
+		
+		<dd><code>ColumnValue</code> - column value</dd>
+		
+		<dd><code>ColumnName</code> - column name</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getUnMatchedElements()"><!-- --></a>
+	<h3>getUnMatchedElements</h3>
+	
+	<kbd>private string <strong>getUnMatchedElements</strong>(string FirstList, string secondList)</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns element which are only present in second-list</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>FirstList</code> - first list which be compared to second list</dd>
+		
+		<dd><code>secondList</code> - second list which be compared from first list</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getUniqueElements()"><!-- --></a>
+	<h3>getUniqueElements</h3>
+	
+	<kbd>private any <strong>getUniqueElements</strong>(string FirstList, string secondList)</kbd>
+	
+	<br><br>
+
+	
+		<p>Returns unique elements from two list</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>FirstList</code> - first list which be compared to second list</dd>
+		
+		<dd><code>secondList</code> - second list which be compared from first list</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="qrySetCell()"><!-- --></a>
+	<h3>qrySetCell</h3>
+	
+	<kbd>private query <strong>qrySetCell</strong>(query qryFrom, query qryTo, array ArrayCols, numeric FromRowNumber, numeric ToRowNumber)</kbd>
+	
+	<br><br>
+
+	
+		<p>Insert value into query</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>qryFrom</code></dd>
+		
+		<dd><code>qryTo</code></dd>
+		
+		<dd><code>ArrayCols</code></dd>
+		
+		<dd><code>FromRowNumber</code></dd>
+		
+		<dd><code>ToRowNumber</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="querySim()"><!-- --></a>
+	<h3>querySim</h3>
+	
+	<kbd>public query <strong>querySim</strong>(string queryData)</kbd>
+	
+	<br><br>
+
+	
+		<p>First line are the query columns separated by commas. Then do a consecuent rows separated by line breaks separated by | to denote columns.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>queryData</code> - The data to create queries</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="queryToArrayOfStructures()"><!-- --></a>
+	<h3>queryToArrayOfStructures</h3>
+	
+	<kbd>public array <strong>queryToArrayOfStructures</strong>(query theQuery)</kbd>
+	
+	<br><br>
+
+	
+		<p>Converts a query to an array of structures</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>theQuery</code> - The query to convert</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="rotateQuery()"><!-- --></a>
+	<h3>rotateQuery</h3>
+	
+	<kbd>public Query <strong>rotateQuery</strong>(query originalQuery)</kbd>
+	
+	<br><br>
+
+	
+		<p>Rotates query swapping rows for cols and cols for rows, first col becomes new col names</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>originalQuery</code> - The query to rotate</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="slugifyCol()"><!-- --></a>
+	<h3>slugifyCol</h3>
+	
+	<kbd>public string <strong>slugifyCol</strong>(string str, [numeric maxLength='0'], [string allow=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>Create a query column name safe slug from a string</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>str</code> - The string to slugify</dd>
+		
+		<dd><code>maxLength</code> - The maximum number of characters for the slug</dd>
+		
+		<dd><code>allow</code> - a regex safe list of additional characters to allow</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="sortQuery()"><!-- --></a>
+	<h3>sortQuery</h3>
+	
+	<kbd>public query <strong>sortQuery</strong>(query qry, string sortBy, [string sortOrder='ASC'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Sorts a query by the given field</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>qry</code> - Query to sort</dd>
+		
+		<dd><code>sortBy</code> - Sort by column(s)</dd>
+		
+		<dd><code>sortOrder</code> - ASC/DESC</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="sortQueryNoCase()"><!-- --></a>
+	<h3>sortQueryNoCase</h3>
+	
+	<kbd>public query <strong>sortQueryNoCase</strong>(query qry, string sortBy, [string sortOrder='ASC'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Sorts a query by the given field non-case</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>qry</code> - Query to sort</dd>
+		
+		<dd><code>sortBy</code> - Sort by column</dd>
+		
+		<dd><code>sortOrder</code> - ASC/DESC</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>

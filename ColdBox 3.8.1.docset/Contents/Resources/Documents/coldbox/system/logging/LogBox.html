@@ -1,0 +1,579 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>LogBox</title>
+	<meta name="keywords" content="coldbox.system.logging.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../highlighter/styles/shCoreDefault.css">
+	<script src="../../../highlighter/scripts/shCore.js"></script>
+	<script src="../../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../../index.html?coldbox/system/logging/LogBox.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system.logging"><span class="label label-success">coldbox.system.logging</span></a>
+</div>
+
+<h2>
+
+Class
+LogBox</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../../resources/inherit.gif" alt="extended by ">coldbox.system.logging.LogBox
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				output 
+				: false 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+<div id="class-hint">
+	
+	<p class="lead">This is LogBox, an enterprise logger. Please remember to persist this factory once it has been created.</p>
+</div>
+
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="LogBox.html#init()">init</A></strong>(<a href="../../../coldbox/system/logging/config/LogBoxConfig.html" title="class in coldbox.system.logging.config">LogBoxConfig</a> config, [any coldbox=''])
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Constructor.
+				
+			</td>
+		</tr>
+	</table>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="LogBox.html#configure()">configure</A></strong>(any&lt;<a href="../../../coldbox/system/logging/config/LogBoxConfig.html" title="class in coldbox.system.logging.config">LogBoxConfig</a>&gt; config)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configure logbox for operation.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any&lt;struct&gt;</code>
+		</td>
+		<td>
+			<strong><a href="LogBox.html#getAppendersMap()">getAppendersMap</A></strong>(any appenders)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a map of appenders by list.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;<a href="../../../coldbox/system/logging/config/LogBoxConfig.html" title="class in coldbox.system.logging.config">LogBoxConfig</a>&gt;</code>
+		</td>
+		<td>
+			<strong><a href="LogBox.html#getConfig()">getConfig</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get this LogBox's configuration object.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="LogBox.html#getCurrentAppenders()">getCurrentAppenders</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the list of currently registered appenders.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="LogBox.html#getCurrentLoggers()">getCurrentLoggers</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the list of currently instantiated loggers.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;<a href="../../../coldbox/system/logging/Logger.html" title="class in coldbox.system.logging">Logger</a>&gt;</code>
+		</td>
+		<td>
+			<strong><a href="LogBox.html#getLogger()">getLogger</A></strong>(any category)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a logger object configured with a category name and appenders.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;<a href="../../../coldbox/system/logging/Logger.html" title="class in coldbox.system.logging">Logger</a>&gt;</code>
+		</td>
+		<td>
+			<strong><a href="LogBox.html#getRootLogger()">getRootLogger</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the root logger.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any&lt;<a href="../../../coldbox/system/core/util/Util.html" title="class in coldbox.system.core.util">Util</a>&gt;</code>
+		</td>
+		<td>
+			<strong><a href="LogBox.html#getUtil()">getUtil</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Create and return a util object.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="LogBox.html#getVersion()">getVersion</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the LogBox version string.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="LogBox.html#locateCategoryParentLogger()">locateCategoryParentLogger</A></strong>(any category)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a parent logger according to category convention inheritance.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="LogBox.html#registerAppender()">registerAppender</A></strong>(any name, any class, [any&lt;struct&gt; properties='[runtime expression]'], [any layout=''], [any&lt;numeric&gt; levelMin='0'], [any&lt;numeric&gt; levelMax='4'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register a new appender object in the appender registry.
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>(<a href="../../../coldbox/system/logging/config/LogBoxConfig.html" title="class in coldbox.system.logging.config">LogBoxConfig</a> config, [any coldbox=''])</kbd>
+
+	<br><br>
+
+	
+	<p>Constructor</p>
+	
+	<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+			<dd><code>config</code> - The LogBoxConfig object to use to configure this instance of LogBox</dd>
+		
+			<dd><code>coldbox</code> - A coldbox application that this instance of logbox can be linked to.</dd>
+		
+	</dl>
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="configure()"><!-- --></a>
+	<h3>configure</h3>
+	
+	<kbd>public void <strong>configure</strong>(any&lt;<a href="../../../coldbox/system/logging/config/LogBoxConfig.html" title="class in coldbox.system.logging.config">LogBoxConfig</a>&gt; config)</kbd>
+	
+	<br><br>
+
+	
+		<p>Configure logbox for operation. You can also re-configure LogBox programmatically. Basically we register all appenders here and all categories</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>config</code> - The LogBoxConfig object to use to configure this instance of LogBox: coldbox.system.logging.config.LogBoxConfig</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getAppendersMap()"><!-- --></a>
+	<h3>getAppendersMap</h3>
+	
+	<kbd>private any&lt;struct&gt; <strong>getAppendersMap</strong>(any appenders)</kbd>
+	
+	<br><br>
+
+	
+		<p>Get a map of appenders by list. Usually called to get a category of appenders.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>appenders</code> - The list of appenders to get</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getConfig()"><!-- --></a>
+	<h3>getConfig</h3>
+	
+	<kbd>public any&lt;<a href="../../../coldbox/system/logging/config/LogBoxConfig.html" title="class in coldbox.system.logging.config">LogBoxConfig</a>&gt; <strong>getConfig</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get this LogBox's configuration object.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getCurrentAppenders()"><!-- --></a>
+	<h3>getCurrentAppenders</h3>
+	
+	<kbd>public any <strong>getCurrentAppenders</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the list of currently registered appenders.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getCurrentLoggers()"><!-- --></a>
+	<h3>getCurrentLoggers</h3>
+	
+	<kbd>public any <strong>getCurrentLoggers</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the list of currently instantiated loggers.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getLogger()"><!-- --></a>
+	<h3>getLogger</h3>
+	
+	<kbd>public any&lt;<a href="../../../coldbox/system/logging/Logger.html" title="class in coldbox.system.logging">Logger</a>&gt; <strong>getLogger</strong>(any category)</kbd>
+	
+	<br><br>
+
+	
+		<p>Get a logger object configured with a category name and appenders. If not configured, then it reverts to the root logger defined for this instance of LogBox</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>category</code> - The category name to use in this logger or pass in the target object will log from and we will inspect the object and use its metadata name.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getRootLogger()"><!-- --></a>
+	<h3>getRootLogger</h3>
+	
+	<kbd>public any&lt;<a href="../../../coldbox/system/logging/Logger.html" title="class in coldbox.system.logging">Logger</a>&gt; <strong>getRootLogger</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the root logger</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getUtil()"><!-- --></a>
+	<h3>getUtil</h3>
+	
+	<kbd>private any&lt;<a href="../../../coldbox/system/core/util/Util.html" title="class in coldbox.system.core.util">Util</a>&gt; <strong>getUtil</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Create and return a util object</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getVersion()"><!-- --></a>
+	<h3>getVersion</h3>
+	
+	<kbd>public any <strong>getVersion</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the LogBox version string.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="locateCategoryParentLogger()"><!-- --></a>
+	<h3>locateCategoryParentLogger</h3>
+	
+	<kbd>private any <strong>locateCategoryParentLogger</strong>(any category)</kbd>
+	
+	<br><br>
+
+	
+		<p>Get a parent logger according to category convention inheritance.  If not found, it returns the root logger.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>category</code> - The category name to investigate for parents.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="registerAppender()"><!-- --></a>
+	<h3>registerAppender</h3>
+	
+	<kbd>public any <strong>registerAppender</strong>(any name, any class, [any&lt;struct&gt; properties='[runtime expression]'], [any layout=''], [any&lt;numeric&gt; levelMin='0'], [any&lt;numeric&gt; levelMax='4'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Register a new appender object in the appender registry.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>name</code> - A unique name for the appender to register. Only unique names can be registered per instance.</dd>
+		
+		<dd><code>class</code> - The appender's class to register. We will create, init it and register it for you.</dd>
+		
+		<dd><code>properties</code> - The structure of properties to configure this appender with.</dd>
+		
+		<dd><code>layout</code> - The layout class to use in this appender for custom message rendering.</dd>
+		
+		<dd><code>levelMin</code> - The default log level for this appender, by default it is 0. Optional. ex: LogBox.logLevels.WARN</dd>
+		
+		<dd><code>levelMax</code> - The default log level for this appender, by default it is 5. Optional. ex: LogBox.logLevels.WARN</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>

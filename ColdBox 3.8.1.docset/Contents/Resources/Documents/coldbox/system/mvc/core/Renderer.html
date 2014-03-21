@@ -1,0 +1,1703 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Renderer</title>
+	<meta name="keywords" content="coldbox.system.mvc.core.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../../highlighter/styles/shCoreDefault.css">
+	<script src="../../../../highlighter/scripts/shCore.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../../../index.html?coldbox/system/mvc/core/Renderer.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system.mvc.core"><span class="label label-success">coldbox.system.mvc.core</span></a>
+</div>
+
+<h2>
+
+Class
+Renderer</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../../../resources/inherit.gif" alt="extended by "><a href="../../../../coldbox/system/mvc/FrameworkSupertype.html" title="class in coldbox.system.mvc">coldbox.system.mvc.FrameworkSupertype</a>
+            <img src="../../../../resources/inherit.gif" alt="extended by ">coldbox.system.mvc.core.Renderer
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				accessors 
+				: true 
+			</li>
+			&nbsp;
+			
+			<li class="label label-danger label-annotations">
+				serializable 
+				: false 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+<div id="class-hint">
+	
+	<p class="lead">******************************************************************************* Copyright Since 2005 ColdBox Framework by Luis Majano and Ortus Solutions, Corp www.coldbox.org | www.luismajano.com | www.ortussolutions.com ******************************************************************************* Author 	 :	Luis Majano Description : This is ColdBox's Renderer plugin.</p>
+</div>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="property_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="5">
+			<strong>Property Summary</strong>
+		</th>
+	</tr>
+	<tr class="info">
+		<th align="left">
+			<strong>type</strong>
+		</th>
+		<th align="left">
+			<strong>property</strong>
+		</th>
+		<th align="left">
+			<strong>default</strong>
+		</th>
+		<th align="left">
+			<strong>serializable</strong>
+		</th>
+		<th align="left">
+			<strong>required</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#appMapping()">appMapping</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#event()">event</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#explicitView()">explicitView</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#isDiscoveryCaching()">isDiscoveryCaching</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#layoutsConvention()">layoutsConvention</A></strong> 
+			<br>
+			
+			<!-- only grab the first sentence of the hint -->
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *********************************** PROPERTIES ********************************************.
+			
+			<br><br>
+			<ul>
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#lockName()">lockName</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#prc()">prc</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#rc()">rc</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#renderedHelpers()">renderedHelpers</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#viewsConvention()">viewsConvention</A></strong> 
+			<br>
+			
+			<br><br>
+			<ul>
+			
+			</ul>
+
+		</td>
+		<td align="right" valign="top" width="1%">
+			
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				true
+			</code>
+		</td>
+		<td align="right" valign="top" width="1%">
+			<code>
+				false
+			</code>
+		</td>
+	</tr>
+	
+	</tr>
+</table>
+
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="Renderer.html#init()">init</A></strong>(any controller)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *********************************** CONSTRUCTOR ********************************************.
+				
+			</td>
+		</tr>
+	</table>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#GETAPPMAPPING()">GETAPPMAPPING</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#GETEVENT()">GETEVENT</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#GETEXPLICITVIEW()">GETEXPLICITVIEW</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#GETISDISCOVERYCACHING()">GETISDISCOVERYCACHING</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#GETLAYOUTSCONVENTION()">GETLAYOUTSCONVENTION</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get: *********************************** PROPERTIES ********************************************.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#GETLOCKNAME()">GETLOCKNAME</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#GETPRC()">GETPRC</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#GETRC()">GETRC</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#GETRENDEREDHELPERS()">GETRENDEREDHELPERS</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#GETVIEWSCONVENTION()">GETVIEWSCONVENTION</A></strong>()
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a></code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#SETAPPMAPPING()">SETAPPMAPPING</A></strong>(any appMapping)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a></code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#SETEVENT()">SETEVENT</A></strong>(any event)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a></code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#SETISDISCOVERYCACHING()">SETISDISCOVERYCACHING</A></strong>(any isDiscoveryCaching)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a></code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#SETLAYOUTSCONVENTION()">SETLAYOUTSCONVENTION</A></strong>(any layoutsConvention)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set: *********************************** PROPERTIES ********************************************.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a></code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#SETLOCKNAME()">SETLOCKNAME</A></strong>(any lockName)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a></code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#SETPRC()">SETPRC</A></strong>(any prc)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a></code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#SETRC()">SETRC</A></strong>(any rc)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a></code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#SETRENDEREDHELPERS()">SETRENDEREDHELPERS</A></strong>(any renderedHelpers)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code><a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a></code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#SETVIEWSCONVENTION()">SETVIEWSCONVENTION</A></strong>(any viewsConvention)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#discoverViewPaths()">discoverViewPaths</A></strong>(any view)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#implicitViewChecks()">implicitViewChecks</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*********************************** PRIVATE ********************************************.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#locateLayout()">locateLayout</A></strong>(any layout)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#locateView()">locateView</A></strong>(any view)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#renderExternalView()">renderExternalView</A></strong>(any view, [struct args='[runtime expression]'])
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#renderLayout()">renderLayout</A></strong>([any layout], [any view=''], [struct args='[runtime expression]'], [boolean prePostExempt='false'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*********************************** LAYOUT METHODS ********************************************.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#renderView()">renderView</A></strong>([any view=''], [struct args='[runtime expression]'], [any collection], [any collectionAs=''], [numeric collectionStartRow='1'], [numeric collectionMaxRows='0'], [any collectionDelim=''], [boolean prePostExempt='false'])
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#renderViewCollection()">renderViewCollection</A></strong>([any view], [any viewPath], [any viewHelperPath], [any args], [any collection], [any collectionAs], [numeric collectionStartRow='1'], [numeric collectionMaxRows='0'], [any collectionDelim=''])
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#renderViewComposite()">renderViewComposite</A></strong>([any view], [any viewPath], [any viewHelperPath], [any args])
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Renderer.html#setExplicitView()">setExplicitView</A></strong>(any view)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*********************************** VIEW METHODS ********************************************.
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_coldbox.system.mvc.FrameworkSupertype"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd><a href="../../../../coldbox/system/mvc/FrameworkSupertype.html" title="class in coldbox.system.mvc">coldbox.system.mvc.FrameworkSupertype</a></kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="../../../..//coldbox/system/mvc/FrameworkSupertype.html#GETCONTROLLER()">GETCONTROLLER</a>, <a href="../../../..//coldbox/system/mvc/FrameworkSupertype.html#SETCONTROLLER()">SETCONTROLLER</a>, <a href="../../../..//coldbox/system/mvc/FrameworkSupertype.html#getModel()">getModel</a>, <a href="../../../..//coldbox/system/mvc/FrameworkSupertype.html#getSetting()">getSetting</a>, <a href="../../../..//coldbox/system/mvc/FrameworkSupertype.html#getSettingStructure()">getSettingStructure</a>, <a href="../../../..//coldbox/system/mvc/FrameworkSupertype.html#populateModel()">populateModel</a>, <a href="../../../..//coldbox/system/mvc/FrameworkSupertype.html#runEvent()">runEvent</a>, <a href="../../../..//coldbox/system/mvc/FrameworkSupertype.html#setNextEvent()">setNextEvent</a>, <a href="../../../..//coldbox/system/mvc/FrameworkSupertype.html#setSetting()">setSetting</a>, <a href="../../../..//coldbox/system/mvc/FrameworkSupertype.html#settingExists()">settingExists</a> 
+			</td>
+		</tr>
+	</table>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>(any controller)</kbd>
+
+	<br><br>
+
+	
+	<p>*********************************** CONSTRUCTOR ********************************************</p>
+	
+	<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+			<dd><code>controller</code></dd>
+		
+	</dl>
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+	<a name="property_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Property Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	
+		<a name="appMapping()"><!-- --></a>
+		<h3>appMapping</h3>
+
+		<kbd>
+			property any <strong>appMapping</strong> 
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			<dd><code>serializable</code> - true</dd>
+			
+			<dd><code>required</code> - false</dd>
+			
+		</dl>
+
+		<hr>
+	
+		<a name="event()"><!-- --></a>
+		<h3>event</h3>
+
+		<kbd>
+			property any <strong>event</strong> 
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			<dd><code>serializable</code> - true</dd>
+			
+			<dd><code>required</code> - false</dd>
+			
+		</dl>
+
+		<hr>
+	
+		<a name="explicitView()"><!-- --></a>
+		<h3>explicitView</h3>
+
+		<kbd>
+			property any <strong>explicitView</strong> 
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			<dd><code>serializable</code> - true</dd>
+			
+			<dd><code>required</code> - false</dd>
+			
+		</dl>
+
+		<hr>
+	
+		<a name="isDiscoveryCaching()"><!-- --></a>
+		<h3>isDiscoveryCaching</h3>
+
+		<kbd>
+			property any <strong>isDiscoveryCaching</strong> 
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			<dd><code>serializable</code> - true</dd>
+			
+			<dd><code>required</code> - false</dd>
+			
+		</dl>
+
+		<hr>
+	
+		<a name="layoutsConvention()"><!-- --></a>
+		<h3>layoutsConvention</h3>
+
+		<kbd>
+			property any <strong>layoutsConvention</strong> 
+		</kbd>
+
+		<br><br>
+		
+			<p>*********************************** PROPERTIES ********************************************</p>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			<dd><code>serializable</code> - true</dd>
+			
+			<dd><code>required</code> - false</dd>
+			
+		</dl>
+
+		<hr>
+	
+		<a name="lockName()"><!-- --></a>
+		<h3>lockName</h3>
+
+		<kbd>
+			property any <strong>lockName</strong> 
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			<dd><code>serializable</code> - true</dd>
+			
+			<dd><code>required</code> - false</dd>
+			
+		</dl>
+
+		<hr>
+	
+		<a name="prc()"><!-- --></a>
+		<h3>prc</h3>
+
+		<kbd>
+			property any <strong>prc</strong> 
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			<dd><code>serializable</code> - true</dd>
+			
+			<dd><code>required</code> - false</dd>
+			
+		</dl>
+
+		<hr>
+	
+		<a name="rc()"><!-- --></a>
+		<h3>rc</h3>
+
+		<kbd>
+			property any <strong>rc</strong> 
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			<dd><code>serializable</code> - true</dd>
+			
+			<dd><code>required</code> - false</dd>
+			
+		</dl>
+
+		<hr>
+	
+		<a name="renderedHelpers()"><!-- --></a>
+		<h3>renderedHelpers</h3>
+
+		<kbd>
+			property any <strong>renderedHelpers</strong> 
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			<dd><code>serializable</code> - true</dd>
+			
+			<dd><code>required</code> - false</dd>
+			
+		</dl>
+
+		<hr>
+	
+		<a name="viewsConvention()"><!-- --></a>
+		<h3>viewsConvention</h3>
+
+		<kbd>
+			property any <strong>viewsConvention</strong> 
+		</kbd>
+
+		<br><br>
+		
+
+		<dl>
+		<dt><strong>Attributes:</strong></dt>
+		
+			<dd><code>serializable</code> - true</dd>
+			
+			<dd><code>required</code> - false</dd>
+			
+		</dl>
+
+		<hr>
+	
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="GETAPPMAPPING()"><!-- --></a>
+	<h3>GETAPPMAPPING</h3>
+	
+	<kbd>public any <strong>GETAPPMAPPING</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="GETEVENT()"><!-- --></a>
+	<h3>GETEVENT</h3>
+	
+	<kbd>public any <strong>GETEVENT</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="GETEXPLICITVIEW()"><!-- --></a>
+	<h3>GETEXPLICITVIEW</h3>
+	
+	<kbd>public any <strong>GETEXPLICITVIEW</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="GETISDISCOVERYCACHING()"><!-- --></a>
+	<h3>GETISDISCOVERYCACHING</h3>
+	
+	<kbd>public any <strong>GETISDISCOVERYCACHING</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="GETLAYOUTSCONVENTION()"><!-- --></a>
+	<h3>GETLAYOUTSCONVENTION</h3>
+	
+	<kbd>public any <strong>GETLAYOUTSCONVENTION</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>get: *********************************** PROPERTIES ********************************************</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="GETLOCKNAME()"><!-- --></a>
+	<h3>GETLOCKNAME</h3>
+	
+	<kbd>public any <strong>GETLOCKNAME</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="GETPRC()"><!-- --></a>
+	<h3>GETPRC</h3>
+	
+	<kbd>public any <strong>GETPRC</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="GETRC()"><!-- --></a>
+	<h3>GETRC</h3>
+	
+	<kbd>public any <strong>GETRC</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="GETRENDEREDHELPERS()"><!-- --></a>
+	<h3>GETRENDEREDHELPERS</h3>
+	
+	<kbd>public any <strong>GETRENDEREDHELPERS</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="GETVIEWSCONVENTION()"><!-- --></a>
+	<h3>GETVIEWSCONVENTION</h3>
+	
+	<kbd>public any <strong>GETVIEWSCONVENTION</strong>()</kbd>
+	
+	<br><br>
+
+	
+
+	</dl>
+	<hr>
+
+	<a name="SETAPPMAPPING()"><!-- --></a>
+	<h3>SETAPPMAPPING</h3>
+	
+	<kbd>public <a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a> <strong>SETAPPMAPPING</strong>(any appMapping)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>appMapping</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="SETEVENT()"><!-- --></a>
+	<h3>SETEVENT</h3>
+	
+	<kbd>public <a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a> <strong>SETEVENT</strong>(any event)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>event</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="SETISDISCOVERYCACHING()"><!-- --></a>
+	<h3>SETISDISCOVERYCACHING</h3>
+	
+	<kbd>public <a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a> <strong>SETISDISCOVERYCACHING</strong>(any isDiscoveryCaching)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>isDiscoveryCaching</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="SETLAYOUTSCONVENTION()"><!-- --></a>
+	<h3>SETLAYOUTSCONVENTION</h3>
+	
+	<kbd>public <a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a> <strong>SETLAYOUTSCONVENTION</strong>(any layoutsConvention)</kbd>
+	
+	<br><br>
+
+	
+		<p>set: *********************************** PROPERTIES ********************************************</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>layoutsConvention</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="SETLOCKNAME()"><!-- --></a>
+	<h3>SETLOCKNAME</h3>
+	
+	<kbd>public <a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a> <strong>SETLOCKNAME</strong>(any lockName)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>lockName</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="SETPRC()"><!-- --></a>
+	<h3>SETPRC</h3>
+	
+	<kbd>public <a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a> <strong>SETPRC</strong>(any prc)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>prc</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="SETRC()"><!-- --></a>
+	<h3>SETRC</h3>
+	
+	<kbd>public <a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a> <strong>SETRC</strong>(any rc)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>rc</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="SETRENDEREDHELPERS()"><!-- --></a>
+	<h3>SETRENDEREDHELPERS</h3>
+	
+	<kbd>public <a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a> <strong>SETRENDEREDHELPERS</strong>(any renderedHelpers)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>renderedHelpers</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="SETVIEWSCONVENTION()"><!-- --></a>
+	<h3>SETVIEWSCONVENTION</h3>
+	
+	<kbd>public <a href="../../../../coldbox/system/mvc/core/Renderer.html" title="class in coldbox.system.mvc.core">Renderer</a> <strong>SETVIEWSCONVENTION</strong>(any viewsConvention)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>viewsConvention</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="discoverViewPaths()"><!-- --></a>
+	<h3>discoverViewPaths</h3>
+	
+	<kbd>private any <strong>discoverViewPaths</strong>(any view)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>view</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="implicitViewChecks()"><!-- --></a>
+	<h3>implicitViewChecks</h3>
+	
+	<kbd>private any <strong>implicitViewChecks</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>*********************************** PRIVATE ********************************************</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="locateLayout()"><!-- --></a>
+	<h3>locateLayout</h3>
+	
+	<kbd>public any <strong>locateLayout</strong>(any layout)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>layout</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="locateView()"><!-- --></a>
+	<h3>locateView</h3>
+	
+	<kbd>public any <strong>locateView</strong>(any view)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>view</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="renderExternalView()"><!-- --></a>
+	<h3>renderExternalView</h3>
+	
+	<kbd>public any <strong>renderExternalView</strong>(any view, [struct args='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/mvc/FrameworkSupertype.html#renderExternalView()">renderExternalView</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/mvc/FrameworkSupertype.html" title="class in coldbox.system.mvc">FrameworkSupertype</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>view</code></dd>
+		
+		<dd><code>args</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="renderLayout()"><!-- --></a>
+	<h3>renderLayout</h3>
+	
+	<kbd>public any <strong>renderLayout</strong>([any layout], [any view=''], [struct args='[runtime expression]'], [boolean prePostExempt='false'])</kbd>
+	
+	<br><br>
+
+	
+		<p>*********************************** LAYOUT METHODS ********************************************</p>
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/mvc/FrameworkSupertype.html#renderLayout()">renderLayout</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/mvc/FrameworkSupertype.html" title="class in coldbox.system.mvc">FrameworkSupertype</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>layout</code></dd>
+		
+		<dd><code>view</code></dd>
+		
+		<dd><code>args</code></dd>
+		
+		<dd><code>prePostExempt</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="renderView()"><!-- --></a>
+	<h3>renderView</h3>
+	
+	<kbd>public any <strong>renderView</strong>([any view=''], [struct args='[runtime expression]'], [any collection], [any collectionAs=''], [numeric collectionStartRow='1'], [numeric collectionMaxRows='0'], [any collectionDelim=''], [boolean prePostExempt='false'])</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+			<dt><strong>Overrides:</strong></dt>
+			<dd>
+			<code>
+			<a href="../../../..//coldbox/system/mvc/FrameworkSupertype.html#renderView()">renderView</a></code>
+			in class
+			<code>
+				<a href="../../../../coldbox/system/mvc/FrameworkSupertype.html" title="class in coldbox.system.mvc">FrameworkSupertype</a>
+			</code>
+			</dd>
+		</dl>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>view</code></dd>
+		
+		<dd><code>args</code></dd>
+		
+		<dd><code>collection</code></dd>
+		
+		<dd><code>collectionAs</code></dd>
+		
+		<dd><code>collectionStartRow</code></dd>
+		
+		<dd><code>collectionMaxRows</code></dd>
+		
+		<dd><code>collectionDelim</code></dd>
+		
+		<dd><code>prePostExempt</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="renderViewCollection()"><!-- --></a>
+	<h3>renderViewCollection</h3>
+	
+	<kbd>public any <strong>renderViewCollection</strong>([any view], [any viewPath], [any viewHelperPath], [any args], [any collection], [any collectionAs], [numeric collectionStartRow='1'], [numeric collectionMaxRows='0'], [any collectionDelim=''])</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>view</code></dd>
+		
+		<dd><code>viewPath</code></dd>
+		
+		<dd><code>viewHelperPath</code></dd>
+		
+		<dd><code>args</code></dd>
+		
+		<dd><code>collection</code></dd>
+		
+		<dd><code>collectionAs</code></dd>
+		
+		<dd><code>collectionStartRow</code></dd>
+		
+		<dd><code>collectionMaxRows</code></dd>
+		
+		<dd><code>collectionDelim</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="renderViewComposite()"><!-- --></a>
+	<h3>renderViewComposite</h3>
+	
+	<kbd>public any <strong>renderViewComposite</strong>([any view], [any viewPath], [any viewHelperPath], [any args])</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>view</code></dd>
+		
+		<dd><code>viewPath</code></dd>
+		
+		<dd><code>viewHelperPath</code></dd>
+		
+		<dd><code>args</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setExplicitView()"><!-- --></a>
+	<h3>setExplicitView</h3>
+	
+	<kbd>public any <strong>setExplicitView</strong>(any view)</kbd>
+	
+	<br><br>
+
+	
+		<p>*********************************** VIEW METHODS ********************************************</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>view</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>

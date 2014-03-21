@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>RequestContextDecorator</title>
+	<meta name="keywords" content="coldbox.system.web.context.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../../highlighter/styles/shCoreDefault.css">
+	<script src="../../../../highlighter/scripts/shCore.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../../../index.html?coldbox/system/web/context/RequestContextDecorator.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system.web.context"><span class="label label-success">coldbox.system.web.context</span></a>
+</div>
+
+<h2>
+
+Class
+RequestContextDecorator</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../../../resources/inherit.gif" alt="extended by "><a href="../../../../coldbox/system/web/context/RequestContext.html" title="class in coldbox.system.web.context">coldbox.system.web.context.RequestContext</a>
+            <img src="../../../../resources/inherit.gif" alt="extended by ">coldbox.system.web.context.RequestContextDecorator
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				output 
+				: false 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+<div id="class-hint">
+	
+	<p class="lead">This is the base request context decorator used as an abstract class for implementing request context decorators</p>
+</div>
+
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="RequestContextDecorator.html#init()">init</A></strong>(any oContext, any controller)
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; constructor.
+				
+			</td>
+		</tr>
+	</table>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="RequestContextDecorator.html#configure()">configure</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Override to provide a pseudo-constructor for your decorator.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="RequestContextDecorator.html#getController()">getController</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get controller: coldbox.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="RequestContextDecorator.html#getRequestContext()">getRequestContext</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the original request context.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="RequestContextDecorator.html#setRequestContext()">setRequestContext</A></strong>(any requestContext)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DO NOT OVERRIDE: Set the original request context.
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_coldbox.system.web.context.RequestContext"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd><a href="../../../../coldbox/system/web/context/RequestContext.html" title="class in coldbox.system.web.context">coldbox.system.web.context.RequestContext</a></kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				<a href="../../../..//coldbox/system/web/context/RequestContext.html#$dump()">$dump</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#$throw()">$throw</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#buildLink()">buildLink</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#clearCollection()">clearCollection</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#collectionAppend()">collectionAppend</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getCollection()">getCollection</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getCurrentAction()">getCurrentAction</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getCurrentEvent()">getCurrentEvent</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getCurrentHandler()">getCurrentHandler</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getCurrentLayout()">getCurrentLayout</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getCurrentLayoutModule()">getCurrentLayoutModule</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getCurrentModule()">getCurrentModule</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getCurrentRoute()">getCurrentRoute</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getCurrentRoutedNamespace()">getCurrentRoutedNamespace</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getCurrentRoutedURL()">getCurrentRoutedURL</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getCurrentView()">getCurrentView</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getCurrentViewArgs()">getCurrentViewArgs</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getCurrentViewModule()">getCurrentViewModule</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getDebugPanelFlag()">getDebugPanelFlag</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getDefaultLayout()">getDefaultLayout</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getDefaultView()">getDefaultView</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getEventCacheableEntry()">getEventCacheableEntry</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getEventName()">getEventName</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getFolderLayouts()">getFolderLayouts</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getHTTPBasicCredentials()">getHTTPBasicCredentials</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getHTTPContent()">getHTTPContent</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getHTTPHeader()">getHTTPHeader</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getHTTPMethod()">getHTTPMethod</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getMemento()">getMemento</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getModuleRoot()">getModuleRoot</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getRegisteredLayouts()">getRegisteredLayouts</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getRenderData()">getRenderData</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getRoutedStruct()">getRoutedStruct</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getSESBaseURL()">getSESBaseURL</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getSelf()">getSelf</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getSize()">getSize</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getTrimValue()">getTrimValue</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getValue()">getValue</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getViewCacheableEntry()">getViewCacheableEntry</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#getViewLayouts()">getViewLayouts</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#isAjax()">isAjax</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#isEventCacheable()">isEventCacheable</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#isNoExecution()">isNoExecution</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#isNoRender()">isNoRender</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#isProxyRequest()">isProxyRequest</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#isSES()">isSES</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#isSSL()">isSSL</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#isViewCacheable()">isViewCacheable</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#noExecution()">noExecution</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#noLayout()">noLayout</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#noRender()">noRender</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#overrideEvent()">overrideEvent</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#paramValue()">paramValue</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#removeEventCacheableEntry()">removeEventCacheableEntry</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#removeValue()">removeValue</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#renderData()">renderData</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#renderWithFormats()">renderWithFormats</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#setDefaultLayout()">setDefaultLayout</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#setDefaultView()">setDefaultView</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#setEventCacheableEntry()">setEventCacheableEntry</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#setHTTPHeader()">setHTTPHeader</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#setLayout()">setLayout</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#setMemento()">setMemento</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#setProxyRequest()">setProxyRequest</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#setRoutedStruct()">setRoutedStruct</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#setSESBaseURL()">setSESBaseURL</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#setValue()">setValue</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#setView()">setView</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#setViewCacheableEntry()">setViewCacheableEntry</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#setisSES()">setisSES</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#showDebugPanel()">showDebugPanel</a>, <a href="../../../..//coldbox/system/web/context/RequestContext.html#valueExists()">valueExists</a> 
+			</td>
+		</tr>
+	</table>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>(any oContext, any controller)</kbd>
+
+	<br><br>
+
+	
+	<p>constructor</p>
+	
+	<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+			<dd><code>oContext</code> - The original context we are decorating. coldbox.system.web.context.RequestContext</dd>
+		
+			<dd><code>controller</code> - The coldbox controller</dd>
+		
+	</dl>
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="configure()"><!-- --></a>
+	<h3>configure</h3>
+	
+	<kbd>public void <strong>configure</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Override to provide a pseudo-constructor for your decorator</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getController()"><!-- --></a>
+	<h3>getController</h3>
+	
+	<kbd>private any <strong>getController</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get controller: coldbox.system.web.Controller</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getRequestContext()"><!-- --></a>
+	<h3>getRequestContext</h3>
+	
+	<kbd>public any <strong>getRequestContext</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the original request context. coldbox.system.web.context.RequestContext</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setRequestContext()"><!-- --></a>
+	<h3>setRequestContext</h3>
+	
+	<kbd>public void <strong>setRequestContext</strong>(any requestContext)</kbd>
+	
+	<br><br>
+
+	
+		<p>DO NOT OVERRIDE: Set the original request context.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>requestContext</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>

@@ -1,0 +1,895 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Coldbox</title>
+	<meta name="keywords" content="coldbox.system.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../highlighter/styles/shCoreDefault.css">
+	<script src="../../highlighter/scripts/shCore.js"></script>
+	<script src="../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../index.html?coldbox/system/Coldbox.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system"><span class="label label-success">coldbox.system</span></a>
+</div>
+
+<h2>
+
+Class
+Coldbox</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../resources/inherit.gif" alt="extended by ">coldbox.system.Coldbox
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				serializable 
+				: false 
+			</li>
+			&nbsp;
+			
+			<li class="label label-danger label-annotations">
+				output 
+				: false 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+<div id="class-hint">
+	
+	<p class="lead">This is the base component used to provide Application.cfc support</p>
+</div>
+
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="Coldbox.html#init()">init</A></strong>(string COLDBOX_CONFIG_FILE, string COLDBOX_APP_ROOT_PATH, [string COLDBOX_APP_KEY], [string COLDBOX_APP_MAPPING=''])
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Used when not using inheritance.
+				
+			</td>
+		</tr>
+	</table>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#coldboxCommands()">coldboxCommands</A></strong>(any cbController, any event)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Execute some coldbox commands.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#getAppHash()">getAppHash</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get AppHash used in the cflocks.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#getLockTimeout()">getLockTimeout</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get LockTimeout for inits.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#isfwReinit()">isfwReinit</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Verify if we need to reboot the framework.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#loadColdbox()">loadColdbox</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Load the framework, initialize it and execute application start procedures.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#locateAppKey()">locateAppKey</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get COLDBOX_APP_KEY used in this application.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#onApplicationEnd()">onApplicationEnd</A></strong>([struct appScope])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An onApplicationEnd method to use or call from your Application.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#onApplicationStart()">onApplicationStart</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An onApplicationStart method to use or call from your Application.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#onMissingTemplate()">onMissingTemplate</A></strong>(any template)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I execute when a non-existing CFM page was requested.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>boolean</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#onRequestStart()">onRequestStart</A></strong>(string targetPage)
+			<br>
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#onSessionEnd()">onSessionEnd</A></strong>(struct sessionScope, [struct appScope])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An onSessionEnd method to use or call from your Application.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#onSessionStart()">onSessionStart</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An onSessionStart method to use or call from your Application.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#processColdBoxRequest()">processColdBoxRequest</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process a Coldbox Request.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#reloadChecks()">reloadChecks</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reload checks and reload settings.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#renderDataSetup()">renderDataSetup</A></strong>(any statusCode, any statusText, any contentType, any encoding)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Render data items.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#setAppHash()">setAppHash</A></strong>(any appHash)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set AppHash used in the cflocks.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#setCOLDBOX_APP_KEY()">setCOLDBOX_APP_KEY</A></strong>(string COLDBOX_APP_KEY)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set COLDBOX_APP_KEY.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#setCOLDBOX_APP_MAPPING()">setCOLDBOX_APP_MAPPING</A></strong>(string COLDBOX_APP_MAPPING)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set COLDBOX_APP_MAPPING.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#setCOLDBOX_APP_ROOT_PATH()">setCOLDBOX_APP_ROOT_PATH</A></strong>(string COLDBOX_APP_ROOT_PATH)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set COLDBOX_APP_ROOT_PATH.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#setCOLDBOX_CONFIG_FILE()">setCOLDBOX_CONFIG_FILE</A></strong>(string COLDBOX_CONFIG_FILE)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set COLDBOX_CONFIG_FILE.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="Coldbox.html#setLockTimeout()">setLockTimeout</A></strong>(any lockTimeout)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set LockTimeout.
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>(string COLDBOX_CONFIG_FILE, string COLDBOX_APP_ROOT_PATH, [string COLDBOX_APP_KEY], [string COLDBOX_APP_MAPPING=''])</kbd>
+
+	<br><br>
+
+	
+	<p>Used when not using inheritance</p>
+	
+	<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+			<dd><code>COLDBOX_CONFIG_FILE</code> - The coldbox config file from the application.cfc</dd>
+		
+			<dd><code>COLDBOX_APP_ROOT_PATH</code> - The coldbox app root path from the application.cfc</dd>
+		
+			<dd><code>COLDBOX_APP_KEY</code> - The key name to use when storing the Coldbox application</dd>
+		
+			<dd><code>COLDBOX_APP_MAPPING</code> - The dot notation path to this application</dd>
+		
+	</dl>
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="coldboxCommands()"><!-- --></a>
+	<h3>coldboxCommands</h3>
+	
+	<kbd>private void <strong>coldboxCommands</strong>(any cbController, any event)</kbd>
+	
+	<br><br>
+
+	
+		<p>Execute some coldbox commands</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>cbController</code> - The cb Controller</dd>
+		
+		<dd><code>event</code> - The event context object</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getAppHash()"><!-- --></a>
+	<h3>getAppHash</h3>
+	
+	<kbd>public any <strong>getAppHash</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get AppHash used in the cflocks</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getLockTimeout()"><!-- --></a>
+	<h3>getLockTimeout</h3>
+	
+	<kbd>public any <strong>getLockTimeout</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get LockTimeout for inits</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="isfwReinit()"><!-- --></a>
+	<h3>isfwReinit</h3>
+	
+	<kbd>public any <strong>isfwReinit</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Verify if we need to reboot the framework. Boolean</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="loadColdbox()"><!-- --></a>
+	<h3>loadColdbox</h3>
+	
+	<kbd>public void <strong>loadColdbox</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Load the framework, initialize it and execute application start procedures</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="locateAppKey()"><!-- --></a>
+	<h3>locateAppKey</h3>
+	
+	<kbd>private any <strong>locateAppKey</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get COLDBOX_APP_KEY used in this application</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="onApplicationEnd()"><!-- --></a>
+	<h3>onApplicationEnd</h3>
+	
+	<kbd>public void <strong>onApplicationEnd</strong>([struct appScope])</kbd>
+	
+	<br><br>
+
+	
+		<p>An onApplicationEnd method to use or call from your Application.cfc</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>appScope</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="onApplicationStart()"><!-- --></a>
+	<h3>onApplicationStart</h3>
+	
+	<kbd>public boolean <strong>onApplicationStart</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>An onApplicationStart method to use or call from your Application.cfc</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="onMissingTemplate()"><!-- --></a>
+	<h3>onMissingTemplate</h3>
+	
+	<kbd>public boolean <strong>onMissingTemplate</strong>(any template)</kbd>
+	
+	<br><br>
+
+	
+		<p>I execute when a non-existing CFM page was requested.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>template</code> - I am the template that the user requested.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="onRequestStart()"><!-- --></a>
+	<h3>onRequestStart</h3>
+	
+	<kbd>public boolean <strong>onRequestStart</strong>(string targetPage)</kbd>
+	
+	<br><br>
+
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>targetPage</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="onSessionEnd()"><!-- --></a>
+	<h3>onSessionEnd</h3>
+	
+	<kbd>public void <strong>onSessionEnd</strong>(struct sessionScope, [struct appScope])</kbd>
+	
+	<br><br>
+
+	
+		<p>An onSessionEnd method to use or call from your Application.cfc</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>sessionScope</code></dd>
+		
+		<dd><code>appScope</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="onSessionStart()"><!-- --></a>
+	<h3>onSessionStart</h3>
+	
+	<kbd>public void <strong>onSessionStart</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>An onSessionStart method to use or call from your Application.cfc</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="processColdBoxRequest()"><!-- --></a>
+	<h3>processColdBoxRequest</h3>
+	
+	<kbd>public void <strong>processColdBoxRequest</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Process a Coldbox Request</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="reloadChecks()"><!-- --></a>
+	<h3>reloadChecks</h3>
+	
+	<kbd>public void <strong>reloadChecks</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Reload checks and reload settings.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="renderDataSetup()"><!-- --></a>
+	<h3>renderDataSetup</h3>
+	
+	<kbd>private void <strong>renderDataSetup</strong>(any statusCode, any statusText, any contentType, any encoding)</kbd>
+	
+	<br><br>
+
+	
+		<p>Render data items</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>statusCode</code></dd>
+		
+		<dd><code>statusText</code></dd>
+		
+		<dd><code>contentType</code></dd>
+		
+		<dd><code>encoding</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setAppHash()"><!-- --></a>
+	<h3>setAppHash</h3>
+	
+	<kbd>public void <strong>setAppHash</strong>(any appHash)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set AppHash used in the cflocks</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>appHash</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setCOLDBOX_APP_KEY()"><!-- --></a>
+	<h3>setCOLDBOX_APP_KEY</h3>
+	
+	<kbd>public void <strong>setCOLDBOX_APP_KEY</strong>(string COLDBOX_APP_KEY)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set COLDBOX_APP_KEY</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>COLDBOX_APP_KEY</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setCOLDBOX_APP_MAPPING()"><!-- --></a>
+	<h3>setCOLDBOX_APP_MAPPING</h3>
+	
+	<kbd>public void <strong>setCOLDBOX_APP_MAPPING</strong>(string COLDBOX_APP_MAPPING)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set COLDBOX_APP_MAPPING</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>COLDBOX_APP_MAPPING</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setCOLDBOX_APP_ROOT_PATH()"><!-- --></a>
+	<h3>setCOLDBOX_APP_ROOT_PATH</h3>
+	
+	<kbd>public void <strong>setCOLDBOX_APP_ROOT_PATH</strong>(string COLDBOX_APP_ROOT_PATH)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set COLDBOX_APP_ROOT_PATH</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>COLDBOX_APP_ROOT_PATH</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setCOLDBOX_CONFIG_FILE()"><!-- --></a>
+	<h3>setCOLDBOX_CONFIG_FILE</h3>
+	
+	<kbd>public void <strong>setCOLDBOX_CONFIG_FILE</strong>(string COLDBOX_CONFIG_FILE)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set COLDBOX_CONFIG_FILE</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>COLDBOX_CONFIG_FILE</code></dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setLockTimeout()"><!-- --></a>
+	<h3>setLockTimeout</h3>
+	
+	<kbd>public void <strong>setLockTimeout</strong>(any lockTimeout)</kbd>
+	
+	<br><br>
+
+	
+		<p>Set LockTimeout</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>lockTimeout</code> - Numeric</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>

@@ -1,0 +1,1520 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Injector</title>
+	<meta name="keywords" content="coldbox.system.ioc.concurrent.Callable interface">
+	<!-- common assets -->
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel ="stylesheet" type="text/css" href="../../../bootstrap/css/bootstrap.min.css">
+<link rel ="stylesheet" type="text/css" href="../../../stylesheet.css">
+	
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,700,700italic|Ubuntu+Mono' rel='stylesheet' type='text/css' />
+	
+<script src="../../../bootstrap/js/jquery-2.1.0.min.js" type="text/javascript"></script>
+<script src="../../../bootstrap/js/bootstrap.min.js" 	type="text/javascript"></script>
+
+<script>
+$(document).ready(function() {
+	// Global Tool Tip Settings
+	$( '[title]' ).tooltip({
+		 animation: 'slide',
+		 delay: { show: 250, hide: 250 }
+	});
+});
+</script>
+	<!-- syntax highlighter -->
+	<link type="text/css" rel="stylesheet" href="../../../highlighter/styles/shCoreDefault.css">
+	<script src="../../../highlighter/scripts/shCore.js"></script>
+	<script src="../../../highlighter/scripts/shBrushColdFusion.js"></script>
+	<script src="../../../highlighter/scripts/shBrushXml.js"></script>
+	<script src="../../../highlighter/scripts/shBrushSql.js"></script>
+	<script src="../../../highlighter/scripts/shBrushJScript.js"></script>
+	<script src="../../../highlighter/scripts/shBrushJava.js"></script>
+	<script src="../../../highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+<body class="withNavbar">
+
+
+
+<!-- ========= START OF NAVBAR ======= -->
+<a name="navbar_top"></a>
+<a href="#skip-navbar_top" title="skip navigation links"></a>	
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container-fluid">
+    
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#class-navigation">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#"><strong>ColdBox Platform v3.8.1</strong></a>
+		</div>
+
+	    <div class="collapse navbar-collapse" id="class-navigation">
+	    	<ul class="nav navbar-nav">
+				
+					<li><a href="../../../overview-summary.html"><i class="glyphicon glyphicon-plane"></i> overview</a></li>
+					
+					<li><a href="package-summary.html"><i class="glyphicon glyphicon-folder-open"></i> &nbsp;package</a></li>
+				
+					<li class="dropdown active">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-flash"></i> class <b class="caret"></b></a>
+
+						<ul class="dropdown-menu">
+							<li><a href="#class">Class Definition</a></li>
+							<li><a href="#constructor_summary">Constructor Summary</a></li>
+							<li><a href="#constructor_detail">Constructor Detail</a></li>
+							<li><a href="#inherited_methods">Inherited Methods</a></li>
+							<li><a href="#method_summary">Method Summary</a></li>
+							<li><a href="#method_detail">Method Detail</a></li>
+							<li><a href="#property_summary">Property Summary</a></li>
+							<li><a href="#property_detail">Property Detail</a></li>
+							
+						</ul>
+					</li>
+				
+	      	</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="../../../index.html?coldbox/system/ioc/Injector.html" target="_top">
+					<i class="glyphicon glyphicon-fullscreen"></i> Frames
+					</a>
+				</li>
+			</ul>
+	    </div>
+
+	</div>
+</nav>	
+
+<a name="skip-navbar_top"></a>
+<!-- ========= END OF NAVBAR ========= -->
+
+<!-- ======== start of class data ======== -->
+<a name="class"><!-- --></a>
+
+<!-- Package -->
+<div class="pull-right">
+	<a href="package-summary.html" title="Package: coldbox.system.ioc"><span class="label label-success">coldbox.system.ioc</span></a>
+</div>
+
+<h2>
+
+Class
+Injector</h2>
+
+
+
+<!-- Inheritance Tree-->
+<pre>WEB-INF.cftags.component
+        <img src="../../../resources/inherit.gif" alt="extended by ">coldbox.system.ioc.Injector
+</pre>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><strong>Class Attributes:</strong></div>
+		<div class="panel-body">
+		
+			<li class="label label-danger label-annotations">
+				serializable 
+				: false 
+			</li>
+			&nbsp;
+			
+			<li class="label label-danger label-annotations">
+				output 
+				: false 
+			</li>
+			&nbsp;
+			
+	</div>
+</div>
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><strong>All Implemented Interfaces:</strong></div>
+  			<div class="panel-body">
+			<a href="../../../coldbox/system/ioc/IInjector.html" title="interface in coldbox.system.ioc">IInjector</a> 
+			</div>
+		</div>
+	
+<div id="class-hint">
+	
+	<p class="lead">A WireBox Injector: Builds the graphs of objects that make up your application.</p>
+</div>
+
+	<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+	<a name="constructor_summary"><!-- --></a>
+	<table class="table table-bordered table-hover">
+		<tr class="info">
+			<th align="left" colspan="2">
+				<strong>Constructor Summary</strong>
+			</th>
+		</tr>
+		<tr>
+			
+			<td>
+				<strong><a href="Injector.html#init()">init</A></strong>([any binder='coldbox.system.ioc.config.DefaultBinder'], [any&lt;struct&gt; properties='[runtime expression]'], [any&lt;<a href="../../../coldbox/system/web/Controller.html" title="class in coldbox.system.web">Controller</a>&gt; coldbox=''])
+				<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Constructor.
+				
+			</td>
+		</tr>
+	</table>
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+<a name="method_summary"><!-- --></a>
+<table class="table table-bordered table-hover">
+	<tr class="info">
+		<th align="left" colspan="2">
+			<strong>Method Summary</strong>
+		</th>
+	</tr>
+
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#autowire()">autowire</A></strong>(any target, [any&lt;<a href="../../../coldbox/system/ioc/config/Mapping.html" title="class in coldbox.system.ioc.config">Mapping</a>&gt; mapping], [any targetID=''], [any&lt;Boolean&gt; annotationCheck='false'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I wire up target objects with dependencies either by mappings or a-la-carte autowires.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;any</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#buildBinder()">buildBinder</A></strong>(any binder, any properties)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Load a configuration binder object according to passed in type.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#buildInstance()">buildInstance</A></strong>(any&lt;<a href="../../../coldbox/system/ioc/config/Mapping.html" title="class in coldbox.system.ioc.config">Mapping</a>&gt; mapping, [any&lt;struct&gt; initArguments='[runtime expression]'])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Build an instance, this is called from registered scopes only as they provide locking and transactions.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#clearSingletons()">clearSingletons</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clear the singleton cache.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#configure()">configure</A></strong>(any&lt;<a href="../../../coldbox/system/ioc/config/Binder.html" title="class in coldbox.system.ioc.config">Binder</a>&gt; binder, any&lt;struct&gt; properties)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configure this injector for operation, called by the init().
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#configureCacheBox()">configureCacheBox</A></strong>(any&lt;struct&gt; config)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configure a standalone version of cacheBox for persistence.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#configureEventManager()">configureEventManager</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configure a standalone version of a WireBox Event Manager.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#configureLogBox()">configureLogBox</A></strong>(any configPath)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configure a standalone version of logBox for logging.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;boolean&gt;</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#containsInstance()">containsInstance</A></strong>(any name)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Checks if this injector can locate a model instance or not.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#doScopeRegistration()">doScopeRegistration</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register this injector on a user specified scope.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;<a href="../../../coldbox/system/ioc/config/Binder.html" title="class in coldbox.system.ioc.config">Binder</a>&gt;</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#getBinder()">getBinder</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the Injector's configuration binder object.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;<a href="../../../coldbox/system/cache/CacheFactory.html" title="class in coldbox.system.cache">CacheFactory</a>&gt;</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#getCacheBox()">getCacheBox</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the instance of CacheBox linked in this Injector.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;<a href="../../../coldbox/system/web/Controller.html" title="class in coldbox.system.web">Controller</a>&gt;</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#getColdbox()">getColdbox</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the instance of ColdBox linked in this Injector.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#getEventManager()">getEventManager</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the injector's event manager.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#getInjectorID()">getInjectorID</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the unique ID of this injector.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#getInstance()">getInstance</A></strong>([any name], [any dsl], [any&lt;struct&gt; initArguments='[runtime expression]'], [any targetObject=''])
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Locates, Creates, Injects and Configures an object model instance.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;<a href="../../../coldbox/system/logging/LogBox.html" title="class in coldbox.system.logging">LogBox</a>&gt;</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#getLogBox()">getLogBox</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the instance of LogBox configured for this Injector.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;<a href="../../../coldbox/system/core/dynamic/BeanPopulator.html" title="class in coldbox.system.core.dynamic">BeanPopulator</a>&gt;</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#getObjectPopulator()">getObjectPopulator</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get an object populator useful for populating objects from JSON,XML, etc.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;<a href="../../../coldbox/system/ioc/Injector.html" title="class in coldbox.system.ioc">Injector</a>&gt;</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#getParent()">getParent</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a reference to the parent injector instance, else an empty simple string meaning nothing is set.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#getScope()">getScope</A></strong>(any scope)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a registered scope in this injector by name.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;struct&gt;</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#getScopeRegistration()">getScopeRegistration</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the structure of scope registration information.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;<a href="../../../coldbox/system/core/collections/ScopeStorage.html" title="class in coldbox.system.core.collections">ScopeStorage</a>&gt;</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#getScopeStorage()">getScopeStorage</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the scope storage utility.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;struct&gt;</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#getScopes()">getScopes</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get all the registered scopes structure in this injector.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;<a href="../../../coldbox/system/core/util/Util.html" title="class in coldbox.system.core.util">Util</a>&gt;</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#getUtil()">getUtil</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return the core util object.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#getVersion()">getVersion</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the Injector's version string.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#injectTarget()">injectTarget</A></strong>(any target, any propertyName, any propertyObject, any scope, any argName)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inject a model object with dependencies via setters or property injections.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;boolean&gt;</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#isCacheBoxLinked()">isCacheBoxLinked</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Checks if CacheBox is linked.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;boolean&gt;</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#isColdBoxLinked()">isColdBoxLinked</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Checks if Coldbox application context is linked.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#locateInstance()">locateInstance</A></strong>(any name)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tries to locate a specific instance by scanning all scan locations and returning the instantiation path.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any&lt;<a href="../../../coldbox/system/ioc/Injector.html" title="class in coldbox.system.ioc">Injector</a>&gt;</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#locateScopedSelf()">locateScopedSelf</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return a self reference using the scoped registration, mostly used by providers or scope widening objects.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#processAfterCompleteDI()">processAfterCompleteDI</A></strong>(any targetObject, any DICompleteMethods)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process after DI completion routines.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#processInjection()">processInjection</A></strong>(any targetObject, any DIData, any targetID)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process property and setter injection.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#processMixins()">processMixins</A></strong>(any targetObject, any mapping)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process mixins on the selected target.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#processProviderMethods()">processProviderMethods</A></strong>(any targetObject, any mapping)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Process provider methods on the selected target.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#registerListeners()">registerListeners</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register all the configured listeners in the configuration file.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>any</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#registerNewInstance()">registerNewInstance</A></strong>(any name, any instancePath)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register a new requested mapping object instance thread safely and returns the mapping configured for this instance.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>private&nbsp;void</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#registerScopes()">registerScopes</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Register all internal and configured WireBox Scopes.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#removeFromScope()">removeFromScope</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remove the Injector from scope registration if enabled, else does nothing.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#setParent()">setParent</A></strong>(any&lt;<a href="../../../coldbox/system/ioc/Injector.html" title="class in coldbox.system.ioc">Injector</a>&gt; injector)
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link a parent Injector with this injector.
+			
+		</td>
+	</tr>
+	
+	<tr>
+		<td align="right" valign="top" width="1%">
+			<code>void</code>
+		</td>
+		<td>
+			<strong><a href="Injector.html#shutdown()">shutdown</A></strong>()
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shutdown the injector gracefully by calling the shutdown events internally.
+			
+		</td>
+	</tr>
+	
+</table>
+
+
+
+<a name="inherited_methods"><!-- --></a>
+
+
+	&nbsp;
+	<a name="methods_inherited_from_class_WEB-INF.cftags.component"><!-- --></a>
+	<table class="table table-hover table-bordered">
+		<tr class="info">
+			<th align="left">
+				<strong>Methods inherited from class <kbd>WEB-INF.cftags.component</kbd></strong>
+			</th>
+		</tr>
+		<tr>
+			<td>
+				
+					<span class="label label-warning"><em>None</em></span>
+				
+			</td>
+		</tr>
+	</table>
+
+
+<hr>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+	<a name="constructor_detail"><!-- --></a>
+	<table class="table table-bordered">
+		<tr class="info">
+			<th colspan="1" align="left">
+				<strong>Constructor Detail</strong>
+			</th>
+		</tr>
+	</table>
+
+	<a name="init()"><!-- --></a><h3>
+	init</h3>
+	<kbd>public <strong>init</strong>([any binder='coldbox.system.ioc.config.DefaultBinder'], [any&lt;struct&gt; properties='[runtime expression]'], [any&lt;<a href="../../../coldbox/system/web/Controller.html" title="class in coldbox.system.web">Controller</a>&gt; coldbox=''])</kbd>
+
+	<br><br>
+
+	
+	<p>Constructor. If called without a configuration binder, then WireBox will instantiate the default configuration binder found in: coldbox.system.ioc.config.DefaultBinder</p>
+	
+	<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+			<dd><code>binder</code> - The WireBox binder or data CFC instance or instantiation path to configure this injector with</dd>
+		
+			<dd><code>properties</code> - A structure of binding properties to passthrough to the Binder Configuration CFC</dd>
+		
+			<dd><code>coldbox</code> - A coldbox application context that this instance of WireBox can be linked to, if not using it, we just ignore it.</dd>
+		
+	</dl>
+	
+	<hr>
+
+
+<!-- ============ PROPERTY DETAIL ========== -->
+
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<a name="method_detail"><!-- --></a>
+<table class="table table-bordered">
+	<tr class="info">
+		<th colspan="1" align="left">
+			<strong>Method Detail</strong>
+		</th>
+	</tr>
+</table>
+
+
+	<a name="autowire()"><!-- --></a>
+	<h3>autowire</h3>
+	
+	<kbd>public any <strong>autowire</strong>(any target, [any&lt;<a href="../../../coldbox/system/ioc/config/Mapping.html" title="class in coldbox.system.ioc.config">Mapping</a>&gt; mapping], [any targetID=''], [any&lt;Boolean&gt; annotationCheck='false'])</kbd>
+	
+	<br><br>
+
+	
+		<p>I wire up target objects with dependencies either by mappings or a-la-carte autowires</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>target</code> - The target object to wire up</dd>
+		
+		<dd><code>mapping</code> - The object mapping with all the necessary wiring metadata. Usually passed by scopes and not a-la-carte autowires</dd>
+		
+		<dd><code>targetID</code> - A unique identifier for this target to wire up. Usually a class path or file path should do. If none is passed we will get the id from the passed target via introspection but it will slow down the wiring</dd>
+		
+		<dd><code>annotationCheck</code> - This value determines if we check if the target contains an autowire annotation in the cfcomponent tag: autowire=true|false, it will only autowire if that metadata attribute is set to true. The default is false, which will autowire anything automatically.</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="buildBinder()"><!-- --></a>
+	<h3>buildBinder</h3>
+	
+	<kbd>private any <strong>buildBinder</strong>(any binder, any properties)</kbd>
+	
+	<br><br>
+
+	
+		<p>Load a configuration binder object according to passed in type</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>binder</code> - The data CFC configuration instance, instantiation path or programmatic binder object to configure this injector with</dd>
+		
+		<dd><code>properties</code> - A map of binding properties to passthrough to the Configuration CFC</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="buildInstance()"><!-- --></a>
+	<h3>buildInstance</h3>
+	
+	<kbd>public any <strong>buildInstance</strong>(any&lt;<a href="../../../coldbox/system/ioc/config/Mapping.html" title="class in coldbox.system.ioc.config">Mapping</a>&gt; mapping, [any&lt;struct&gt; initArguments='[runtime expression]'])</kbd>
+	
+	<br><br>
+
+	
+		<p>Build an instance, this is called from registered scopes only as they provide locking and transactions</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>mapping</code> - The mapping to construct</dd>
+		
+		<dd><code>initArguments</code> - The constructor structure of arguments to passthrough when initializing the instance</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="clearSingletons()"><!-- --></a>
+	<h3>clearSingletons</h3>
+	
+	<kbd>public any <strong>clearSingletons</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Clear the singleton cache</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="configure()"><!-- --></a>
+	<h3>configure</h3>
+	
+	<kbd>public void <strong>configure</strong>(any&lt;<a href="../../../coldbox/system/ioc/config/Binder.html" title="class in coldbox.system.ioc.config">Binder</a>&gt; binder, any&lt;struct&gt; properties)</kbd>
+	
+	<br><br>
+
+	
+		<p>Configure this injector for operation, called by the init(). You can also re-configure this injector programmatically, but it is not recommended.</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>binder</code> - The configuration binder object or path to configure this Injector instance with</dd>
+		
+		<dd><code>properties</code> - A structure of binding properties to passthrough to the Configuration CFC</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="configureCacheBox()"><!-- --></a>
+	<h3>configureCacheBox</h3>
+	
+	<kbd>private void <strong>configureCacheBox</strong>(any&lt;struct&gt; config)</kbd>
+	
+	<br><br>
+
+	
+		<p>Configure a standalone version of cacheBox for persistence</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>config</code> - The cacheBox configuration data structure</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="configureEventManager()"><!-- --></a>
+	<h3>configureEventManager</h3>
+	
+	<kbd>private void <strong>configureEventManager</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Configure a standalone version of a WireBox Event Manager</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="configureLogBox()"><!-- --></a>
+	<h3>configureLogBox</h3>
+	
+	<kbd>private void <strong>configureLogBox</strong>(any configPath)</kbd>
+	
+	<br><br>
+
+	
+		<p>Configure a standalone version of logBox for logging</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>configPath</code> - The logBox configuration path to use</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="containsInstance()"><!-- --></a>
+	<h3>containsInstance</h3>
+	
+	<kbd>public any&lt;boolean&gt; <strong>containsInstance</strong>(any name)</kbd>
+	
+	<br><br>
+
+	
+		<p>Checks if this injector can locate a model instance or not</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../..//coldbox/system/ioc/IInjector.html#containsInstance()">containsInstance</a></code>
+				in interface
+				<code>
+					<a href="../../../coldbox/system/ioc/IInjector.html" title="interface in coldbox.system.ioc">IInjector</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>name</code> - The object name or alias to search for if this container can locate it or has knowledge of it</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="doScopeRegistration()"><!-- --></a>
+	<h3>doScopeRegistration</h3>
+	
+	<kbd>private void <strong>doScopeRegistration</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Register this injector on a user specified scope</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getBinder()"><!-- --></a>
+	<h3>getBinder</h3>
+	
+	<kbd>public any&lt;<a href="../../../coldbox/system/ioc/config/Binder.html" title="class in coldbox.system.ioc.config">Binder</a>&gt; <strong>getBinder</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the Injector's configuration binder object</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getCacheBox()"><!-- --></a>
+	<h3>getCacheBox</h3>
+	
+	<kbd>public any&lt;<a href="../../../coldbox/system/cache/CacheFactory.html" title="class in coldbox.system.cache">CacheFactory</a>&gt; <strong>getCacheBox</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the instance of CacheBox linked in this Injector. Empty if using standalone version</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getColdbox()"><!-- --></a>
+	<h3>getColdbox</h3>
+	
+	<kbd>public any&lt;<a href="../../../coldbox/system/web/Controller.html" title="class in coldbox.system.web">Controller</a>&gt; <strong>getColdbox</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the instance of ColdBox linked in this Injector. Empty if using standalone version</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getEventManager()"><!-- --></a>
+	<h3>getEventManager</h3>
+	
+	<kbd>public any <strong>getEventManager</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the injector's event manager</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getInjectorID()"><!-- --></a>
+	<h3>getInjectorID</h3>
+	
+	<kbd>public any <strong>getInjectorID</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the unique ID of this injector</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getInstance()"><!-- --></a>
+	<h3>getInstance</h3>
+	
+	<kbd>public any <strong>getInstance</strong>([any name], [any dsl], [any&lt;struct&gt; initArguments='[runtime expression]'], [any targetObject=''])</kbd>
+	
+	<br><br>
+
+	
+		<p>Locates, Creates, Injects and Configures an object model instance</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../..//coldbox/system/ioc/IInjector.html#getInstance()">getInstance</a></code>
+				in interface
+				<code>
+					<a href="../../../coldbox/system/ioc/IInjector.html" title="interface in coldbox.system.ioc">IInjector</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>name</code> - The mapping name or CFC instance path to try to build up</dd>
+		
+		<dd><code>dsl</code> - The dsl string to use to retrieve the instance model object, mutually exclusive with 'name'</dd>
+		
+		<dd><code>initArguments</code> - The constructor structure of arguments to passthrough when initializing the instance</dd>
+		
+		<dd><code>targetObject</code> - The object requesting the dependency, usually only used by DSL lookups</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getLogBox()"><!-- --></a>
+	<h3>getLogBox</h3>
+	
+	<kbd>public any&lt;<a href="../../../coldbox/system/logging/LogBox.html" title="class in coldbox.system.logging">LogBox</a>&gt; <strong>getLogBox</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the instance of LogBox configured for this Injector</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getObjectPopulator()"><!-- --></a>
+	<h3>getObjectPopulator</h3>
+	
+	<kbd>public any&lt;<a href="../../../coldbox/system/core/dynamic/BeanPopulator.html" title="class in coldbox.system.core.dynamic">BeanPopulator</a>&gt; <strong>getObjectPopulator</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get an object populator useful for populating objects from JSON,XML, etc.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getParent()"><!-- --></a>
+	<h3>getParent</h3>
+	
+	<kbd>public any&lt;<a href="../../../coldbox/system/ioc/Injector.html" title="class in coldbox.system.ioc">Injector</a>&gt; <strong>getParent</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get a reference to the parent injector instance, else an empty simple string meaning nothing is set</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../..//coldbox/system/ioc/IInjector.html#getParent()">getParent</a></code>
+				in interface
+				<code>
+					<a href="../../../coldbox/system/ioc/IInjector.html" title="interface in coldbox.system.ioc">IInjector</a>
+				</code>
+				</dd>
+			</dl>
+		
+
+	</dl>
+	<hr>
+
+	<a name="getScope()"><!-- --></a>
+	<h3>getScope</h3>
+	
+	<kbd>public any <strong>getScope</strong>(any scope)</kbd>
+	
+	<br><br>
+
+	
+		<p>Get a registered scope in this injector by name</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>scope</code> - The name of the scope</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getScopeRegistration()"><!-- --></a>
+	<h3>getScopeRegistration</h3>
+	
+	<kbd>public any&lt;struct&gt; <strong>getScopeRegistration</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the structure of scope registration information</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getScopeStorage()"><!-- --></a>
+	<h3>getScopeStorage</h3>
+	
+	<kbd>public any&lt;<a href="../../../coldbox/system/core/collections/ScopeStorage.html" title="class in coldbox.system.core.collections">ScopeStorage</a>&gt; <strong>getScopeStorage</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the scope storage utility</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getScopes()"><!-- --></a>
+	<h3>getScopes</h3>
+	
+	<kbd>public any&lt;struct&gt; <strong>getScopes</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get all the registered scopes structure in this injector</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getUtil()"><!-- --></a>
+	<h3>getUtil</h3>
+	
+	<kbd>public any&lt;<a href="../../../coldbox/system/core/util/Util.html" title="class in coldbox.system.core.util">Util</a>&gt; <strong>getUtil</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Return the core util object</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="getVersion()"><!-- --></a>
+	<h3>getVersion</h3>
+	
+	<kbd>public any <strong>getVersion</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Get the Injector's version string.</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="injectTarget()"><!-- --></a>
+	<h3>injectTarget</h3>
+	
+	<kbd>private void <strong>injectTarget</strong>(any target, any propertyName, any propertyObject, any scope, any argName)</kbd>
+	
+	<br><br>
+
+	
+		<p>Inject a model object with dependencies via setters or property injections</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>target</code> - The target that will be injected with dependencies</dd>
+		
+		<dd><code>propertyName</code> - The name of the property to inject</dd>
+		
+		<dd><code>propertyObject</code> - The object to inject</dd>
+		
+		<dd><code>scope</code> - The scope to inject a property into, if any else empty means it is a setter call</dd>
+		
+		<dd><code>argName</code> - The name of the argument to send if setter injection</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="isCacheBoxLinked()"><!-- --></a>
+	<h3>isCacheBoxLinked</h3>
+	
+	<kbd>public any&lt;boolean&gt; <strong>isCacheBoxLinked</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Checks if CacheBox is linked</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="isColdBoxLinked()"><!-- --></a>
+	<h3>isColdBoxLinked</h3>
+	
+	<kbd>public any&lt;boolean&gt; <strong>isColdBoxLinked</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Checks if Coldbox application context is linked</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="locateInstance()"><!-- --></a>
+	<h3>locateInstance</h3>
+	
+	<kbd>public any <strong>locateInstance</strong>(any name)</kbd>
+	
+	<br><br>
+
+	
+		<p>Tries to locate a specific instance by scanning all scan locations and returning the instantiation path. If model not found then the returned instantiation path will be empty</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>name</code> - The model instance name to locate</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="locateScopedSelf()"><!-- --></a>
+	<h3>locateScopedSelf</h3>
+	
+	<kbd>public any&lt;<a href="../../../coldbox/system/ioc/Injector.html" title="class in coldbox.system.ioc">Injector</a>&gt; <strong>locateScopedSelf</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Return a self reference using the scoped registration, mostly used by providers or scope widening objects</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="processAfterCompleteDI()"><!-- --></a>
+	<h3>processAfterCompleteDI</h3>
+	
+	<kbd>private void <strong>processAfterCompleteDI</strong>(any targetObject, any DICompleteMethods)</kbd>
+	
+	<br><br>
+
+	
+		<p>Process after DI completion routines</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>targetObject</code> - The target object to do some goodness on</dd>
+		
+		<dd><code>DICompleteMethods</code> - The array of DI completion methods to call</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="processInjection()"><!-- --></a>
+	<h3>processInjection</h3>
+	
+	<kbd>private void <strong>processInjection</strong>(any targetObject, any DIData, any targetID)</kbd>
+	
+	<br><br>
+
+	
+		<p>Process property and setter injection</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>targetObject</code> - The target object to do some goodness on</dd>
+		
+		<dd><code>DIData</code> - The DI data to use</dd>
+		
+		<dd><code>targetID</code> - The target ID to process injections</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="processMixins()"><!-- --></a>
+	<h3>processMixins</h3>
+	
+	<kbd>private void <strong>processMixins</strong>(any targetObject, any mapping)</kbd>
+	
+	<br><br>
+
+	
+		<p>Process mixins on the selected target</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>targetObject</code> - The target object to do some goodness on</dd>
+		
+		<dd><code>mapping</code> - The target mapping</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="processProviderMethods()"><!-- --></a>
+	<h3>processProviderMethods</h3>
+	
+	<kbd>private void <strong>processProviderMethods</strong>(any targetObject, any mapping)</kbd>
+	
+	<br><br>
+
+	
+		<p>Process provider methods on the selected target</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>targetObject</code> - The target object to do some goodness on</dd>
+		
+		<dd><code>mapping</code> - The target mapping</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="registerListeners()"><!-- --></a>
+	<h3>registerListeners</h3>
+	
+	<kbd>private void <strong>registerListeners</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Register all the configured listeners in the configuration file</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="registerNewInstance()"><!-- --></a>
+	<h3>registerNewInstance</h3>
+	
+	<kbd>public any <strong>registerNewInstance</strong>(any name, any instancePath)</kbd>
+	
+	<br><br>
+
+	
+		<p>Register a new requested mapping object instance thread safely and returns the mapping configured for this instance</p>
+	
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>name</code> - The name of the mapping to register</dd>
+		
+		<dd><code>instancePath</code> - The path of the mapping to register</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="registerScopes()"><!-- --></a>
+	<h3>registerScopes</h3>
+	
+	<kbd>private void <strong>registerScopes</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Register all internal and configured WireBox Scopes</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="removeFromScope()"><!-- --></a>
+	<h3>removeFromScope</h3>
+	
+	<kbd>public void <strong>removeFromScope</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Remove the Injector from scope registration if enabled, else does nothing</p>
+	
+
+	</dl>
+	<hr>
+
+	<a name="setParent()"><!-- --></a>
+	<h3>setParent</h3>
+	
+	<kbd>public void <strong>setParent</strong>(any&lt;<a href="../../../coldbox/system/ioc/Injector.html" title="class in coldbox.system.ioc">Injector</a>&gt; injector)</kbd>
+	
+	<br><br>
+
+	
+		<p>Link a parent Injector with this injector</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../..//coldbox/system/ioc/IInjector.html#setParent()">setParent</a></code>
+				in interface
+				<code>
+					<a href="../../../coldbox/system/ioc/IInjector.html" title="interface in coldbox.system.ioc">IInjector</a>
+				</code>
+				</dd>
+			</dl>
+		
+		<dl>
+		<dt><strong>Parameters:</strong></dt>
+		
+		<dd><code>injector</code> - A WireBox Injector to assign as a parent to this Injector</dd>
+		
+		</dl>
+	
+
+	</dl>
+	<hr>
+
+	<a name="shutdown()"><!-- --></a>
+	<h3>shutdown</h3>
+	
+	<kbd>public void <strong>shutdown</strong>()</kbd>
+	
+	<br><br>
+
+	
+		<p>Shutdown the injector gracefully by calling the shutdown events internally.</p>
+	
+			<dl>
+				<dt><strong>Specified by:</strong></dt>
+				<dd>
+				<code>
+				<a href="../../..//coldbox/system/ioc/IInjector.html#shutdown()">shutdown</a></code>
+				in interface
+				<code>
+					<a href="../../../coldbox/system/ioc/IInjector.html" title="interface in coldbox.system.ioc">IInjector</a>
+				</code>
+				</dd>
+			</dl>
+		
+
+	</dl>
+	<hr>
+
+
+
+</body>
+</html>
