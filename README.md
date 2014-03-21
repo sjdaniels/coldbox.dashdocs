@@ -2,7 +2,6 @@ coldbox.dashdocs
 ================
 
 DashDocs generator for ColdBox API documentation
-----------------
 
 ###To Install DocSet:
 
@@ -21,5 +20,5 @@ DashDocs generator for ColdBox API documentation
 6. Copy the API docs for your version to ./Coldbox 3.5.1.docset/Contents/Resources/Documents/
 7. Run the search index populator script included in this project, passing your docset directory name as second arg: 
 
-	python cbdoc2set.py ColdBox\ 3.5.1.docset
+	`python cbdoc2set.py ColdBox\ 3.5.1.docset`
 
